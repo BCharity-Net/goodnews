@@ -1,0 +1,29 @@
+{
+  "name": "@good/og",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --port 4785",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --fix --ext .ts,.tsx",
+    "prettier": "prettier --check \"**/*.{js,ts,tsx,md}\"  --cache",
+    "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,md}\"  --cache",
+    "start": "next start --port 4785",
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "@good/config": "workspace:*",
+    "@good/data": "workspace:*",
+    "@good/helpers": "workspace:*",
+    "@good/lens": "workspace:*",
+    "next": "^14.2.3",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "@types/react": "^18.3.1",
+    "typescript": "^5.4.5"
+  }
+}

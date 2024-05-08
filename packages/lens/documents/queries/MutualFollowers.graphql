@@ -1,0 +1,10 @@
+query MutualFollowers($request: MutualFollowersRequest!) {
+  mutualFollowers(request: $request) {
+    items {
+      ...ListProfileFields
+    }
+    pageInfo {
+      next
+    }
+  }
+}

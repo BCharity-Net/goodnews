@@ -1,0 +1,23 @@
+fragment ActedNotificationFields on ActedNotification {
+  id
+  actions {
+    actedAt
+    by {
+      ...PublicationProfileFields
+    }
+  }
+  publication {
+    ... on Post {
+      ...PostFields
+    }
+    ... on Comment {
+      ...CommentBaseFields
+    }
+    ... on Mirror {
+      ...MirrorFields
+    }
+    ... on Quote {
+      ...QuoteBaseFields
+    }
+  }
+}

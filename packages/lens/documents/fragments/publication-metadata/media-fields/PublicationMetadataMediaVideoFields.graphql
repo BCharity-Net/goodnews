@@ -1,0 +1,11 @@
+fragment PublicationMetadataMediaVideoFields on PublicationMetadataMediaVideo {
+  video {
+    optimized {
+      uri
+    }
+  }
+  cover {
+    ...EncryptableImageSetFields
+  }
+  license
+}

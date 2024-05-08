@@ -1,0 +1,59 @@
+fragment ProfileFields on Profile {
+  id
+  handle {
+    ...HandleInfoFields
+  }
+  ownedBy {
+    ...NetworkAddressFields
+  }
+  signless
+  sponsor
+  createdAt
+  stats {
+    ...ProfileStatsFields
+  }
+  operations {
+    ...ProfileOperationsFields
+  }
+  interests
+  invitedBy {
+    id
+    handle {
+      ...HandleInfoFields
+    }
+    ownedBy {
+      ...NetworkAddressFields
+    }
+    metadata {
+      ...ProfileMetadataFields
+    }
+  }
+  invitesLeft
+  onchainIdentity {
+    proofOfHumanity
+    ens {
+      name
+    }
+    sybilDotOrg {
+      verified
+      source {
+        twitter {
+          handle
+        }
+      }
+    }
+    worldcoin {
+      isHuman
+    }
+  }
+  followNftAddress {
+    ...NetworkAddressFields
+  }
+  followModule {
+    ...FollowModuleFields
+  }
+  metadata {
+    ...ProfileMetadataFields
+  }
+  peerToPeerRecommendedByMe
+}

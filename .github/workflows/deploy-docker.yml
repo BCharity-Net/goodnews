@@ -1,0 +1,34 @@
+name: Deploy Docker Images
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    name: API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🚪
+        uses: actions/checkout@v4
+
+      - name: Build and push API image 🚀
+        uses: ./.github/actions/docker
+        with:
+          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+          image_name: api
+          docker_file: ./apps/api/Dockerfile
+
+      - name: Trigger API Deployment 🚀
+        uses: indiesdev/curl@v1.1
+        with:
+          url: https://api.bcharity.net/internal/railway/triggerDeployments
+          method: 'POST'
+          body: '{ "secret": "${{ secrets.SECRET }}", "serviceId": "4a2a1bfb-e499-4c71-bf7f-d9ad47443c31" }'
+          headers: '{ "Content-Type": "application/json", "Referer": "https://bcharity.net" }'

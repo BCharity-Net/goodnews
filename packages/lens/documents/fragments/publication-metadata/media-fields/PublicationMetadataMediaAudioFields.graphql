@@ -1,0 +1,12 @@
+fragment PublicationMetadataMediaAudioFields on PublicationMetadataMediaAudio {
+  artist
+  audio {
+    optimized {
+      uri
+    }
+  }
+  cover {
+    ...EncryptableImageSetFields
+  }
+  license
+}

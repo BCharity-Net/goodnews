@@ -1,0 +1,32 @@
+{
+  "name": "@good/lens",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "main": "generated.ts",
+  "scripts": {
+    "codegen": "graphql-codegen",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ext .js,.ts,.tsx",
+    "prettier": "prettier --check \"**/*.{js,ts,tsx,md}\"  --cache",
+    "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,md}\"  --cache",
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.3",
+    "@good/data": "workspace:*",
+    "axios": "^1.6.8",
+    "graphql-ws": "^5.16.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/fragment-matcher": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.6",
+    "@graphql-codegen/typescript-operations": "^4.2.0",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.0",
+    "@good/config": "workspace:*",
+    "@parcel/watcher": "^2.4.1",
+    "@types/node": "^20.12.10",
+    "typescript": "^5.4.5"
+  }
+}

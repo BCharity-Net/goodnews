@@ -1,0 +1,26 @@
+fragment MirrorFields on Mirror {
+  id
+  publishedOn {
+    id
+  }
+  isHidden
+  momoka {
+    proof
+  }
+  txHash
+  createdAt
+  by {
+    ...PublicationProfileFields
+  }
+  mirrorOn {
+    ... on Post {
+      ...PostFields
+    }
+    ... on Comment {
+      ...CommentFields
+    }
+    ... on Quote {
+      ...QuoteFields
+    }
+  }
+}

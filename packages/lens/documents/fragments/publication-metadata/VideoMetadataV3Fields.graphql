@@ -1,0 +1,20 @@
+fragment VideoMetadataV3Fields on VideoMetadataV3 {
+  id
+  rawURI
+  tags
+  attributes {
+    ...MetadataAttributeFields
+  }
+  asset {
+    ...PublicationMetadataMediaVideoFields
+  }
+  attachments {
+    ...PublicationMetadataMediaFields
+  }
+  title
+  content
+  encryptedWith {
+    ...PublicationMetadataLitEncryptionFields
+  }
+  appId
+}

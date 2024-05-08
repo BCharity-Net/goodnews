@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "GitHub.copilot-nightly",
+    "GitHub.remotehub",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "mquandalle.graphql",
+    "PKief.material-icon-theme",
+    "Prisma.prisma",
+    "christian-kohler.npm-intellisense",
+    "bradlc.vscode-tailwindcss",
+    "aaron-bond.better-comments"
+  ]
+}

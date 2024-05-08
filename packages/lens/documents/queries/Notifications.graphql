@@ -1,0 +1,10 @@
+query Notifications($request: NotificationRequest!) {
+  notifications(request: $request) {
+    items {
+      ...NotificationFields
+    }
+    pageInfo {
+      next
+    }
+  }
+}

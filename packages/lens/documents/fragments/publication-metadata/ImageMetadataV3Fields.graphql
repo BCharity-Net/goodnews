@@ -1,0 +1,20 @@
+fragment ImageMetadataV3Fields on ImageMetadataV3 {
+  id
+  rawURI
+  tags
+  attributes {
+    ...MetadataAttributeFields
+  }
+  attachments {
+    ...PublicationMetadataMediaFields
+  }
+  asset {
+    ...PublicationMetadataMediaImageFields
+  }
+  title
+  content
+  encryptedWith {
+    ...PublicationMetadataLitEncryptionFields
+  }
+  appId
+}

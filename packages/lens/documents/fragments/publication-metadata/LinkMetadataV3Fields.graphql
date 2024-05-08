@@ -1,0 +1,17 @@
+fragment LinkMetadataV3Fields on LinkMetadataV3 {
+  id
+  rawURI
+  tags
+  attributes {
+    ...MetadataAttributeFields
+  }
+  attachments {
+    ...PublicationMetadataMediaFields
+  }
+  content
+  sharingLink
+  encryptedWith {
+    ...PublicationMetadataLitEncryptionFields
+  }
+  appId
+}
