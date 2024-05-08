@@ -41,7 +41,7 @@
 
 ## 🌿 About Good
 
-Good is a cutting-edge social media application that leverages the power of [Lens Protocol](https://lens.xyz) 🌿 to create a decentralized and permissionless platform for users to interact, share, and engage with one another. With a focus on privacy, security, and user control, Good aims to revolutionize the social media landscape by providing a more transparent and equitable digital environment for its users.
+Good is a cutting-edge social media applicationprotocol for the public good that leverages the power of [Lens Protocol](https://lens.xyz) 🌿 to create a decentralized and permissionless platform for users to interact, share, and engage with one another. With a focus on privacy, security, and user control, Good aims to revolutionize the social media landscape by providing a more transparent and equitable digital environment for its users.
 
 ## 📦 Environments
 
@@ -53,11 +53,11 @@ Good is a cutting-edge social media application that leverages the power of [Len
 
 ## ✅ Community
 
-For a place to have open discussions on features, voice your ideas, or get help with general questions please visit our community at [Discord](https://bcharity.net/discord).
+For a place to have open discussions on features, voice your ideas, or get help with general questions please visit our community at [Discord](https://discord.gg/Jp6w5QSsHe).
 
 ## 📊 Repo Activity
 
-<img width="100%" src="https://repobeats.axiom.co/api/embed/8e423b6c5794e1958e33d3d8cecabd3259bd6798.svg" alt="Repobeats analytics" />
+<img width="100%" src="https://repobeats.axiom.co/api/embed/8e423b6c5666e1958e33d3d8cecabd3259bd6798.svg" alt="Repobeats analytics" />
 
 ## 💕 Contributors
 
