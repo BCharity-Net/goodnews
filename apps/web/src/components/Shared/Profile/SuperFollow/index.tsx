@@ -1,11 +1,11 @@
 import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
-import { StarIcon } from '@heroicons/react/24/outline';
 import { PROFILE } from '@good/data/tracking';
 import getProfile from '@good/helpers/getProfile';
 import { Button, Modal } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
+import { StarIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';

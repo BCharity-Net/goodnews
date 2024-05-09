@@ -1,8 +1,5 @@
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { LockClosedIcon, LockOpenIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import { LENS_HUB } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
@@ -14,6 +11,9 @@ import {
   GridLayout,
   Spinner
 } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { LockClosedIcon, LockOpenIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

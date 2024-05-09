@@ -10,7 +10,6 @@ import type {
 import type { OptimisticTransaction } from '@good/types/misc';
 
 import { useApolloClient } from '@apollo/client';
-import checkAndToastDispatcherError from '@helpers/checkAndToastDispatcherError';
 import { LensHub } from '@good/abis';
 import { LENS_HUB } from '@good/data/constants';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
@@ -34,6 +33,7 @@ import {
   useQuoteOnMomokaMutation
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
+import checkAndToastDispatcherError from '@helpers/checkAndToastDispatcherError';
 import { useRouter } from 'next/router';
 import { usePublicationStore } from 'src/store/non-persisted/publication/usePublicationStore';
 import { useNonceStore } from 'src/store/non-persisted/useNonceStore';

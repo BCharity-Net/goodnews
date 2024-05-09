@@ -2,12 +2,6 @@ import type { ApolloCache } from '@apollo/client';
 import type { PeerToPeerRecommendRequest, Profile } from '@good/lens';
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import {
-  ArrowDownCircleIcon,
-  ArrowUpCircleIcon
-} from '@heroicons/react/24/outline';
 import { Errors } from '@good/data/errors';
 import { GARDENER } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
@@ -16,6 +10,12 @@ import {
   usePeerToPeerUnrecommendMutation
 } from '@good/lens';
 import { Button } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import {
+  ArrowDownCircleIcon,
+  ArrowUpCircleIcon
+} from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';

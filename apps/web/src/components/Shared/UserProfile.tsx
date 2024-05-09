@@ -1,11 +1,6 @@
 import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
-import isVerified from '@helpers/isVerified';
-import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
-} from '@heroicons/react/24/solid';
 import formatRelativeOrAbsolute from '@good/helpers/datetime/formatRelativeOrAbsolute';
 import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
@@ -15,6 +10,11 @@ import hasMisused from '@good/helpers/hasMisused';
 import humanize from '@good/helpers/humanize';
 import { Image } from '@good/ui';
 import cn from '@good/ui/cn';
+import isVerified from '@helpers/isVerified';
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon
+} from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { memo } from 'react';
 

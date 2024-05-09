@@ -1,12 +1,12 @@
 import type { OpenActionModule } from '@good/lens';
 import type { FC } from 'react';
 
+import { OpenActionModuleType } from '@good/lens';
 import {
   BriefcaseIcon,
   DocumentPlusIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-import { OpenActionModuleType } from '@good/lens';
 
 interface GetOpenActionModuleIconProps {
   module?: OpenActionModule;

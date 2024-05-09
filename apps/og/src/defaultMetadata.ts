@@ -24,7 +24,7 @@ const defaultMetadata: Metadata = {
     type: 'website'
   },
   title: APP_NAME,
-  twitter: { card: 'summary_large_image', site: '@heydotxyz' }
+  twitter: { card: 'summary_large_image', site: '@gooddotxyz' }
 };
 
 export default defaultMetadata;

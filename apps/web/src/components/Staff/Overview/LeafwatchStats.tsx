@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import {
   ExploreProfilesOrderByType,
   LimitType,
@@ -69,7 +69,7 @@ const LeafwatchStats: FC = () => {
   const getStats = async (): Promise<StatsType> => {
     const response: {
       data: StatsType;
-    } = await axios.get(`${HEY_API_URL}/internal/leafwatch/stats`);
+    } = await axios.get(`${GOOD_API_URL}/internal/leafwatch/stats`);
 
     return response.data;
   };
@@ -84,7 +84,7 @@ const LeafwatchStats: FC = () => {
     cached: number;
     volume: number;
   }> => {
-    const response = await axios.get(`${HEY_API_URL}/internal/score/volume`);
+    const response = await axios.get(`${GOOD_API_URL}/internal/score/volume`);
 
     return response.data;
   };

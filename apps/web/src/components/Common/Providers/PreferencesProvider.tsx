@@ -1,13 +1,13 @@
 import type { FiatRate } from '@good/types/lens';
 import type { FC } from 'react';
 
-import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
-import getCurrentSession from '@helpers/getCurrentSession';
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import { FeatureFlag } from '@good/data/feature-flags';
 import getAllTokens from '@good/helpers/api/getAllTokens';
 import getPreferences from '@good/helpers/api/getPreferences';
 import getScore from '@good/helpers/api/getScore';
+import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
+import getCurrentSession from '@helpers/getCurrentSession';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { usePreferencesStore } from 'src/store/non-persisted/usePreferencesStore';
@@ -76,7 +76,7 @@ const PreferencesProvider: FC = () => {
   // Fetch verified members
   const getVerifiedMembers = async () => {
     try {
-      const response = await axios.get(`${HEY_API_URL}/misc/verified`);
+      const response = await axios.get(`${GOOD_API_URL}/misc/verified`);
       const { data } = response;
       setVerifiedMembers(data.result || []);
       return true;
@@ -113,7 +113,7 @@ const PreferencesProvider: FC = () => {
 
   const getFiatRates = async (): Promise<FiatRate[]> => {
     try {
-      const response = await axios.get(`${HEY_API_URL}/lens/rate`);
+      const response = await axios.get(`${GOOD_API_URL}/lens/rate`);
       const { data } = response;
       return data.result || [];
     } catch {

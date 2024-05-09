@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { Menu } from '@headlessui/react';
 import { Card } from '@good/ui';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 

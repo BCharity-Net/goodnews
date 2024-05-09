@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { SparklesIcon } from '@heroicons/react/24/solid';
 import { Badge } from '@good/ui';
+import { SparklesIcon } from '@heroicons/react/24/solid';
 
 const New: FC = () => {
   return (

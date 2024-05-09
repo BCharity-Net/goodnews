@@ -2,10 +2,10 @@ import type { NewAttachment } from '@good/types/misc';
 import type { FC } from 'react';
 
 import ChooseThumbnail from '@components/Composer/ChooseThumbnail';
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Image } from '@good/ui';
 import cn from '@good/ui/cn';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useEffect, useRef } from 'react';
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';
 import { usePublicationVideoStore } from 'src/store/non-persisted/publication/usePublicationVideoStore';

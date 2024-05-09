@@ -1,16 +1,16 @@
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-  STAFF_PICK_FEATURE_ID,
-  SWR_CACHE_AGE_10_SECS_30_DAYS
+    STAFF_PICK_FEATURE_ID,
+    SWR_CACHE_AGE_10_SECS_30_DAYS
 } from 'src/helpers/constants';
 
 export const get: Handler = async (_, res) => {
   try {
-    const data = await heyPg.query(
+    const data = await goodPg.query(
       `
         SELECT "profileId"
         FROM "ProfileFeature"

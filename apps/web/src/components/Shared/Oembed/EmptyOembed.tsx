@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { LinkIcon } from '@heroicons/react/24/outline';
 import { PLACEHOLDER_IMAGE } from '@good/data/constants';
 import { Card, Image } from '@good/ui';
+import { LinkIcon } from '@heroicons/react/24/outline';
 
 interface EmptyOembedProps {
   url: string;

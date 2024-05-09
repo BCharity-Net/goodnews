@@ -1,12 +1,12 @@
 import type { Nft as INft } from '@good/types/misc';
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
-import { CursorArrowRaysIcon } from '@heroicons/react/24/outline';
 import { PUBLICATION } from '@good/data/tracking';
 import getNftChainInfo from '@good/helpers/getNftChainInfo';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Button, Card, Tooltip } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
+import { CursorArrowRaysIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 import MintedBy from './MintedBy';

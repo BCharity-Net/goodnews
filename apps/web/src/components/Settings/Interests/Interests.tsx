@@ -2,11 +2,6 @@ import type { ProfileInterestsRequest, ProfileInterestTypes } from '@good/lens';
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import sanitizeProfileInterests from '@helpers/sanitizeProfileInterests';
-import { PlusCircleIcon } from '@heroicons/react/24/outline';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { Errors } from '@good/data';
 import { SETTINGS } from '@good/data/tracking';
 import {
@@ -16,6 +11,11 @@ import {
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import sanitizeProfileInterests from '@helpers/sanitizeProfileInterests';
+import { PlusCircleIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import toast from 'react-hot-toast';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';

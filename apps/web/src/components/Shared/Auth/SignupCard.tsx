@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME, STATIC_IMAGES_URL } from '@good/data/constants';
 import { AUTH } from '@good/data/tracking';
 import { Button, Card } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
 
 import { useSignupStore } from './Signup';

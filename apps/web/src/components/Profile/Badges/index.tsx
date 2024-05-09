@@ -1,13 +1,13 @@
 import type { ProfileOnchainIdentity } from '@good/lens';
 import type { FC } from 'react';
 
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 import Ens from './Ens';
+import GoodNft from './GoodNft';
 import GoodProfile from './GoodProfile';
-import HeyNft from './HeyNft';
 import ProofOfHumanity from './ProofOfHumanity';
 import Sybil from './Sybil';
 import Worldcoin from './Worldcoin';
@@ -21,7 +21,7 @@ interface BadgesProps {
 const Badges: FC<BadgesProps> = ({ address, id, onchainIdentity }) => {
   // Begin: Get isGoodProfile
   const getIsGoodProfile = async (): Promise<boolean> => {
-    const response = await axios.get(`${HEY_API_URL}/badges/isGoodProfile`, {
+    const response = await axios.get(`${GOOD_API_URL}/badges/isGoodProfile`, {
       params: { id }
     });
     const { data } = response;
@@ -36,18 +36,18 @@ const Badges: FC<BadgesProps> = ({ address, id, onchainIdentity }) => {
   // End: Get isGoodProfile
 
   // Begin: Check has Good NFT
-  const getHasHeyNft = async (): Promise<boolean> => {
-    const response = await axios.get(`${HEY_API_URL}/badges/hasHeyNft`, {
+  const getHasGoodNft = async (): Promise<boolean> => {
+    const response = await axios.get(`${GOOD_API_URL}/badges/hasGoodNft`, {
       params: { address }
     });
     const { data } = response;
 
-    return data?.hasHeyNft || false;
+    return data?.hasGoodNft || false;
   };
 
-  const { data: hasHeyNft } = useQuery({
-    queryFn: getHasHeyNft,
-    queryKey: ['getHasHeyNft', address]
+  const { data: hasGoodNft } = useQuery({
+    queryFn: getHasGoodNft,
+    queryKey: ['getHasGoodNft', address]
   });
   // End: Check has Good NFT
 
@@ -57,7 +57,7 @@ const Badges: FC<BadgesProps> = ({ address, id, onchainIdentity }) => {
     onchainIdentity?.ens?.name ||
     onchainIdentity?.worldcoin?.isHuman ||
     isGoodProfile ||
-    hasHeyNft;
+    hasGoodNft;
 
   if (!hasOnChainIdentity) {
     return null;
@@ -72,7 +72,7 @@ const Badges: FC<BadgesProps> = ({ address, id, onchainIdentity }) => {
         <Sybil onchainIdentity={onchainIdentity} />
         <Worldcoin onchainIdentity={onchainIdentity} />
         {isGoodProfile && <GoodProfile />}
-        {hasHeyNft && <HeyNft />}
+        {hasGoodNft && <GoodNft />}
       </div>
     </>
   );

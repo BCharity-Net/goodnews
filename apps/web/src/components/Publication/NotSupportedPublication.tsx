@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { EyeSlashIcon } from '@heroicons/react/24/outline';
 import { APP_NAME } from '@good/data/constants';
 import { Card } from '@good/ui';
+import { EyeSlashIcon } from '@heroicons/react/24/outline';
 
 interface NotSupportedPublicationProps {
   type?: string;

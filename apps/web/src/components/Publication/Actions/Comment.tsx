@@ -1,10 +1,10 @@
 import type { MirrorablePublication } from '@good/lens';
 import type { FC } from 'react';
 
-import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 import humanize from '@good/helpers/humanize';
 import nFormatter from '@good/helpers/nFormatter';
 import { Tooltip } from '@good/ui';
+import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 

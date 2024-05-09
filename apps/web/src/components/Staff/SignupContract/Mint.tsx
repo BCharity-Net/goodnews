@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { GoodLensSignup } from '@good/abis';
 import {
   HANDLE_PREFIX,
-  HEY_LENS_SIGNUP,
+  GOOD_LENS_SIGNUP,
   ZERO_ADDRESS
 } from '@good/data/constants';
 import { Regex } from '@good/data/regex';
@@ -41,7 +41,7 @@ const Mint: FC = () => {
       setIsLoading(true);
       return await writeContractAsync({
         abi: GoodLensSignup,
-        address: HEY_LENS_SIGNUP,
+        address: GOOD_LENS_SIGNUP,
         args: [
           [address, ZERO_ADDRESS, '0x'],
           handle.toLowerCase(),

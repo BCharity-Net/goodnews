@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-import showCrisp from '@helpers/showCrisp';
-import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import { APP_NAME } from '@good/data/constants';
 import { GridItemEight, GridLayout } from '@good/ui';
+import showCrisp from '@helpers/showCrisp';
+import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
 
 const Suspended: FC = () => {

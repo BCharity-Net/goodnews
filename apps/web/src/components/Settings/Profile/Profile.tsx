@@ -9,11 +9,6 @@ import type { z } from 'zod';
 
 import ChooseFile from '@components/Shared/ChooseFile';
 import ImageCropperController from '@components/Shared/ImageCropperController';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import uploadCroppedImage, { readFile } from '@helpers/profilePictureUtils';
-import uploadToArweave from '@helpers/uploadToArweave';
-import { InformationCircleIcon, PencilIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import {
   AVATAR,
@@ -49,6 +44,11 @@ import {
   TextArea,
   useZodForm
 } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import uploadCroppedImage, { readFile } from '@helpers/profilePictureUtils';
+import uploadToArweave from '@helpers/uploadToArweave';
+import { InformationCircleIcon, PencilIcon } from '@heroicons/react/24/outline';
 import {
   MetadataAttributeType,
   profile as profileMetadata

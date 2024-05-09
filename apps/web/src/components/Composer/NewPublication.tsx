@@ -1,12 +1,12 @@
 import type {
-    MirrorablePublication,
-    MomokaCommentRequest,
-    MomokaPostRequest,
-    MomokaQuoteRequest,
-    OnchainCommentRequest,
-    OnchainPostRequest,
-    OnchainQuoteRequest,
-    Quote
+  MirrorablePublication,
+  MomokaCommentRequest,
+  MomokaPostRequest,
+  MomokaQuoteRequest,
+  OnchainCommentRequest,
+  OnchainPostRequest,
+  OnchainQuoteRequest,
+  Quote
 } from '@good/lens';
 import type { IGif } from '@good/types/giphy';
 import type { NewAttachment } from '@good/types/misc';
@@ -16,9 +16,6 @@ import NewAttachments from '@components/Composer/NewAttachments';
 import QuotedPublication from '@components/Publication/QuotedPublication';
 import { AudioPublicationSchema } from '@components/Shared/Audio';
 import Wrapper from '@components/Shared/Embed/Wrapper';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import uploadToArweave from '@helpers/uploadToArweave';
 import { KNOWN_ATTRIBUTES } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { PUBLICATION } from '@good/data/tracking';
@@ -29,6 +26,9 @@ import removeQuoteOn from '@good/helpers/removeQuoteOn';
 import { ReferenceModuleType } from '@good/lens';
 import { Button, Card, ErrorMessage } from '@good/ui';
 import cn from '@good/ui/cn';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import uploadToArweave from '@helpers/uploadToArweave';
 import { MetadataAttributeType } from '@lens-protocol/metadata';
 import { useUnmountEffect } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -42,16 +42,16 @@ import { useOpenActionStore } from 'src/store/non-persisted/publication/useOpenA
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';
 import { usePublicationAttributesStore } from 'src/store/non-persisted/publication/usePublicationAttributesStore';
 import {
-    DEFAULT_AUDIO_PUBLICATION,
-    usePublicationAudioStore
+  DEFAULT_AUDIO_PUBLICATION,
+  usePublicationAudioStore
 } from 'src/store/non-persisted/publication/usePublicationAudioStore';
 import { usePublicationLicenseStore } from 'src/store/non-persisted/publication/usePublicationLicenseStore';
 import { usePublicationLiveStore } from 'src/store/non-persisted/publication/usePublicationLiveStore';
 import { usePublicationPollStore } from 'src/store/non-persisted/publication/usePublicationPollStore';
 import { usePublicationStore } from 'src/store/non-persisted/publication/usePublicationStore';
 import {
-    DEFAULT_VIDEO_THUMBNAIL,
-    usePublicationVideoStore
+  DEFAULT_VIDEO_THUMBNAIL,
+  usePublicationVideoStore
 } from 'src/store/non-persisted/publication/usePublicationVideoStore';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
 import { useNonceStore } from 'src/store/non-persisted/useNonceStore';

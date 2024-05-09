@@ -1,10 +1,10 @@
 import type { PublicationMetadata } from '@good/lens';
 import type { FC } from 'react';
 
-import getAssetLicense from '@helpers/getAssetLicense';
-import { ScaleIcon } from '@heroicons/react/24/outline';
 import getPublicationData from '@good/helpers/getPublicationData';
 import { Card } from '@good/ui';
+import getAssetLicense from '@helpers/getAssetLicense';
+import { ScaleIcon } from '@heroicons/react/24/outline';
 import { memo } from 'react';
 
 interface MetadataProps {

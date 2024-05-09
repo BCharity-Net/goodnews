@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
-import errorToast from '@helpers/errorToast';
 import formatDate from '@good/helpers/datetime/formatDate';
 import {
   type ModReport,
@@ -9,6 +8,7 @@ import {
   useModDisputeReportMutation
 } from '@good/lens';
 import { Button, Form, TextArea, useZodForm } from '@good/ui';
+import errorToast from '@helpers/errorToast';
 import toast from 'react-hot-toast';
 import { object, string } from 'zod';
 

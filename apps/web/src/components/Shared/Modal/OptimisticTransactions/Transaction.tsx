@@ -1,9 +1,9 @@
 import type { OptimisticTransaction } from '@good/types/misc';
 import type { FC } from 'react';
 
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { OptmisticPublicationType } from '@good/types/enums';
 import { Tooltip } from '@good/ui';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { useTransactionStore } from 'src/store/persisted/useTransactionStore';
 
 interface TransactionProps {

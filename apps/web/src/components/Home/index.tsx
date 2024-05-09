@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 
 import NewPost from '@components/Composer/Post/New';
 import ExploreFeed from '@components/Explore/Feed';
-import { Leafwatch } from '@helpers/leafwatch';
 import { HomeFeedType } from '@good/data/enums';
 import { PAGEVIEW } from '@good/data/tracking';
 import { GridItemEight, GridItemFour, GridLayout } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useEffect, useState } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

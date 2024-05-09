@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { PuzzlePieceIcon } from '@heroicons/react/24/outline';
 import { Badge } from '@good/ui';
+import { PuzzlePieceIcon } from '@heroicons/react/24/outline';
 
 const Alpha: FC = () => {
   return (

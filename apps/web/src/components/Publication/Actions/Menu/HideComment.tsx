@@ -7,14 +7,14 @@ import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';
 
 import { useHiddenCommentFeedStore } from '@components/Publication';
-import { Menu } from '@headlessui/react';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { CheckCircleIcon, NoSymbolIcon } from '@heroicons/react/24/outline';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { useHideCommentMutation, useUnhideCommentMutation } from '@good/lens';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { CheckCircleIcon, NoSymbolIcon } from '@heroicons/react/24/outline';
 import { toast } from 'react-hot-toast';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

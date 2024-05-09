@@ -4,7 +4,7 @@ import { GoodPro } from '@good/abis';
 import { Errors } from '@good/data';
 import {
   APP_NAME,
-  HEY_PRO,
+  GOOD_PRO,
   PRO_TIER_PRICES,
   STATIC_IMAGES_URL
 } from '@good/data/constants';
@@ -18,8 +18,8 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';
-import { useProStore } from 'src/store/non-persisted/useProStore';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
+import { useProStore } from 'src/store/non-persisted/useProStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { parseEther } from 'viem';
 import { useTransaction, useWriteContract } from 'wagmi';
@@ -106,7 +106,7 @@ const Pro: NextPage = () => {
 
       return await writeContractAsync({
         abi: GoodPro,
-        address: HEY_PRO,
+        address: GOOD_PRO,
         args: [currentProfile.id],
         functionName: id === 'monthly' ? 'subscribeMonthly' : 'subscribeYearly',
         value: parseEther(

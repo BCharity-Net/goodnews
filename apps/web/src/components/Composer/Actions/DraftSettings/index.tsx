@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 import { Modal, Tooltip } from '@good/ui';
+import { ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 

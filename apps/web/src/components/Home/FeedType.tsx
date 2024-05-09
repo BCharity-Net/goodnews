@@ -1,5 +1,8 @@
 import type { Dispatch, FC, SetStateAction } from 'react';
 
+import { HomeFeedType } from '@good/data/enums';
+import { HOME } from '@good/data/tracking';
+import { TabButton } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
   CheckCircleIcon,
@@ -7,9 +10,6 @@ import {
   LightBulbIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-import { HomeFeedType } from '@good/data/enums';
-import { HOME } from '@good/data/tracking';
-import { TabButton } from '@good/ui';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
 interface FeedTypeProps {

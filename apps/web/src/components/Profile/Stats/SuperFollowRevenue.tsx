@@ -2,11 +2,11 @@ import type { FollowRevenueRequest } from '@good/lens';
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { STATIC_IMAGES_URL } from '@good/data/constants';
 import humanize from '@good/helpers/humanize';
 import { useFollowRevenuesQuery } from '@good/lens';
 import { Card, CardHeader, ErrorMessage } from '@good/ui';
+import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
 
 interface SuperFollowRevenueProps {

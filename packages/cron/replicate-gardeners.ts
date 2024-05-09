@@ -8,7 +8,7 @@ const { Client } = pg;
 const lensClient = new Client({
   connectionString: process.env.LENS_DATABASE_URL
 });
-const heyClient = new Client({ connectionString: process.env.DATABASE_URL });
+const goodClient = new Client({ connectionString: process.env.DATABASE_URL });
 
 const main = async () => {
   await lensClient.connect();
@@ -19,9 +19,9 @@ const main = async () => {
 
   logger.info(`Inserting / Updating ${profiles.rows.length} profiles...`);
 
-  await heyClient.connect();
+  await goodClient.connect();
   for (const profile of profiles.rows) {
-    await heyClient.query(
+    await goodClient.query(
       `
         INSERT INTO "ProfileFeature" ("profileId", "featureId", "enabled", "createdAt")
         VALUES ($1, $2, $3, now())
@@ -37,7 +37,7 @@ const main = async () => {
     'Deleting old profiles that are not in the gardener list anymore...'
   );
 
-  const deletedProfiles = await heyClient.query(
+  const deletedProfiles = await goodClient.query(
     `
       DELETE FROM "ProfileFeature"
       WHERE "profileId" != ALL($1)
@@ -52,7 +52,7 @@ const main = async () => {
     `Deleted ${deletedProfiles.rowCount} old profiles that are no longer a gardener`
   );
 
-  await heyClient.end();
+  await goodClient.end();
 };
 
 main();

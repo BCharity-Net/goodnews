@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
+import { GOOD_API_URL } from '@good/data/constants';
+import { GARDENER } from '@good/data/tracking';
+import cn from '@good/ui/cn';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import { Leafwatch } from '@helpers/leafwatch';
 import { BoltIcon as BoltIconOutline } from '@heroicons/react/24/outline';
 import { BoltIcon as BoltIconSolid } from '@heroicons/react/24/solid';
-import { HEY_API_URL } from '@good/data/constants';
-import { GARDENER } from '@good/data/tracking';
-import cn from '@good/ui/cn';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
@@ -21,7 +21,7 @@ const GardenerMode: FC<ModModeProps> = ({ className = '' }) => {
   const toggleModMode = () => {
     toast.promise(
       axios.post(
-        `${HEY_API_URL}/internal/features/gardenerMode`,
+        `${GOOD_API_URL}/internal/features/gardenerMode`,
         { enabled: !gardenerMode },
         { headers: getAuthApiHeaders() }
       ),

@@ -1,5 +1,5 @@
-import type { EditorExtension } from '@helpers/prosekit/extension';
 import type { Emoji } from '@good/types/misc';
+import type { EditorExtension } from '@helpers/prosekit/extension';
 import type { FC } from 'react';
 
 import { EditorRegex } from '@good/data/regex';

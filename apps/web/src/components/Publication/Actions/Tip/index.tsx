@@ -2,7 +2,6 @@ import type { MirrorablePublication } from '@good/lens';
 import type { FC } from 'react';
 
 import MenuTransition from '@components/Shared/MenuTransition';
-import { Menu } from '@headlessui/react';
 import { STATIC_IMAGES_URL } from '@good/data/constants';
 import getPublicationTipById from '@good/helpers/getPublicationTipById';
 import nFormatter from '@good/helpers/nFormatter';
@@ -10,6 +9,7 @@ import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { TipIcon } from '@good/icons';
 import { Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import party from 'party-js';
 import { useRef } from 'react';

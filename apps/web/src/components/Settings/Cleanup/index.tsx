@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 
 import MetaTags from '@components/Common/MetaTags';
 import NotLoggedIn from '@components/Shared/NotLoggedIn';
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME } from '@good/data/constants';
 import { Localstorage } from '@good/data/storage';
 import { PAGEVIEW } from '@good/data/tracking';
@@ -14,6 +13,7 @@ import {
   GridItemFour,
   GridLayout
 } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';

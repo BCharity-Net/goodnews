@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import { Tooltip } from '@good/ui';
+import { Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import { usePublicationPollStore } from 'src/store/non-persisted/publication/usePublicationPollStore';
 

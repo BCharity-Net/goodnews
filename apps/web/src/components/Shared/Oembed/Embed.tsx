@@ -1,12 +1,12 @@
 import type { OG } from '@good/types/misc';
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { ATTACHMENT } from '@good/data/constants';
 import { PUBLICATION } from '@good/data/tracking';
 import imageKit from '@good/helpers/imageKit';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Card, Image } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 
 interface EmbedProps {

@@ -10,15 +10,6 @@ import type { FC } from 'react';
 
 import CountdownTimer from '@components/Shared/CountdownTimer';
 import Slug from '@components/Shared/Slug';
-import {
-  BanknotesIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  PhotoIcon,
-  PuzzlePieceIcon,
-  UsersIcon
-} from '@heroicons/react/24/outline';
 import { POLYGONSCAN_URL } from '@good/data/constants';
 import formatDate from '@good/helpers/datetime/formatDate';
 import formatAddress from '@good/helpers/formatAddress';
@@ -28,6 +19,15 @@ import humanize from '@good/helpers/humanize';
 import nFormatter from '@good/helpers/nFormatter';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import { HelpTooltip, Tooltip, WarningMessage } from '@good/ui';
+import {
+  BanknotesIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  PhotoIcon,
+  PuzzlePieceIcon,
+  UsersIcon
+} from '@heroicons/react/24/outline';
 import { useCounter } from '@uidotdev/usehooks';
 import Link from 'next/link';
 import plur from 'plur';

@@ -41,7 +41,7 @@
 
 ## 🌿 About Good
 
-Good is a cutting-edge social media applicationprotocol for the public good that leverages the power of [Lens Protocol](https://lens.xyz) 🌿 to create a decentralized and permissionless platform for users to interact, share, and engage with one another. With a focus on privacy, security, and user control, Good aims to revolutionize the social media landscape by providing a more transparent and equitable digital environment for its users.
+Good is a cutting-edge social media protocol for the public good that leverages the power of [Lens Protocol](https://lens.xyz) 🌿 to create a decentralized and permissionless platform for users to interact, share, and engage with one another. With a focus on privacy, security, and user control, Good aims to revolutionize the social media landscape by providing a more transparent and equitable digital environment for its users.
 
 ## 📦 Environments
 

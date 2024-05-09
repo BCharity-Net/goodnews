@@ -7,10 +7,10 @@ import type { FC, ReactNode } from 'react';
 
 import AllowanceButton from '@components/Settings/Allowance/Button';
 import NoBalanceError from '@components/Shared/NoBalanceError';
-import getCurrentSession from '@helpers/getCurrentSession';
 import { useApprovedModuleAllowanceAmountQuery } from '@good/lens';
 import { Button, Spinner, WarningMessage } from '@good/ui';
 import cn from '@good/ui/cn';
+import getCurrentSession from '@helpers/getCurrentSession';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { formatUnits } from 'viem';

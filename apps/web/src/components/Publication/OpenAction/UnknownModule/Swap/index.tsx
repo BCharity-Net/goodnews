@@ -6,9 +6,6 @@ import type { UniswapQuote } from '@good/types/good';
 import type { FC } from 'react';
 import type { Address } from 'viem';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import {
   KNOWN_ATTRIBUTES,
   REWARDS_ADDRESS,
@@ -20,6 +17,9 @@ import getUniswapQuote from '@good/helpers/getUniswapQuote';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { useModuleMetadataQuery } from '@good/lens';
 import { Card } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import { CHAIN } from 'src/constants';

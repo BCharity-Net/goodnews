@@ -3,12 +3,12 @@ import type { FC } from 'react';
 
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationListShimmer from '@components/Shared/Shimmer/PublicationListShimmer';
+import { CustomFiltersType, LimitType, usePublicationsQuery } from '@good/lens';
+import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import {
   ArrowLeftIcon,
   ChatBubbleBottomCenterTextIcon
 } from '@heroicons/react/24/outline';
-import { CustomFiltersType, LimitType, usePublicationsQuery } from '@good/lens';
-import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import Link from 'next/link';
 import { Virtuoso } from 'react-virtuoso';
 import { useImpressionsStore } from 'src/store/non-persisted/useImpressionsStore';

@@ -8,8 +8,8 @@ import { Errors } from '@good/data';
 import {
   APP_NAME,
   DEFAULT_COLLECT_TOKEN,
-  HEY_API_URL,
-  HEY_TIPPING,
+  GOOD_API_URL,
+  GOOD_TIPPING,
   MAX_UINT256,
   STATIC_IMAGES_URL
 } from '@good/data/constants';
@@ -79,7 +79,7 @@ const Action: FC<ActionProps> = ({
 
   const { data, isLoading: isGettingAllowance } = useReadContract({
     abi: GoodTipping,
-    address: HEY_TIPPING,
+    address: GOOD_TIPPING,
     args: [selectedCurrency?.contractAddress, address],
     functionName: 'checkAllowance',
     query: { refetchInterval: 2000 }
@@ -168,7 +168,7 @@ const Action: FC<ActionProps> = ({
           }
         ],
         address: selectedCurrency?.contractAddress as Address,
-        args: [HEY_TIPPING, MAX_UINT256],
+        args: [GOOD_TIPPING, MAX_UINT256],
         functionName: 'approve'
       });
       Leafwatch.track(PUBLICATION.TIP.ENABLE, {
@@ -193,7 +193,7 @@ const Action: FC<ActionProps> = ({
 
       const hash = await writeContractAsync({
         abi: GoodTipping,
-        address: HEY_TIPPING,
+        address: GOOD_TIPPING,
         args: [
           selectedCurrency?.contractAddress,
           publication.by.ownedBy.address,
@@ -206,7 +206,7 @@ const Action: FC<ActionProps> = ({
       });
 
       await axios.post(
-        `${HEY_API_URL}/tips/create`,
+        `${GOOD_API_URL}/tips/create`,
         {
           amount: cryptoRate - cryptoRate * 0.05,
           fromAddress: address,

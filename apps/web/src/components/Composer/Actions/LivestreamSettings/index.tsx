@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { VideoCameraIcon } from '@heroicons/react/24/outline';
 import { Tooltip } from '@good/ui';
+import { VideoCameraIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { usePublicationLiveStore } from 'src/store/non-persisted/publication/usePublicationLiveStore';
 

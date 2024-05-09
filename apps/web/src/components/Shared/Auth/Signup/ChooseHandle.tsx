@@ -4,7 +4,7 @@ import { GoodLensSignup } from '@good/abis';
 import {
   APP_NAME,
   HANDLE_PREFIX,
-  HEY_LENS_SIGNUP,
+  GOOD_LENS_SIGNUP,
   IS_MAINNET,
   SIGNUP_PRICE,
   ZERO_ADDRESS
@@ -115,7 +115,7 @@ const ChooseHandle: FC = () => {
 
       return await writeContractAsync({
         abi: GoodLensSignup,
-        address: HEY_LENS_SIGNUP,
+        address: GOOD_LENS_SIGNUP,
         args: [[address, ZERO_ADDRESS, '0x'], handle, [delegatedExecutor]],
         functionName: 'createProfileWithHandleUsingCredits',
         value: parseEther(SIGNUP_PRICE.toString())
@@ -142,7 +142,7 @@ const ChooseHandle: FC = () => {
     window.createLemonSqueezy?.();
     window.LemonSqueezy?.Setup?.({ eventHandler });
     window.LemonSqueezy?.Url?.Open?.(
-      urlcat('https://heyverse.lemonsqueezy.com/checkout/buy/:product', {
+      urlcat('https://goodverse.lemonsqueezy.com/checkout/buy/:product', {
         'checkout[custom][address]': address,
         'checkout[custom][delegatedExecutor]': delegatedExecutor,
         'checkout[custom][handle]': handle.toLowerCase(),

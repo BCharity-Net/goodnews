@@ -2,8 +2,6 @@ import type { BlockRequest, UnblockRequest } from '@good/lens';
 import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
 import { LENS_HUB } from '@good/data/constants';
@@ -19,6 +17,8 @@ import {
   useUnblockMutation
 } from '@good/lens';
 import { Alert } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

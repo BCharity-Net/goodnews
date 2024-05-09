@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
-import { PencilSquareIcon } from '@heroicons/react/24/outline';
 import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
 import getProfile from '@good/helpers/getProfile';
 import { Card, Image } from '@good/ui';
+import { PencilSquareIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { usePublicationStore } from 'src/store/non-persisted/publication/usePublicationStore';

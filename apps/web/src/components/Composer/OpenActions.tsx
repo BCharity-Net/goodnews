@@ -2,8 +2,8 @@ import type { UnknownOpenActionModuleSettings } from '@good/lens';
 import type { FC } from 'react';
 
 import SwapOpenAction from '@components/Publication/OpenAction/UnknownModule/Swap';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { useOpenActionStore } from 'src/store/non-persisted/publication/useOpenActionStore';
 
 const OpenActions: FC = () => {

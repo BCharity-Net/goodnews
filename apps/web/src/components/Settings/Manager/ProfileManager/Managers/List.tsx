@@ -4,9 +4,6 @@ import type { Address } from 'viem';
 
 import Loader from '@components/Shared/Loader';
 import WalletProfile from '@components/Shared/WalletProfile';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { MinusCircleIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
 import { LENS_HUB } from '@good/data/constants';
@@ -21,6 +18,9 @@ import {
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button, EmptyState, ErrorMessage, Spinner } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { MinusCircleIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Virtuoso } from 'react-virtuoso';

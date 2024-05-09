@@ -3,16 +3,16 @@ import type { FC } from 'react';
 import Beta from '@components/Shared/Badges/Beta';
 import SearchProfiles from '@components/Shared/SearchProfiles';
 import ToggleWithHelper from '@components/Shared/ToggleWithHelper';
+import { ADDRESS_PLACEHOLDER } from '@good/data/constants';
+import splitNumber from '@good/helpers/splitNumber';
+import { OpenActionModuleType } from '@good/lens';
+import { Button, Input } from '@good/ui';
 import {
   ArrowsRightLeftIcon,
   PlusIcon,
   UsersIcon,
   XCircleIcon
 } from '@heroicons/react/24/outline';
-import { ADDRESS_PLACEHOLDER } from '@good/data/constants';
-import splitNumber from '@good/helpers/splitNumber';
-import { OpenActionModuleType } from '@good/lens';
-import { Button, Input } from '@good/ui';
 import { useCollectModuleStore } from 'src/store/non-persisted/publication/useCollectModuleStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { isAddress } from 'viem';

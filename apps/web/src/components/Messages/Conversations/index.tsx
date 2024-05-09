@@ -1,8 +1,8 @@
 import type { CachedConversation } from '@xmtp/react-sdk';
 import type { FC } from 'react';
 
-import { ArrowLeftIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import cn from '@good/ui/cn';
+import { ArrowLeftIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import {
   useClient,
   useConsent,

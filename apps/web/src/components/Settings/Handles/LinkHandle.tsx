@@ -5,13 +5,6 @@ import IndexStatus from '@components/Shared/IndexStatus';
 import LazySmallUserProfile from '@components/Shared/LazySmallUserProfile';
 import Loader from '@components/Shared/Loader';
 import Slug from '@components/Shared/Slug';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import {
-  AtSymbolIcon,
-  MinusCircleIcon,
-  PlusCircleIcon
-} from '@heroicons/react/24/outline';
 import { TokenHandleRegistry } from '@good/abis';
 import { Errors } from '@good/data';
 import { TOKEN_HANDLE_REGISTRY } from '@good/data/constants';
@@ -25,6 +18,13 @@ import {
   useOwnedHandlesQuery
 } from '@good/lens';
 import { Button, EmptyState, Spinner } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import {
+  AtSymbolIcon,
+  MinusCircleIcon,
+  PlusCircleIcon
+} from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

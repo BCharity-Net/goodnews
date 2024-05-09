@@ -1,10 +1,10 @@
 import Loader from '@components/Shared/Loader';
-import errorToast from '@helpers/errorToast';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
 import { LENS_HUB } from '@good/data/constants';
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
 import { Button } from '@good/ui';
+import errorToast from '@helpers/errorToast';
 import { type FC, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

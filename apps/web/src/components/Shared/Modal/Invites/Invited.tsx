@@ -1,8 +1,8 @@
 import type { InvitedResult } from '@good/lens';
 import type { FC } from 'react';
 
-import { TicketIcon } from '@heroicons/react/24/outline';
 import { EmptyState } from '@good/ui';
+import { TicketIcon } from '@heroicons/react/24/outline';
 import plur from 'plur';
 
 import Profile from './Profile';

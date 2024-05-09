@@ -1,16 +1,16 @@
 import type { FC, ReactNode } from 'react';
 
 import Video from '@components/Shared/Video';
+import { GOOD_API_URL } from '@good/data/constants';
+import { Card, Spinner, Tooltip } from '@good/ui';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import {
-    ClipboardDocumentIcon,
-    SignalIcon,
-    VideoCameraIcon,
-    VideoCameraSlashIcon
+  ClipboardDocumentIcon,
+  SignalIcon,
+  VideoCameraIcon,
+  VideoCameraSlashIcon
 } from '@heroicons/react/24/outline';
 import { XCircleIcon } from '@heroicons/react/24/solid';
-import { HEY_API_URL } from '@good/data/constants';
-import { Card, Spinner, Tooltip } from '@good/ui';
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -43,7 +43,7 @@ const LivestreamEditor: FC = () => {
     try {
       setCreating(true);
       const response = await axios.post(
-        `${HEY_API_URL}/live/create`,
+        `${GOOD_API_URL}/live/create`,
         { record },
         { headers: getAuthApiHeaders() }
       );

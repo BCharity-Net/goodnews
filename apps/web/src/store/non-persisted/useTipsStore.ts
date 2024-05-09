@@ -1,7 +1,7 @@
 import type { PublicationTip } from '@good/types/good';
 
-import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import getPublicationsTips from '@good/helpers/api/getPublicationsTips';
+import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import { createTrackedSelector } from 'react-tracked';
 import { create } from 'zustand';
 

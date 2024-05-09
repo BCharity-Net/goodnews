@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import SinglePublication from '@components/Publication/SinglePublication';
 import PaidActionsShimmer from '@components/Shared/Shimmer/PaidActionsShimmer';
-import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { LimitType, useLatestPaidActionsQuery } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
+import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { Virtuoso } from 'react-virtuoso';
 
 import OpenActionPaidAction from './OpenActionPaidAction';

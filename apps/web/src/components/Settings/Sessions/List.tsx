@@ -2,9 +2,6 @@ import type { ApprovedAuthenticationRequest } from '@good/lens';
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { ComputerDesktopIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { Errors } from '@good/data';
 import { SETTINGS } from '@good/data/tracking';
 import formatDate from '@good/helpers/datetime/formatDate';
@@ -14,6 +11,9 @@ import {
   useRevokeAuthenticationMutation
 } from '@good/lens';
 import { Button, EmptyState, ErrorMessage } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { ComputerDesktopIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Virtuoso } from 'react-virtuoso';

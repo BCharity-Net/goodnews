@@ -7,8 +7,6 @@ import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
 import UserProfile from '@components/Shared/UserProfile';
-import errorToast from '@helpers/errorToast';
-import { UsersIcon } from '@heroicons/react/24/outline';
 import {
   ManagedProfileVisibility,
   useHideManagedProfileMutation,
@@ -16,6 +14,8 @@ import {
   useUnhideManagedProfileMutation
 } from '@good/lens';
 import { Button, EmptyState, ErrorMessage } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { UsersIcon } from '@heroicons/react/24/outline';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { Virtuoso } from 'react-virtuoso';

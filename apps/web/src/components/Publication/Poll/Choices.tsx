@@ -2,13 +2,7 @@ import type { Poll } from '@good/types/good';
 import type { FC } from 'react';
 
 import Beta from '@components/Shared/Badges/Beta';
-import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
-import { Leafwatch } from '@helpers/leafwatch';
-import {
-  Bars3BottomLeftIcon,
-  CheckCircleIcon
-} from '@heroicons/react/24/solid';
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { PUBLICATION } from '@good/data/tracking';
 import getTimetoNow from '@good/helpers/datetime/getTimetoNow';
@@ -16,6 +10,12 @@ import humanize from '@good/helpers/humanize';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Card, Spinner } from '@good/ui';
 import cn from '@good/ui/cn';
+import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
+import { Leafwatch } from '@helpers/leafwatch';
+import {
+  Bars3BottomLeftIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/solid';
 import axios from 'axios';
 import plur from 'plur';
 import { useState } from 'react';
@@ -53,7 +53,7 @@ const Choices: FC<ChoicesProps> = ({ poll, refetch }) => {
       setSelectedOption(id);
 
       await axios.post(
-        `${HEY_API_URL}/polls/act`,
+        `${GOOD_API_URL}/polls/act`,
         { option: id, poll: poll.id },
         { headers: getAuthApiHeaders() }
       );

@@ -81,7 +81,7 @@ const nextConfig = {
 
 module.exports = withSentryConfig(
   nextConfig,
-  { org: 'heyverse', project: 'web', silent: true },
+  { org: 'goodverse', project: 'web', silent: true },
   {
     automaticVercelMonitors: true,
     disableLogger: true,

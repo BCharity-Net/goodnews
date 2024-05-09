@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
 import ToggleWithHelper from '@components/Shared/ToggleWithHelper';
-import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { DEFAULT_COLLECT_TOKEN, STATIC_IMAGES_URL } from '@good/data/constants';
 import { OpenActionModuleType } from '@good/lens';
 import { Input, Select } from '@good/ui';
+import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { useCollectModuleStore } from 'src/store/non-persisted/publication/useCollectModuleStore';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
 

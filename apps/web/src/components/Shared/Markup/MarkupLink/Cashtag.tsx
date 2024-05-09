@@ -1,9 +1,9 @@
 import type { MarkupLinkProps } from '@good/types/misc';
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 import urlcat from 'urlcat';
 

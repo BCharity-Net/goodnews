@@ -4,8 +4,8 @@ import type {
 } from '@good/lens';
 import type { FC } from 'react';
 
-import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
+import isFeatureAvailable from '@helpers/isFeatureAvailable';
 
 import RentableBillboardOpenAction from './UnknownModule/RentableBillboard';
 import SwapOpenAction from './UnknownModule/Swap';

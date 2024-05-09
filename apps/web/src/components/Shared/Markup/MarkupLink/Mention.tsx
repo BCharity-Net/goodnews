@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import Slug from '@components/Shared/Slug';
 import UserPreview from '@components/Shared/UserPreview';
-import { Leafwatch } from '@helpers/leafwatch';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 
 const Mention: FC<MarkupLinkProps> = ({ mentions, title }) => {

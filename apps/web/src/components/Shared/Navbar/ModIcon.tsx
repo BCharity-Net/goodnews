@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { ShieldCheckIcon } from '@heroicons/react/24/outline';
 import { Tooltip } from '@good/ui';
+import { ShieldCheckIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 

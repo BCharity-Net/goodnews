@@ -34,7 +34,7 @@ const Links: FC = () => {
             title="Live Railway Logs"
           />
           <ListItem
-            link="https://heyverse.sentry.io/issues/?project=4506721358512128"
+            link="https://goodverse.sentry.io/issues/?project=4506721358512128"
             title="Sentry Errors"
           />
         </ul>

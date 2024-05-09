@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 import type { Address } from 'viem';
 
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import { POLYGONSCAN_URL } from '@good/data/constants';
 import formatAddress from '@good/helpers/formatAddress';
 import getStampFyiURL from '@good/helpers/getStampFyiURL';
 import imageKit from '@good/helpers/imageKit';
 import { Image } from '@good/ui';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import useEnsName from 'src/hooks/useEnsName';
 

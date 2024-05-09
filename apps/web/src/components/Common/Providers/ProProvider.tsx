@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import getCurrentSession from '@helpers/getCurrentSession';
 import getPro from '@good/helpers/api/getPro';
+import getCurrentSession from '@helpers/getCurrentSession';
 import { useQuery } from '@tanstack/react-query';
 import { useProStore } from 'src/store/non-persisted/useProStore';
 

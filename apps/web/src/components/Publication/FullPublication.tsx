@@ -1,13 +1,13 @@
 import type { AnyPublication } from '@good/lens';
 import type { FC } from 'react';
 
-import { QueueListIcon } from '@heroicons/react/24/outline';
 import getProfileFlags from '@good/helpers/api/getProfileFlags';
 import formatDate from '@good/helpers/datetime/formatDate';
 import getAppName from '@good/helpers/getAppName';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import { Card, Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';
+import { QueueListIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import usePushToImpressions from 'src/hooks/usePushToImpressions';

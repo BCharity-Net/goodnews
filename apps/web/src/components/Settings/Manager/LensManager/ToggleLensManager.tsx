@@ -1,9 +1,6 @@
 import type { FC } from 'react';
 
 import IndexStatus from '@components/Shared/IndexStatus';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
 import { LENS_HUB } from '@good/data/constants';
@@ -16,6 +13,9 @@ import {
 } from '@good/lens';
 import { Button, Spinner } from '@good/ui';
 import cn from '@good/ui/cn';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

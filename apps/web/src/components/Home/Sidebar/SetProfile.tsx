@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
 import New from '@components/Shared/Badges/New';
-import { Leafwatch } from '@helpers/leafwatch';
-import { MinusCircleIcon } from '@heroicons/react/24/outline';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { APP_NAME } from '@good/data/constants';
 import { ONBOARDING } from '@good/data/tracking';
 import { Card } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
+import { MinusCircleIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

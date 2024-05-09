@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { Cog6ToothIcon } from '@heroicons/react/24/outline';
 import cn from '@good/ui/cn';
+import { Cog6ToothIcon } from '@heroicons/react/24/outline';
 
 interface SettingsProps {
   className?: string;

@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { Errors } from '@good/data';
 import { SETTINGS } from '@good/data/tracking';
 import downloadJson from '@good/helpers/downloadJson';
 import { useNotificationsLazyQuery } from '@good/lens';
 import { Button, Card, CardHeader } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';

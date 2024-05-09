@@ -4,7 +4,6 @@ import type { StateSnapshot, VirtuosoHandle } from 'react-virtuoso';
 
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
-import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import {
   LimitType,
   PublicationMetadataMainFocusType,
@@ -12,6 +11,7 @@ import {
   usePublicationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
+import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { useEffect, useRef } from 'react';
 import { Virtuoso } from 'react-virtuoso';
 import { ProfileFeedType } from 'src/enums';

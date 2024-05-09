@@ -1,10 +1,10 @@
 import type { Amount } from '@good/lens';
 import type { FC, ReactNode } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { STATIC_IMAGES_URL } from '@good/data/constants';
 import { PUBLICATION } from '@good/data/tracking';
 import getUniswapURL from '@good/helpers/getUniswapURL';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 
 import WrapWmatic from './WrapWmatic';

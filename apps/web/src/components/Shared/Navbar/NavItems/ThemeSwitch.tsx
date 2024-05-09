@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { SYSTEM } from '@good/data/tracking';
 import cn from '@good/ui/cn';
+import { Leafwatch } from '@helpers/leafwatch';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { useTheme } from 'next-themes';
 
 interface ThemeSwitchProps {

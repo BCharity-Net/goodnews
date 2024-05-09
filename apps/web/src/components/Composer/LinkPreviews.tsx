@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
 import Oembed from '@components/Shared/Oembed';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { KNOWN_ATTRIBUTES } from '@good/data/constants';
 import getURLs from '@good/helpers/getURLs';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { MetadataAttributeType } from '@lens-protocol/metadata';
 import { useEffect, useState } from 'react';
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';

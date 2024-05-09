@@ -25,7 +25,7 @@ export const get: Handler = async (req, res) => {
     return res
       .status(200)
       .setHeader('Cache-Control', SWR_CACHE_AGE_1_SEC_30_DAYS)
-      .json({ haveUsedHey: Number(result[0].count) > 0, success: true });
+      .json({ haveUsedGood: Number(result[0].count) > 0, success: true });
   } catch (error) {
     return catchedError(res, error);
   }

@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
 import { Errors } from '@good/data';
 import { STATIC_IMAGES_URL } from '@good/data/constants';
 import { AUTH } from '@good/data/tracking';
 import { useAuthenticateMutation, useChallengeLazyQuery } from '@good/lens';
 import { Button, Spinner } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { signIn } from 'src/store/persisted/useAuthStore';

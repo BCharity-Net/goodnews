@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import { Regex } from '@good/data/regex';
 import logger from '@good/helpers/logger';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import validateIsStaff from 'src/helpers/middlewares/validateIsStaff';
 import { invalidBody, noBody, notAllowed } from 'src/helpers/responses';
@@ -45,7 +45,7 @@ export const post: Handler = async (req, res) => {
   const { contractAddress, decimals, name, symbol } = body as ExtensionRequest;
 
   try {
-    const token = await heyPg.query(
+    const token = await goodPg.query(
       `
         INSERT INTO "AllowedToken" ("contractAddress", "decimals", "name", "symbol")
         VALUES ($1, $2, $3, $4)

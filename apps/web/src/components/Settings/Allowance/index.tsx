@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 
 import MetaTags from '@components/Common/MetaTags';
 import NotLoggedIn from '@components/Shared/NotLoggedIn';
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
 import {
@@ -12,6 +11,7 @@ import {
   GridLayout,
   TabButton
 } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useEffect, useState } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

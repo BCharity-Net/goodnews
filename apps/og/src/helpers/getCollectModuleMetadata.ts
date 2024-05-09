@@ -1,9 +1,9 @@
 import type { MirrorablePublication } from '@good/lens';
 
-import getPublicationOGImages from '@helpers/getPublicationOGImages';
 import { APP_NAME } from '@good/data/constants';
 import allowedOpenActionModules from '@good/helpers/allowedOpenActionModules';
 import getProfile from '@good/helpers/getProfile';
+import getPublicationOGImages from '@helpers/getPublicationOGImages';
 
 const getCollectModuleMetadata = (publication: MirrorablePublication) => {
   const { openActionModules } = publication;

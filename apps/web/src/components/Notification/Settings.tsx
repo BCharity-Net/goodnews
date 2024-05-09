@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
 import HighSignalNotificationFilter from '@components/Settings/Preferences/HighSignalNotificationFilter';
-import { BellIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
 import { Modal, Tooltip } from '@good/ui';
+import { BellIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
 const Settings: FC = () => {

@@ -2,9 +2,9 @@ import type { AnyPublication, FeedItem } from '@good/lens';
 import type { FC } from 'react';
 
 import PublicationProfile from '@components/Publication/PublicationProfile';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { usePublicationStore } from 'src/store/non-persisted/publication/usePublicationStore';
 
 import PublicationMenu from './Actions/Menu';

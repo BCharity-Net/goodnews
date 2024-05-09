@@ -1,4 +1,4 @@
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import axios from 'axios';
 
 const FALLBACK_SCORE = {
@@ -18,7 +18,7 @@ const getScore = async (
   score: number;
 }> => {
   try {
-    const response = await axios.get(`${HEY_API_URL}/score/get`, {
+    const response = await axios.get(`${GOOD_API_URL}/score/get`, {
       params: { id }
     });
 

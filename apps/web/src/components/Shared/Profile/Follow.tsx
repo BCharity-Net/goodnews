@@ -2,8 +2,6 @@ import type { FollowRequest, Profile } from '@good/lens';
 import type { OptimisticTransaction } from '@good/types/misc';
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
 import { LENS_HUB } from '@good/data/constants';
@@ -18,6 +16,8 @@ import {
 import { useApolloClient } from '@good/lens/apollo';
 import { OptmisticPublicationType } from '@good/types/enums';
 import { Button } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import toast from 'react-hot-toast';

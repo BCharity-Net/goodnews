@@ -2,8 +2,6 @@ import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
 import { Errors } from '@good/data/errors';
 import { SETTINGS } from '@good/data/tracking';
 import getAvatar from '@good/helpers/getAvatar';
@@ -14,6 +12,8 @@ import {
   useSetDefaultProfileMutation
 } from '@good/lens';
 import { Button, Card, CardHeader, Select } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';

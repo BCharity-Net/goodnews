@@ -7,12 +7,6 @@ import type { OptimisticTransaction } from '@good/types/misc';
 import type { FC } from 'react';
 
 import { useApolloClient } from '@apollo/client';
-import { Menu } from '@headlessui/react';
-import checkAndToastDispatcherError from '@helpers/checkAndToastDispatcherError';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import hasOptimisticallyMirrored from '@helpers/optimistic/hasOptimisticallyMirrored';
-import { ArrowsRightLeftIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import { LENS_HUB } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
@@ -30,6 +24,12 @@ import {
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import checkAndToastDispatcherError from '@helpers/checkAndToastDispatcherError';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import hasOptimisticallyMirrored from '@helpers/optimistic/hasOptimisticallyMirrored';
+import { ArrowsRightLeftIcon } from '@heroicons/react/24/outline';
 import { useCounter } from '@uidotdev/usehooks';
 import { toast } from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

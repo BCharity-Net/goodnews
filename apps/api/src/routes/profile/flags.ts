@@ -2,11 +2,11 @@ import type { ProfileFlags } from '@good/types/good';
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-  SUSPENDED_FEATURE_ID,
-  SWR_CACHE_AGE_10_MINS_30_DAYS
+    SUSPENDED_FEATURE_ID,
+    SWR_CACHE_AGE_10_MINS_30_DAYS
 } from 'src/helpers/constants';
 import { noBody } from 'src/helpers/responses';
 
@@ -18,7 +18,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const profileFeature = await heyPg.query(
+    const profileFeature = await goodPg.query(
       `
         SELECT * FROM "ProfileFeature"
         WHERE enabled = TRUE

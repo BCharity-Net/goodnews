@@ -6,4 +6,3 @@ export * from './LensHandles';
 export * from './LensHub';
 export * from './PermissionlessCreator';
 export * from './TokenHandleRegistry';
-

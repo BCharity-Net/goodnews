@@ -2,17 +2,17 @@ import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
 import UserPreview from '@components/Shared/UserPreview';
-import isVerified from '@helpers/isVerified';
-import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
-} from '@heroicons/react/24/solid';
 import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
 import getProfile from '@good/helpers/getProfile';
 import hasMisused from '@good/helpers/hasMisused';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Image } from '@good/ui';
+import isVerified from '@helpers/isVerified';
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon
+} from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 interface NotificationProfileProps {

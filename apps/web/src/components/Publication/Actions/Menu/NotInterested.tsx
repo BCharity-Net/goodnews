@@ -5,10 +5,6 @@ import type {
 import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';
 
-import { Menu } from '@headlessui/react';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import {
@@ -16,6 +12,10 @@ import {
   useUndoPublicationNotInterestedMutation
 } from '@good/lens';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { toast } from 'react-hot-toast';
 
 interface NotInterestedProps {

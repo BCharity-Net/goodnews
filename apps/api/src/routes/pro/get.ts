@@ -1,9 +1,9 @@
 import type { Handler } from 'express';
 
 import { GoodPro } from '@good/abis';
-import { HEY_PRO, IS_MAINNET } from '@good/data/constants';
+import { GOOD_PRO, IS_MAINNET } from '@good/data/constants';
 import logger from '@good/helpers/logger';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import getRpc from 'src/helpers/getRpc';
 import prisma from 'src/helpers/prisma';
@@ -19,7 +19,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const pro = await heyPg.query(`SELECT * FROM "Pro" WHERE "id" = $1;`, [
+    const pro = await goodPg.query(`SELECT * FROM "Pro" WHERE "id" = $1;`, [
       id as string
     ]);
 
@@ -40,7 +40,7 @@ export const get: Handler = async (req, res) => {
 
     const data = await client.readContract({
       abi: GoodPro,
-      address: HEY_PRO,
+      address: GOOD_PRO,
       args: [id],
       functionName: 'proExpiresAt'
     });

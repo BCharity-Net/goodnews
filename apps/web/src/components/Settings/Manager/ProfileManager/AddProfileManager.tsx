@@ -1,9 +1,6 @@
 import type { FC } from 'react';
 
 import SearchProfiles from '@components/Shared/SearchProfiles';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { PlusCircleIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import { ADDRESS_PLACEHOLDER, LENS_HUB } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
@@ -16,6 +13,9 @@ import {
   useCreateChangeProfileManagersTypedDataMutation
 } from '@good/lens';
 import { Button, Spinner } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { PlusCircleIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

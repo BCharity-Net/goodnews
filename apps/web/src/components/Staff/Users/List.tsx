@@ -8,7 +8,6 @@ import type { FC } from 'react';
 import Loader from '@components/Shared/Loader';
 import P2PRecommendation from '@components/Shared/Profile/P2PRecommendation';
 import UserProfile from '@components/Shared/UserProfile';
-import { ArrowPathIcon, UsersIcon } from '@heroicons/react/24/outline';
 import { SUPER_ADMIN } from '@good/data/constants';
 import getProfile from '@good/helpers/getProfile';
 import {
@@ -19,6 +18,7 @@ import {
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage, Input, Select } from '@good/ui';
 import cn from '@good/ui/cn';
+import { ArrowPathIcon, UsersIcon } from '@heroicons/react/24/outline';
 import { useDebounce } from '@uidotdev/usehooks';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

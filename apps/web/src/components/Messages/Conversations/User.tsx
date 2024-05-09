@@ -5,11 +5,6 @@ import type { Address } from 'viem';
 
 import UserProfileShimmer from '@components/Shared/Shimmer/UserProfileShimmer';
 import Slug from '@components/Shared/Slug';
-import isVerified from '@helpers/isVerified';
-import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
-} from '@heroicons/react/24/solid';
 import formatAddress from '@good/helpers/formatAddress';
 import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
@@ -18,6 +13,11 @@ import getStampFyiURL from '@good/helpers/getStampFyiURL';
 import hasMisused from '@good/helpers/hasMisused';
 import { useDefaultProfileQuery } from '@good/lens';
 import { Image } from '@good/ui';
+import isVerified from '@helpers/isVerified';
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon
+} from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
 import LatestMessage from './LatestMessage';

@@ -1,7 +1,7 @@
 import type { OG } from '@good/types/misc';
 import type { FC } from 'react';
 
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import { ALLOWED_HTML_HOSTS } from '@good/data/og';
 import getFavicon from '@good/helpers/getFavicon';
 import { useQuery } from '@tanstack/react-query';
@@ -23,7 +23,7 @@ const Oembed: FC<OembedProps> = ({ onLoad, publicationId, url }) => {
   const { data, error, isLoading } = useQuery({
     enabled: Boolean(url),
     queryFn: async () => {
-      const response = await axios.get(`${HEY_API_URL}/oembed`, {
+      const response = await axios.get(`${GOOD_API_URL}/oembed`, {
         params: { url }
       });
       return response.data.oembed;

@@ -1,11 +1,11 @@
 import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
-import { Menu } from '@headlessui/react';
-import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import getProfile from '@good/helpers/getProfile';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import { useGlobalAlertStateStore } from 'src/store/non-persisted/useGlobalAlertStateStore';
 
 interface BlockProps {

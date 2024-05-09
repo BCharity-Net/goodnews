@@ -3,8 +3,6 @@ import type { NextPage } from 'next';
 
 import MetaTags from '@components/Common/MetaTags';
 import NewPost from '@components/Composer/Post/New';
-import { Leafwatch } from '@helpers/leafwatch';
-import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import {
   APP_NAME,
   HANDLE_PREFIX,
@@ -15,6 +13,8 @@ import getProfileFlags from '@good/helpers/api/getProfileFlags';
 import getProfile from '@good/helpers/getProfile';
 import { useProfileQuery } from '@good/lens';
 import { EmptyState, GridItemEight, GridItemFour, GridLayout } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
+import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';

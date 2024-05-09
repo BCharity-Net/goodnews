@@ -9,7 +9,6 @@ import CommentWarning from '@components/Shared/CommentWarning';
 import Footer from '@components/Shared/Footer';
 import UserProfile from '@components/Shared/UserProfile';
 import PublicationStaffTool from '@components/StaffTools/Panels/Publication';
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME } from '@good/data/constants';
 import { PAGEVIEW, ProfileLinkSource } from '@good/data/tracking';
 import getProfile from '@good/helpers/getProfile';
@@ -23,6 +22,7 @@ import {
   usePublicationsQuery
 } from '@good/lens';
 import { Card, GridItemEight, GridItemFour, GridLayout } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { createTrackedSelector } from 'react-tracked';

@@ -4,14 +4,14 @@ import type { FC } from 'react';
 import Reports from '@components/Mod/ReportsFeed/Reports';
 import SuspendButton from '@components/Publication/Actions/HigherActions/SuspendButton';
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
+import formatDate from '@good/helpers/datetime/formatDate';
+import { Button, Modal } from '@good/ui';
 import {
   ChatBubbleOvalLeftEllipsisIcon,
   EyeIcon,
   FlagIcon,
   HandRaisedIcon
 } from '@heroicons/react/24/outline';
-import formatDate from '@good/helpers/datetime/formatDate';
-import { Button, Modal } from '@good/ui';
 import { useState } from 'react';
 
 import Dispute from './Dispute';

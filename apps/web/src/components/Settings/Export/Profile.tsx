@@ -1,11 +1,11 @@
 import type { ProfileRequest, Profile as TProfile } from '@good/lens';
 import type { FC } from 'react';
 
-import { Leafwatch } from '@helpers/leafwatch';
 import { SETTINGS } from '@good/data/tracking';
 import downloadJson from '@good/helpers/downloadJson';
 import { useProfileLazyQuery } from '@good/lens';
 import { Button, Card, CardHeader } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
 import { useState } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

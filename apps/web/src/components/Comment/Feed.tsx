@@ -5,7 +5,6 @@ import { useHiddenCommentFeedStore } from '@components/Publication';
 import QueuedPublication from '@components/Publication/QueuedPublication';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
-import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 import {
   CommentRankingFilterType,
   CustomFiltersType,
@@ -15,6 +14,7 @@ import {
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
+import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 import { Virtuoso } from 'react-virtuoso';
 import { useImpressionsStore } from 'src/store/non-persisted/useImpressionsStore';
 import { useTipsStore } from 'src/store/non-persisted/useTipsStore';

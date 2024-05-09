@@ -2,8 +2,8 @@ import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
-import { UsersIcon } from '@heroicons/react/24/outline';
 import { useProfilesManagedQuery } from '@good/lens';
+import { UsersIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 interface ManagedProfilesProps {

@@ -1,28 +1,28 @@
 import type { FC } from 'react';
 
 import { GoodLensSignup } from '@good/abis';
-import { HEY_LENS_SIGNUP } from '@good/data/constants';
+import { GOOD_LENS_SIGNUP } from '@good/data/constants';
 import { NumberedStat } from '@good/ui';
 import { useReadContract } from 'wagmi';
 
 const ProfilesCreated: FC = () => {
   const { data: totalProfilesCreated } = useReadContract({
     abi: GoodLensSignup,
-    address: HEY_LENS_SIGNUP,
+    address: GOOD_LENS_SIGNUP,
     functionName: 'totalProfilesCreated',
     query: { refetchInterval: 2000 }
   });
 
   const { data: profilesCreatedViaCrypto } = useReadContract({
     abi: GoodLensSignup,
-    address: HEY_LENS_SIGNUP,
+    address: GOOD_LENS_SIGNUP,
     functionName: 'profilesCreatedViaCrypto',
     query: { refetchInterval: 2000 }
   });
 
   const { data: profilesCreatedViaCard } = useReadContract({
     abi: GoodLensSignup,
-    address: HEY_LENS_SIGNUP,
+    address: GOOD_LENS_SIGNUP,
     functionName: 'profilesCreatedViaCard',
     query: { refetchInterval: 2000 }
   });

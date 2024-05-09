@@ -1,16 +1,16 @@
 import type { ApprovedAllowanceAmountResult } from '@good/lens';
 import type { Dispatch, FC, SetStateAction } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import getAllowanceModule from '@helpers/getAllowanceModule';
-import { Leafwatch } from '@helpers/leafwatch';
-import { ExclamationTriangleIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { SETTINGS } from '@good/data/tracking';
 import {
   OpenActionModuleType,
   useGenerateModuleCurrencyApprovalDataLazyQuery
 } from '@good/lens';
 import { Button, Modal, Spinner, WarningMessage } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import getAllowanceModule from '@helpers/getAllowanceModule';
+import { Leafwatch } from '@helpers/leafwatch';
+import { ExclamationTriangleIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

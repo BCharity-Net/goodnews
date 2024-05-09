@@ -2,9 +2,9 @@ import type { RewardPool } from '@good/types/misc';
 import type { FC } from 'react';
 import type { Address } from 'viem';
 
-import { GiftIcon } from '@heroicons/react/24/outline';
 import getSwapRewardPool from '@good/helpers/getSwapRewardPool';
 import humanize from '@good/helpers/humanize';
+import { GiftIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import { formatUnits, isAddress } from 'viem';
 

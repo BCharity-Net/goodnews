@@ -4,6 +4,10 @@ import type { FC } from 'react';
 import P2PRecommendation from '@components/Shared/Profile/P2PRecommendation';
 import MetaDetails from '@components/Shared/Staff/MetaDetails';
 import UserProfile from '@components/Shared/UserProfile';
+import { APP_NAME, GOOD_API_URL, IS_MAINNET } from '@good/data/constants';
+import getPreferences from '@good/helpers/api/getPreferences';
+import formatAddress from '@good/helpers/formatAddress';
+import getFollowModule from '@good/helpers/getFollowModule';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import {
   BanknotesIcon,
@@ -14,10 +18,6 @@ import {
   PhotoIcon
 } from '@heroicons/react/24/outline';
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
-import { APP_NAME, HEY_API_URL, IS_MAINNET } from '@good/data/constants';
-import getPreferences from '@good/helpers/api/getPreferences';
-import formatAddress from '@good/helpers/formatAddress';
-import getFollowModule from '@good/helpers/getFollowModule';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Link from 'next/link';
@@ -33,22 +33,22 @@ interface ProfileStaffToolProps {
 }
 
 const ProfileStaffTool: FC<ProfileStaffToolProps> = ({ profile }) => {
-  const getHaveUsedHey = async () => {
+  const getHaveUsedGood = async () => {
     try {
       const response = await axios.get(
-        `${HEY_API_URL}/internal/leafwatch/profile/haveUsedHey`,
+        `${GOOD_API_URL}/internal/leafwatch/profile/haveUsedGood`,
         { params: { id: profile.id } }
       );
 
-      return response.data.haveUsedHey;
+      return response.data.haveUsedGood;
     } catch {
       return false;
     }
   };
 
-  const { data: haveUsedHey } = useQuery({
-    queryFn: getHaveUsedHey,
-    queryKey: ['getHaveUsedHey', profile.id]
+  const { data: haveUsedGood } = useQuery({
+    queryFn: getHaveUsedGood,
+    queryKey: ['getHaveUsedGood', profile.id]
   });
 
   const { data: preferences } = useQuery({
@@ -73,7 +73,7 @@ const ProfileStaffTool: FC<ProfileStaffToolProps> = ({ profile }) => {
         <div className="text-lg font-bold">Profile Overview</div>
       </div>
       <div className="mt-3 space-y-2">
-        {haveUsedHey ? (
+        {haveUsedGood ? (
           <MetaDetails
             icon={
               <img

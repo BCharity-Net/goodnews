@@ -1,6 +1,6 @@
 import type { ProfileFlags } from '@good/types/good';
 
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import axios from 'axios';
 
 /**
@@ -10,7 +10,7 @@ import axios from 'axios';
  */
 const getProfileFlags = async (id: string): Promise<null | ProfileFlags> => {
   try {
-    const response = await axios.get(`${HEY_API_URL}/profile/flags`, {
+    const response = await axios.get(`${GOOD_API_URL}/profile/flags`, {
       params: { id }
     });
 

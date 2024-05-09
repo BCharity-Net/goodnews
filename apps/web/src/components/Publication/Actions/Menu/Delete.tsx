@@ -1,10 +1,10 @@
 import type { MirrorablePublication } from '@good/lens';
 import type { FC } from 'react';
 
-import { Menu } from '@headlessui/react';
-import { TrashIcon } from '@heroicons/react/24/outline';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import { TrashIcon } from '@heroicons/react/24/outline';
 import { useGlobalAlertStateStore } from 'src/store/non-persisted/useGlobalAlertStateStore';
 
 interface DeleteProps {

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { CircleStackIcon } from '@heroicons/react/24/outline';
 import cn from '@good/ui/cn';
+import { CircleStackIcon } from '@heroicons/react/24/outline';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
 import { useTransactionStore } from 'src/store/persisted/useTransactionStore';
 

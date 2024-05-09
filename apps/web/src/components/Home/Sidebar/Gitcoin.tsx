@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
 import CountdownTimer from '@components/Shared/CountdownTimer';
-import { rubikMonoOneFont } from '@helpers/fonts';
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME, STATIC_IMAGES_URL } from '@good/data/constants';
 import { MISCELLANEOUS } from '@good/data/tracking';
 import { Button, Card } from '@good/ui';
+import { rubikMonoOneFont } from '@helpers/fonts';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 
 const Gitcoin: FC = () => {

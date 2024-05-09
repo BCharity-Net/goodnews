@@ -1,8 +1,5 @@
 import type { FC } from 'react';
 
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { StarIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { LensHub } from '@good/abis';
 import {
   ADDRESS_PLACEHOLDER,
@@ -29,6 +26,9 @@ import {
   Select,
   useZodForm
 } from '@good/ui';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { StarIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';

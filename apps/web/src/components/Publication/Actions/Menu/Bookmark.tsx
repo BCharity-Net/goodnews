@@ -5,11 +5,6 @@ import type {
 import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';
 
-import { Menu } from '@headlessui/react';
-import errorToast from '@helpers/errorToast';
-import { Leafwatch } from '@helpers/leafwatch';
-import { BookmarkIcon as BookmarkIconOutline } from '@heroicons/react/24/outline';
-import { BookmarkIcon as BookmarkIconSolid } from '@heroicons/react/24/solid';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import {
@@ -17,6 +12,11 @@ import {
   useRemovePublicationBookmarkMutation
 } from '@good/lens';
 import cn from '@good/ui/cn';
+import { Menu } from '@headlessui/react';
+import errorToast from '@helpers/errorToast';
+import { Leafwatch } from '@helpers/leafwatch';
+import { BookmarkIcon as BookmarkIconOutline } from '@heroicons/react/24/outline';
+import { BookmarkIcon as BookmarkIconSolid } from '@heroicons/react/24/solid';
 import { useCounter, useToggle } from '@uidotdev/usehooks';
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';

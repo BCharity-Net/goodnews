@@ -10,17 +10,17 @@ export const IS_PREVIEW = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
 export const LENS_NETWORK = process.env.NEXT_PUBLIC_LENS_NETWORK || 'mainnet';
 
 export const LENS_API_URL = getEnvConfig().lensApiEndpoint;
-export const HEY_API_URL = IS_PRODUCTION
-  ? getEnvConfig().heyApiEndpoint
+export const GOOD_API_URL = IS_PRODUCTION
+  ? getEnvConfig().goodApiEndpoint
   : 'http://localhost:4784';
 export const LENS_HUB = getEnvConfig().lensHub;
 export const LENS_HANDLES = getEnvConfig().lensHandles;
 export const TOKEN_HANDLE_REGISTRY = getEnvConfig().tokenHandleRegistry;
-export const HEY_LENS_SIGNUP = getEnvConfig().heyLensSignup;
+export const GOOD_LENS_SIGNUP = getEnvConfig().goodLensSignup;
 export const DEFAULT_COLLECT_TOKEN = getEnvConfig().defaultCollectToken;
 export const PERMISSIONLESS_CREATOR = getEnvConfig().permissionlessCreator;
-export const HEY_PRO = getEnvConfig().heyPro;
-export const HEY_TIPPING = getEnvConfig().heyTipping;
+export const GOOD_PRO = getEnvConfig().goodPro;
+export const GOOD_TIPPING = getEnvConfig().goodTipping;
 
 export const IS_MAINNET = LENS_API_URL === LensEndpoint.Mainnet;
 export const ADDRESS_PLACEHOLDER = '0x03Ba3...7EF';
@@ -47,7 +47,7 @@ export const TEST_PK =
   '0x8b33302ca865bc1ed65bc02b71dd02067bd3dae3da2f8bb0d95b16509e9ac71e';
 export const TEST_LENS_ID = '0x43';
 export const TEST_NON_STAFF_LENS_ID = '0x4c';
-export const HEY_CURATED_ID = '0x0214f6';
+export const GOOD_CURATED_ID = '0x0214f6';
 export const ZERO_PUBLICATION_ID = '0x00-0x00';
 export const HANDLE_PREFIX = 'lens/';
 export const SIGNUP_PRICE = IS_MAINNET ? 8 : 1;
@@ -55,7 +55,7 @@ export const PRO_TIER_PRICES = {
   annually: 90,
   monthly: 8
 };
-export const HEY_MEMBERSHIP_NFT = IS_MAINNET
+export const GOOD_MEMBERSHIP_NFT = IS_MAINNET
   ? '0x100372BBF7f975f6b1448fB11AB0F814b2740EEd'
   : '0x75120677aBF34ae95a916C6E9DbB610a06536CC3';
 export const SUPER_ADMIN = '0x0d';
@@ -76,7 +76,7 @@ export const PLACEHOLDER_IMAGE = `${STATIC_IMAGES_URL}/placeholder.webp`;
 export const MOONPAY_URL = IS_MAINNET
   ? 'https://buy.moonpay.com'
   : 'https://buy-sandbox.moonpay.com';
-export const HEY_IMAGEKIT_URL = 'https://ik.imagekit.io/lensterimg';
+export const GOOD_IMAGEKIT_URL = 'https://ik.imagekit.io/lensterimg';
 
 // Tokens / Keys
 export const WALLETCONNECT_PROJECT_ID = 'cd542acc70c2b548030f9901a52e70c8';
@@ -96,7 +96,7 @@ export const ATTACHMENT = 'tr:w-1000';
 
 // S3 bucket
 export const S3_BUCKET = {
-  HEY_MEDIA: 'good-media'
+  GOOD_MEDIA: 'good-media'
 };
 
 // Feature Flags

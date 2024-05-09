@@ -2,8 +2,8 @@ import type { MirrorNotification as TMirrorNotification } from '@good/lens';
 import type { FC } from 'react';
 
 import Markup from '@components/Shared/Markup';
-import { ArrowsRightLeftIcon } from '@heroicons/react/24/solid';
 import getPublicationData from '@good/helpers/getPublicationData';
+import { ArrowsRightLeftIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import plur from 'plur';
 import usePushToImpressions from 'src/hooks/usePushToImpressions';

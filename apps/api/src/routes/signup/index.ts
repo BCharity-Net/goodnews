@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 import type { Address } from 'viem';
 
 import { GoodLensSignup } from '@good/abis';
-import { HEY_LENS_SIGNUP, ZERO_ADDRESS } from '@good/data/constants';
+import { GOOD_LENS_SIGNUP, ZERO_ADDRESS } from '@good/data/constants';
 import logger from '@good/helpers/logger';
 import crypto from 'crypto';
 import catchedError from 'src/helpers/catchedError';
@@ -102,7 +102,7 @@ export const post: Handler = async (req, res) => {
 
     const hash = await client.writeContract({
       abi: GoodLensSignup,
-      address: HEY_LENS_SIGNUP,
+      address: GOOD_LENS_SIGNUP,
       args: [[address, ZERO_ADDRESS, '0x'], handle, [delegatedExecutor]],
       functionName: 'createProfileWithHandle'
     });

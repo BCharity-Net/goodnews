@@ -9,8 +9,8 @@ import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
   LimitType,
   ProfileDocument,
-  PublicationType,
-  PublicationsDocument
+  PublicationsDocument,
+  PublicationType
 } from '@good/lens';
 import { apolloClient } from '@good/lens/apollo';
 import defaultMetadata from 'src/defaultMetadata';
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     publisher: displayName,
     title: title,
-    twitter: { card: 'summary', site: '@heydotxyz' }
+    twitter: { card: 'summary', site: '@gooddotxyz' }
   };
 }
 

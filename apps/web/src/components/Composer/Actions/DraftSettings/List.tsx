@@ -3,11 +3,11 @@ import type { FC } from 'react';
 
 import { useEditorContext } from '@components/Composer/Editor';
 import Loader from '@components/Shared/Loader';
-import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
-import { ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
-import { HEY_API_URL } from '@good/data/constants';
+import { GOOD_API_URL } from '@good/data/constants';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Button, EmptyState, ErrorMessage } from '@good/ui';
+import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
+import { ArchiveBoxArrowDownIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useState } from 'react';
@@ -30,7 +30,7 @@ const List: FC<ListProps> = ({ setShowModal }) => {
 
   const getDrafts = async (): Promise<[] | Draft[]> => {
     try {
-      const { data } = await axios.get(`${HEY_API_URL}/drafts/all`, {
+      const { data } = await axios.get(`${GOOD_API_URL}/drafts/all`, {
         headers: getAuthApiHeaders()
       });
 
@@ -79,7 +79,7 @@ const List: FC<ListProps> = ({ setShowModal }) => {
     try {
       setDeleting(true);
       await axios.post(
-        `${HEY_API_URL}/drafts/delete`,
+        `${GOOD_API_URL}/drafts/delete`,
         { id: draft.id },
         { headers: getAuthApiHeaders() }
       );

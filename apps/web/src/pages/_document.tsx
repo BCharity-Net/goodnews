@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-class HeyDocument extends Document {
+class GoodDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -38,4 +38,4 @@ class HeyDocument extends Document {
   }
 }
 
-export default HeyDocument;
+export default GoodDocument;

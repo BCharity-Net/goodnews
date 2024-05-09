@@ -1,7 +1,6 @@
 import type { ActOnOpenActionLensManagerRequest } from '@good/lens';
 import type { Address } from 'viem';
 
-import errorToast from '@helpers/errorToast';
 import { LensHub } from '@good/abis';
 import { LENS_HUB } from '@good/data/constants';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
@@ -11,6 +10,7 @@ import {
   useBroadcastOnchainMutation,
   useCreateActOnOpenActionTypedDataMutation
 } from '@good/lens';
+import errorToast from '@helpers/errorToast';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNonceStore } from 'src/store/non-persisted/useNonceStore';

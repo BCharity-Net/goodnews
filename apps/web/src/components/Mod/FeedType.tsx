@@ -1,13 +1,13 @@
 import type { Dispatch, FC, SetStateAction } from 'react';
 
+import { ModFeedType } from '@good/data/enums';
+import { TabButton } from '@good/ui';
 import {
   ClockIcon,
   FlagIcon,
   MagnifyingGlassIcon,
   UsersIcon
 } from '@heroicons/react/24/outline';
-import { ModFeedType } from '@good/data/enums';
-import { TabButton } from '@good/ui';
 
 interface FeedTypeProps {
   feedType: ModFeedType;

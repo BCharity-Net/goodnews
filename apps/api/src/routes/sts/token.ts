@@ -18,7 +18,7 @@ const params = {
           "s3:AbortMultipartUpload"
         ],
         "Resource": [
-          "arn:aws:s3:::${S3_BUCKET.HEY_MEDIA}/*"
+          "arn:aws:s3:::${S3_BUCKET.GOOD_MEDIA}/*"
         ]
       }
     ]

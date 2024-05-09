@@ -24,8 +24,6 @@
     "root": true
   },
   "devDependencies": {
-    "add": "^2.0.6",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",

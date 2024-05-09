@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import DismissRecommendedProfile from '@components/Shared/DismissRecommendedProfile';
 import UserProfile from '@components/Shared/UserProfile';
-import { UsersIcon } from '@heroicons/react/24/outline';
 import { ProfileLinkSource } from '@good/data/tracking';
 import { EmptyState } from '@good/ui';
+import { UsersIcon } from '@heroicons/react/24/outline';
 import { Virtuoso } from 'react-virtuoso';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

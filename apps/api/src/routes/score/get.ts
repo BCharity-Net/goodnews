@@ -2,12 +2,12 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import axios from 'axios';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import lensPg from 'src/db/lensPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-  SCORE_WORKER_URL,
-  SWR_CACHE_AGE_1_HOUR_12_HRS
+    SCORE_WORKER_URL,
+    SWR_CACHE_AGE_1_HOUR_12_HRS
 } from 'src/helpers/constants';
 import { noBody } from 'src/helpers/responses';
 
@@ -20,7 +20,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const [cachedProfile, pro] = await heyPg.multi(
+    const [cachedProfile, pro] = await goodPg.multi(
       `
         SELECT * FROM "CachedProfileScore"
         WHERE "id" = $1
@@ -58,7 +58,7 @@ export const get: Handler = async (req, res) => {
 
     const [scores, adjustedScores] = await Promise.all([
       lensPg.query(scoreQuery),
-      heyPg.query(
+      goodPg.query(
         `SELECT * FROM "AdjustedProfileScore" WHERE "profileId" = $1`,
         [id as string]
       )
@@ -72,7 +72,7 @@ export const get: Handler = async (req, res) => {
 
     const score = Number(scores[0].score) + sum;
 
-    const newCachedProfile = await heyPg.query(
+    const newCachedProfile = await goodPg.query(
       `
         INSERT INTO "CachedProfileScore" ("id", "score", "expiresAt")
         VALUES ($1, $2, $3)

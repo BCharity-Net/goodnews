@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { Address } from 'viem';
 
 import { GoodLensSignup } from '@good/abis';
-import { HEY_LENS_SIGNUP } from '@good/data/constants';
+import { GOOD_LENS_SIGNUP } from '@good/data/constants';
 import { STAFFTOOLS } from '@good/data/tracking';
 import { Button, NumberedStat } from '@good/ui';
 import errorToast from '@helpers/errorToast';
@@ -29,7 +29,7 @@ const RelayerBalance: FC<RelayerBalanceProps> = ({ address, index }) => {
 
   const { data: allowed } = useReadContract({
     abi: GoodLensSignup,
-    address: HEY_LENS_SIGNUP,
+    address: GOOD_LENS_SIGNUP,
     args: [address],
     functionName: 'allowedAddresses'
   });

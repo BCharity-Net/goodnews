@@ -4,12 +4,12 @@ import type { FC } from 'react';
 import HigherActions from '@components/Publication/Actions/HigherActions';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
-import { Leafwatch } from '@helpers/leafwatch';
-import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { GARDENER } from '@good/data/tracking';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import { LimitType, useSearchPublicationsQuery } from '@good/lens';
 import { Button, Card, EmptyState, ErrorMessage, Input } from '@good/ui';
+import { Leafwatch } from '@helpers/leafwatch';
+import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import { Virtuoso } from 'react-virtuoso';
 

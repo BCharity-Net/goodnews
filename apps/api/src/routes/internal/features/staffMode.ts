@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import parseJwt from '@good/helpers/parseJwt';
-import heyPg from 'src/db/heyPg';
+import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import { STAFF_MODE_FEATURE_ID } from 'src/helpers/constants';
 import validateIsStaff from 'src/helpers/middlewares/validateIsStaff';
@@ -42,7 +42,7 @@ export const post: Handler = async (req, res) => {
     const profile_id = payload.id;
 
     if (enabled) {
-      await heyPg.query(
+      await goodPg.query(
         `
           INSERT INTO "ProfileFeature" ("profileId", "featureId")
           VALUES ($1, $2)
@@ -57,7 +57,7 @@ export const post: Handler = async (req, res) => {
       return res.status(200).json({ enabled, success: true });
     }
 
-    await heyPg.query(
+    await goodPg.query(
       `
         DELETE FROM "ProfileFeature"
         WHERE "profileId" = $1 AND "featureId" = $2

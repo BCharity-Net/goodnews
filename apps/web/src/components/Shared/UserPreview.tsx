@@ -2,11 +2,6 @@ import type { Profile } from '@good/lens';
 import type { FC, ReactNode } from 'react';
 
 import MutualFollowers from '@components/Profile/MutualFollowers';
-import isVerified from '@helpers/isVerified';
-import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
-} from '@heroicons/react/24/solid';
 import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
 import getMentions from '@good/helpers/getMentions';
@@ -16,6 +11,11 @@ import nFormatter from '@good/helpers/nFormatter';
 import truncateByWords from '@good/helpers/truncateByWords';
 import { useProfileLazyQuery } from '@good/lens';
 import { Card, Image } from '@good/ui';
+import isVerified from '@helpers/isVerified';
+import {
+  CheckBadgeIcon,
+  ExclamationCircleIcon
+} from '@heroicons/react/24/solid';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import plur from 'plur';
 import { useState } from 'react';

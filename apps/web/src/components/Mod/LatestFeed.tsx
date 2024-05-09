@@ -8,7 +8,6 @@ import type { FC } from 'react';
 import HigherActions from '@components/Publication/Actions/HigherActions';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
-import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { IS_MAINNET } from '@good/data/constants';
 import {
   ExplorePublicationsOrderByType,
@@ -16,6 +15,7 @@ import {
   useModExplorePublicationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
+import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { useEffect } from 'react';
 import { Virtuoso } from 'react-virtuoso';
 

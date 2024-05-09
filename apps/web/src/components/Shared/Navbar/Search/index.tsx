@@ -3,8 +3,6 @@ import type { ChangeEvent, FC, MutableRefObject } from 'react';
 
 import Loader from '@components/Shared/Loader';
 import UserProfile from '@components/Shared/UserProfile';
-import { Leafwatch } from '@helpers/leafwatch';
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ProfileLinkSource, SEARCH } from '@good/data/tracking';
 import getProfile from '@good/helpers/getProfile';
 import {
@@ -14,6 +12,8 @@ import {
 } from '@good/lens';
 import { Card, Input } from '@good/ui';
 import cn from '@good/ui/cn';
+import { Leafwatch } from '@helpers/leafwatch';
+import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useClickAway, useDebounce } from '@uidotdev/usehooks';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';

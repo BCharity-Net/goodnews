@@ -2,9 +2,9 @@ import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
 import MenuTransition from '@components/Shared/MenuTransition';
+import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Menu } from '@headlessui/react';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
-import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Fragment } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

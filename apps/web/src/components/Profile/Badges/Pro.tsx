@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { StarIcon } from '@heroicons/react/24/solid';
 import getPro from '@good/helpers/api/getPro';
 import { Tooltip } from '@good/ui';
+import { StarIcon } from '@heroicons/react/24/solid';
 import { useQuery } from '@tanstack/react-query';
 
 interface ProProps {

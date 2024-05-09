@@ -1,9 +1,9 @@
 import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
-import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import { FeatureFlag } from '@good/data/feature-flags';
 import { Card } from '@good/ui';
+import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 
 import CreatorTool from './CreatorTool';

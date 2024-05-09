@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 
 import Footer from '@components/Shared/Footer';
-import { Leafwatch } from '@helpers/leafwatch';
 import { APP_NAME } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
+import { Leafwatch } from '@helpers/leafwatch';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
