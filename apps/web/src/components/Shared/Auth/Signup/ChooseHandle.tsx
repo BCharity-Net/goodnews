@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import { GoodLensSignup } from '@good/abis';
 import {
   APP_NAME,
-  HANDLE_PREFIX,
   GOOD_LENS_SIGNUP,
+  HANDLE_PREFIX,
   IS_MAINNET,
   SIGNUP_PRICE,
   ZERO_ADDRESS

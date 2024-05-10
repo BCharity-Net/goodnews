@@ -6,8 +6,8 @@ import goodPg from 'src/db/goodPg';
 import lensPg from 'src/db/lensPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-    SCORE_WORKER_URL,
-    SWR_CACHE_AGE_1_HOUR_12_HRS
+  SCORE_WORKER_URL,
+  SWR_CACHE_AGE_1_HOUR_12_HRS
 } from 'src/helpers/constants';
 import { noBody } from 'src/helpers/responses';
 

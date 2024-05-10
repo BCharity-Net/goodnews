@@ -2,8 +2,8 @@ import type { FC } from 'react';
 
 import { GoodLensSignup } from '@good/abis';
 import {
-  HANDLE_PREFIX,
   GOOD_LENS_SIGNUP,
+  HANDLE_PREFIX,
   ZERO_ADDRESS
 } from '@good/data/constants';
 import { Regex } from '@good/data/regex';

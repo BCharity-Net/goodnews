@@ -5,8 +5,8 @@ import logger from '@good/helpers/logger';
 import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-    SUSPENDED_FEATURE_ID,
-    SWR_CACHE_AGE_10_MINS_30_DAYS
+  SUSPENDED_FEATURE_ID,
+  SWR_CACHE_AGE_10_MINS_30_DAYS
 } from 'src/helpers/constants';
 import { noBody } from 'src/helpers/responses';
 
