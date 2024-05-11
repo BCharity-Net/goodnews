@@ -5,7 +5,7 @@ import { PUBLICATION } from '@good/data/tracking';
 import getPublicationData from '@good/helpers/getPublicationData';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import cn from '@good/ui/cn';
-import { Menu } from '@headlessui/react';
+import { MenuItem } from '@headlessui/react';
 import { Leafwatch } from '@helpers/leafwatch';
 import { LanguageIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -30,11 +30,11 @@ const Translate: FC<TranslateProps> = ({ publication }) => {
   };
 
   return (
-    <Menu.Item
+    <MenuItem
       as={Link}
-      className={({ active }) =>
+      className={({ focus }) =>
         cn(
-          { 'dropdown-active': active },
+          { 'dropdown-active': focus },
           'm-2 block cursor-pointer rounded-lg px-2 py-1.5 text-sm'
         )
       }
@@ -51,7 +51,7 @@ const Translate: FC<TranslateProps> = ({ publication }) => {
         <LanguageIcon className="size-4" />
         <div>Translate</div>
       </div>
-    </Menu.Item>
+    </MenuItem>
   );
 };
 

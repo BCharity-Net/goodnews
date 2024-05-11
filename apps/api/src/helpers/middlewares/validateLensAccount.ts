@@ -31,7 +31,7 @@ const validateLensAccount = async (request: Request) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'User-agent': 'bcharity.net'
+          'User-agent': 'Bcharity.net'
         }
       }
     );

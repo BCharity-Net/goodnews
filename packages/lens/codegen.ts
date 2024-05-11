@@ -16,7 +16,7 @@ const config: CodegenConfig = {
     }
   },
   hooks: {
-    afterAllFileWrite: ['eslint --fix', 'prettier --write']
+    afterOneFileWrite: ['eslint --fix', 'prettier --write']
   },
   overwrite: true,
   schema: LensEndpoint.Staging

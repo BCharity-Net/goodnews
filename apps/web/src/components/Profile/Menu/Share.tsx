@@ -5,7 +5,7 @@ import { PROFILE } from '@good/data/tracking';
 import getProfile from '@good/helpers/getProfile';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import cn from '@good/ui/cn';
-import { Menu } from '@headlessui/react';
+import { MenuItem } from '@headlessui/react';
 import { Leafwatch } from '@helpers/leafwatch';
 import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
 import toast from 'react-hot-toast';
@@ -16,11 +16,11 @@ interface ShareProps {
 
 const Share: FC<ShareProps> = ({ profile }) => {
   return (
-    <Menu.Item
+    <MenuItem
       as="div"
-      className={({ active }) =>
+      className={({ focus }) =>
         cn(
-          { 'dropdown-active': active },
+          { 'dropdown-active': focus },
           'm-2 flex cursor-pointer items-center space-x-2 rounded-lg px-2 py-1.5 text-sm'
         )
       }
@@ -35,7 +35,7 @@ const Share: FC<ShareProps> = ({ profile }) => {
     >
       <ClipboardDocumentIcon className="size-4" />
       <div>Copy link</div>
-    </Menu.Item>
+    </MenuItem>
   );
 };
 

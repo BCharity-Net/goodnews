@@ -11,7 +11,7 @@ import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { useHideCommentMutation, useUnhideCommentMutation } from '@good/lens';
 import cn from '@good/ui/cn';
-import { Menu } from '@headlessui/react';
+import { MenuItem } from '@headlessui/react';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
 import { CheckCircleIcon, NoSymbolIcon } from '@heroicons/react/24/outline';
@@ -79,11 +79,11 @@ const HideComment: FC<HideCommentProps> = ({ publication }) => {
   };
 
   return (
-    <Menu.Item
+    <MenuItem
       as="div"
-      className={({ active }) =>
+      className={({ focus }) =>
         cn(
-          { 'dropdown-active': active },
+          { 'dropdown-active': focus },
           'm-2 block cursor-pointer rounded-lg px-2 py-1.5 text-sm'
         )
       }
@@ -105,7 +105,7 @@ const HideComment: FC<HideCommentProps> = ({ publication }) => {
           </>
         )}
       </div>
-    </Menu.Item>
+    </MenuItem>
   );
 };
 

@@ -2,7 +2,11 @@ import type { UniswapQuote } from '@good/types/good';
 import type { FC } from 'react';
 
 import { Card, HelpTooltip } from '@good/ui';
-import { Disclosure } from '@headlessui/react';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel
+} from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 
 interface DetailsProps {
@@ -27,7 +31,7 @@ const Details: FC<DetailsProps> = ({
       <Disclosure>
         {({ open }) => (
           <>
-            <Disclosure.Button className="w-full px-5 py-3">
+            <DisclosureButton className="w-full px-5 py-3">
               <div className="flex items-center justify-between">
                 <div>
                   1 WMATIC = {firstQuote.amountOut}{' '}
@@ -39,8 +43,8 @@ const Details: FC<DetailsProps> = ({
                   <ChevronDownIcon className="size-3" />
                 )}
               </div>
-            </Disclosure.Button>
-            <Disclosure.Panel className="space-y-2 px-5 pb-3">
+            </DisclosureButton>
+            <DisclosurePanel className="space-y-2 px-5 pb-3">
               <div className="divider" />
               <div className="item flex justify-between">
                 <div>Max. slippage</div>
@@ -68,7 +72,7 @@ const Details: FC<DetailsProps> = ({
                 </div>
                 <div>Uniswap API</div>
               </div>
-            </Disclosure.Panel>
+            </DisclosurePanel>
           </>
         )}
       </Disclosure>

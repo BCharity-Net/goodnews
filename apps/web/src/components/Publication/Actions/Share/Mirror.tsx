@@ -24,7 +24,7 @@ import {
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import cn from '@good/ui/cn';
-import { Menu } from '@headlessui/react';
+import { MenuItem } from '@headlessui/react';
 import checkAndToastDispatcherError from '@helpers/checkAndToastDispatcherError';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
@@ -299,11 +299,11 @@ const Mirror: FC<MirrorProps> = ({ isLoading, publication, setIsLoading }) => {
   };
 
   return (
-    <Menu.Item
+    <MenuItem
       as="div"
-      className={({ active }) =>
+      className={({ focus }) =>
         cn(
-          { 'dropdown-active': active },
+          { 'dropdown-active': focus },
           hasMirrored ? 'text-green-500' : '',
           'm-2 block cursor-pointer rounded-lg px-4 py-1.5 text-sm'
         )
@@ -315,7 +315,7 @@ const Mirror: FC<MirrorProps> = ({ isLoading, publication, setIsLoading }) => {
         <ArrowsRightLeftIcon className="size-4" />
         <div>{hasMirrored ? 'Mirror again' : 'Mirror'}</div>
       </div>
-    </Menu.Item>
+    </MenuItem>
   );
 };
 

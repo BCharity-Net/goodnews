@@ -9,7 +9,7 @@ import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { TipIcon } from '@good/icons';
 import { Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';
-import { Menu } from '@headlessui/react';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import party from 'party-js';
 import { useRef } from 'react';
@@ -48,7 +48,7 @@ const Tip: FC<TipProps> = ({ publication, showCount }) => {
   return (
     <div className="flex items-center space-x-1">
       <Menu as="div" className="relative">
-        <Menu.Button
+        <MenuButton
           aria-label="Tip"
           as={motion.button}
           className={cn(
@@ -66,13 +66,13 @@ const Tip: FC<TipProps> = ({ publication, showCount }) => {
               className={cn({ 'text-brand-500': tip?.tipped }, iconClassName)}
             />
           </Tooltip>
-        </Menu.Button>
+        </MenuButton>
         <MenuTransition>
-          <Menu.Items
+          <MenuItems
             className="absolute z-[5] mt-1 w-max rounded-xl border bg-white shadow-sm focus:outline-none dark:border-gray-700 dark:bg-gray-900"
             static
           >
-            <Menu.Item>
+            <MenuItem>
               {({ close }) => (
                 <Action
                   closePopover={close}
@@ -80,8 +80,8 @@ const Tip: FC<TipProps> = ({ publication, showCount }) => {
                   triggerConfetti={triggerConfetti}
                 />
               )}
-            </Menu.Item>
-          </Menu.Items>
+            </MenuItem>
+          </MenuItems>
         </MenuTransition>
       </Menu>
       {(tip?.count || 0) > 0 && !showCount ? (
