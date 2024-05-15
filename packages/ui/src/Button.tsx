@@ -30,32 +30,33 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) {
+    // 设置粉色相关的样式
     const commonStyles = {
-      'border border-black dark:border-white': variant === 'primary',
-      'border border-gray-600': variant === 'secondary',
-      'border border-red-600': variant === 'danger',
-      'border border-yellow-600 focus:ring-yellow-400/50': variant === 'warning'
+      'border border-pink-500': variant === 'primary',
+      'border border-pink-400': variant === 'secondary',
+      'border border-pink-600': variant === 'danger',
+      'border border-pink-300 focus:ring-pink-200/50': variant === 'warning'
     };
 
     const nonOutlineStyles = {
-      'bg-black dark:bg-white text-white dark:text-black hover:bg-gray-900 active:bg-black':
+      'bg-pink-500 text-white hover:bg-pink-600 active:bg-pink-700':
         !outline && variant === 'primary',
-      'bg-gray-500 text-white hover:bg-gray-600 active:bg-gray-700':
+      'bg-pink-400 text-white hover:bg-pink-500 active:bg-pink-600':
         !outline && variant === 'secondary',
-      'bg-red-500 text-white hover:bg-red-400 active:bg-red-700':
+      'bg-pink-600 text-white hover:bg-pink-700 active:bg-pink-800':
         !outline && variant === 'danger',
-      'bg-yellow-500 text-white hover:bg-yellow-400 active:bg-yellow-700':
+      'bg-pink-300 text-white hover:bg-pink-400 active:bg-pink-500':
         !outline && variant === 'warning'
     };
 
     const outlineStyles = {
-      'text-black hover:bg-gray-50 active:bg-gray-100 dark:text-white dark:hover:bg-gray-800 dark:active:bg-gray-700':
+      'text-pink-500 hover:bg-pink-50 active:bg-pink-100':
         outline && variant === 'primary',
-      'text-gray-500 hover:bg-gray-50 active:bg-gray-100':
+      'text-pink-400 hover:bg-pink-50 active:bg-pink-100':
         outline && variant === 'secondary',
-      'text-red-500 hover:bg-red-50 active:bg-red-100':
+      'text-pink-600 hover:bg-pink-50 active:bg-pink-100':
         outline && variant === 'danger',
-      'text-yellow-500 hover:bg-yellow-50 active:bg-yellow-100':
+      'text-pink-300 hover:bg-pink-50 active:bg-pink-100':
         outline && variant === 'warning'
     };
 
