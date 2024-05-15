@@ -20,7 +20,8 @@ const LoginButton: FC<LoginButtonProps> = ({
 
   return (
     <Button
-      className={className}
+      className={`rounded-full border-0 bg-pink-500 px-4 py-2 font-bold text-white hover:bg-pink-700 ${className}`}
+      style={{ border: 'none !important' }}
       icon={
         <img
           alt="Lens Logo"
