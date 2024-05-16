@@ -14,11 +14,7 @@ const SignupCard: FC = () => {
 
   return (
     <Card as="aside" className="mb-4 space-y-4 p-5">
-      <img
-        alt="Dizzy emoji"
-        className="mx-auto size-14"
-        src={`${STATIC_IMAGES_URL}/emojis/dizzy.png`}
-      />
+      <img alt="Dizzy emoji" className="mx-auto size-14" src="/dizzy.png" />
       <div className="space-y-3 text-center">
         <div className="font-bold">Get your {APP_NAME} profile now!</div>
         <div>
