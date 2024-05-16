@@ -65,11 +65,20 @@ const Navbar: FC = () => {
   };
 
   return (
-    <header className="divider sticky top-0 z-10 w-full bg-white dark:bg-black">
+    <header className="divider sticky top-0 z-10 h-full bg-white dark:bg-black">
       {staffMode ? <StaffBar /> : null}
       <div className="container mx-auto max-w-screen-xl px-5">
-        <div className="relative flex h-14 items-center justify-between sm:h-16">
-          <div className="flex items-center justify-start">
+        <div className="relative flex h-full flex-col items-start justify-between">
+          <div className="flex flex-col items-start">
+            <Link className="rounded-full outline-offset-8" href="/">
+              <img
+                alt="Logo"
+                className="mb-4 size-8"
+                height={32}
+                src={`${STATIC_IMAGES_URL}/app-icon/${appIcon}.png`}
+                width={32}
+              />
+            </Link>
             <button
               className="inline-flex items-center justify-center rounded-md text-gray-500 focus:outline-none md:hidden"
               onClick={() => setShowSearch(!showSearch)}
@@ -81,40 +90,14 @@ const Navbar: FC = () => {
                 <MagnifyingGlassIcon className="size-6" />
               )}
             </button>
-            <Link
-              className="hidden rounded-full outline-offset-8 md:block"
-              href="/"
-            >
-              <img
-                alt="Logo"
-                className="size-8"
-                height={32}
-                src={`${STATIC_IMAGES_URL}/app-icon/${appIcon}.png`}
-                width={32}
-              />
-            </Link>
-            <div className="hidden sm:ml-6 md:block">
-              <div className="flex items-center space-x-4">
-                <div className="hidden md:block">
-                  <Search />
-                </div>
-                <NavItems />
-              </div>
+            <div className="hidden md:block">
+              <Search />
             </div>
+            <nav className="mt-4 space-y-2">
+              <NavItems />
+            </nav>
           </div>
-          <Link
-            className={cn('md:hidden', !currentProfile?.id && 'ml-[60px]')}
-            href="/"
-          >
-            <img
-              alt="Logo"
-              className="size-7"
-              height={32}
-              src={`${STATIC_IMAGES_URL}/app-icon/${appIcon}.png`}
-              width={32}
-            />
-          </Link>
-          <div className="flex items-center gap-4">
+          <div className="mt-auto flex flex-col items-start gap-4">
             {currentProfile ? (
               <>
                 <ModIcon />
