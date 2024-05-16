@@ -70,7 +70,7 @@ const Success: FC = () => {
       <img
         alt="Dizzy emoji"
         className="mx-auto mt-8 size-14"
-        src={`${STATIC_IMAGES_URL}/emojis/dizzy.png`}
+        src="/dizzy.png"
       />
       <Button
         className="mt-5"
