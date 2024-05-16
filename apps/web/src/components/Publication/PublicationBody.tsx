@@ -139,6 +139,7 @@ const PublicationBody: FC<PublicationBodyProps> = ({
       {showQuote && <Quote publication={targetPublication.quoteOn} />}
       <Metadata metadata={targetPublication.metadata} />
     </div>
+    
   );
 };
 

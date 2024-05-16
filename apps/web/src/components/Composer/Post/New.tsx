@@ -58,12 +58,12 @@ const NewPost: FC = () => {
           width={44}
         />
         <button
-          className="flex w-full items-center space-x-2 rounded-xl border bg-gray-100 px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
+          className="flex w-full items-center space-x-2 rounded-xl bg-gray-800 px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
           onClick={() => openModal()}
           type="button"
         >
           <PencilSquareIcon className="size-5" />
-          <span>What's new?!</span>
+          <span className='text-left'>What is happening?!</span>
         </button>
       </div>
     </Card>

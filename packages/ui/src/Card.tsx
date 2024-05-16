@@ -23,7 +23,7 @@ export const Card: FC<CardProps> = ({
         forceRounded
           ? 'rounded-xl'
           : 'rounded-none border-x-0 sm:rounded-xl sm:border-x',
-        'border bg-white dark:border-gray-700 dark:bg-black',
+        'border bg-gray-800 text-white dark:border-gray-700 dark:bg-black ',
         className
       )}
       onClick={onClick}
