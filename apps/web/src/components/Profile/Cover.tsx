@@ -24,7 +24,7 @@ const Cover: FC<CoverProps> = ({ cover }) => {
           })`,
           backgroundPosition: 'center center',
           backgroundRepeat: hasCover ? 'no-repeat' : 'repeat',
-          backgroundSize: 'cover' // Adjusted to cover the entire container
+          backgroundSize: 'cover'
         }}
       />
     </div>

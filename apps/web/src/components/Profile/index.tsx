@@ -1,6 +1,7 @@
 import type { Profile } from '@good/lens';
 import type { NextPage } from 'next';
 
+
 import MetaTags from '@components/Common/MetaTags';
 import NewPost from '@components/Composer/Post/New';
 import {
@@ -24,6 +25,8 @@ import Custom500 from 'src/pages/500';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import Sidebar from '../Home/Sidebar';
+import Link from 'next/link';
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 
 import Cover from './Cover';
@@ -130,9 +133,19 @@ const ViewProfile: NextPage = () => {
         }) • ${APP_NAME}`}
       />
       <ThreeColumnContainer>
-
+  
         <ProfileGridLayout>
           <ProfileGridItemFour>
+          <Link href="/" passHref>
+              <div className="flex items-center justify-between bg-black text-white">
+                <div className="flex items-center">
+                  <ArrowLeftIcon className="text-white h-8 w-8" />
+                  <div className="ml-2">
+                    <h2 className="text-lg font-semibold">{getProfile(profile).displayName}</h2>
+                  </div>
+                </div>
+              </div>
+            </Link>
             <Cover
               cover={
                 isSuspended

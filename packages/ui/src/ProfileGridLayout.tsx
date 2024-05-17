@@ -16,7 +16,7 @@ export const ThreeColumnContainer: FC<GridProps> = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-2 gap-10', // Two columns with a gap of 10px between them
+        'grid grid-cols-3 ', // Two columns with a gap of 10px between them
         className
       )}
       style={{
@@ -24,12 +24,12 @@ export const ThreeColumnContainer: FC<GridProps> = ({
       }}
     >
       {/* First column */}
-      <div className="col-span-1">
+      <div className="col-span-2">
         {firstChild} {/* Render the first child component */}
       </div>
 
       {/* Second column */}
-      <div className="col-span-1 mt-8 lg:mt-0">
+      <div className="col-span-1 mt-8 lg:mt-0 pl-5">
         {secondChild} {/* Render the second child component */}
       </div>
     </div>
@@ -40,7 +40,7 @@ export const ProfileGridLayout: FC<GridProps> = ({
   children,
   className = '',
 }) => {
-  const coverWidth = 850; // Hard code the cover width
+  const coverWidth = 1200; 
 
   return (
     <div
