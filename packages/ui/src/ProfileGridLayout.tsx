@@ -1,4 +1,4 @@
-import React, { FC, Children, ReactNode } from 'react'; // Import React and Children from 'react'
+import React, { FC, Children, ReactNode } from 'react'; 
 import cn from '../cn';
 
 interface GridProps {
@@ -16,21 +16,21 @@ export const ThreeColumnContainer: FC<GridProps> = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-3 ', // Two columns with a gap of 10px between them
+        'grid grid-cols-3 ',
         className
       )}
       style={{
-        overflowX: 'hidden', // Prevent horizontal scrolling
+        overflowX: 'hidden', 
       }}
     >
       {/* First column */}
       <div className="col-span-2">
-        {firstChild} {/* Render the first child component */}
+        {firstChild}
       </div>
 
       {/* Second column */}
       <div className="col-span-1 mt-8 lg:mt-0 pl-5">
-        {secondChild} {/* Render the second child component */}
+        {secondChild} 
       </div>
     </div>
   );
