@@ -705,7 +705,7 @@ const NewPost: FC<NewPublicationProps> = ({ publication }) => {
   return (
     <Card
       className={cn({
-        '!rounded-b-xl rounded-t border-none': !isComment
+        '!rounded-b-xl rounded-t border': !isComment
       })}
       onClick={() => setShowEmojiPicker(false)}
     >
