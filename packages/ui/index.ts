@@ -2,12 +2,15 @@ export { Alert } from './src/Alert';
 export { Badge } from './src/Badge';
 export { Button } from './src/Button';
 export { Card } from './src/Card';
+export { BlockCard } from './src/BlockCard';
 export { default as CardHeader } from './src/CardHeader';
 export { Checkbox } from './src/Checkbox';
 export { EmptyState } from './src/EmptyState';
 export { ErrorMessage } from './src/ErrorMessage';
 export { FieldError, Form, useZodForm } from './src/Form';
 export { GridItemEight, GridItemFour, GridLayout } from './src/GridLayout';
+export { ProfileGridItemEight, ProfileGridItemThreeRows,
+   ProfileGridItemFour, ProfileGridLayout, ThreeColumnContainer } from './src/ProfileGridLayout';
 export { default as HelpTooltip } from './src/HelpTooltip';
 export { Image } from './src/Image';
 export { Input } from './src/Input';

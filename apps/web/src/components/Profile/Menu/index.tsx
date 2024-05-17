@@ -19,6 +19,10 @@ interface ProfileMenuProps {
 const ProfileMenu: FC<ProfileMenuProps> = ({ profile }) => {
   const { currentProfile } = useProfileStore();
 
+  if (!currentProfile) {
+    return null;
+  }
+
   return (
     <Menu as="div" className="relative">
       <MenuButton as={Fragment}>
@@ -28,7 +32,7 @@ const ProfileMenu: FC<ProfileMenuProps> = ({ profile }) => {
           onClick={stopEventPropagation}
           type="button"
         >
-          <EllipsisVerticalIcon className="ld-text-gray-500 size-5" />
+          {/* <EllipsisVerticalIcon className="ld-text-gray-500 size-5" /> */}
         </button>
       </MenuButton>
       <MenuTransition>
@@ -37,12 +41,13 @@ const ProfileMenu: FC<ProfileMenuProps> = ({ profile }) => {
           static
         >
           <Share profile={profile} />
-          {currentProfile && currentProfile?.id !== profile.id ? (
+          {/* Only render Block and Report if the currentProfile id is not equal to the profile id */}
+          {currentProfile?.id !== profile.id && (
             <>
               <Block profile={profile} />
               <Report profile={profile} />
             </>
-          ) : null}
+          )}
         </MenuItems>
       </MenuTransition>
     </Menu>

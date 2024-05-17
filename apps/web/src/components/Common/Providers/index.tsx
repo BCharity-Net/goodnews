@@ -45,7 +45,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
             <PreferencesProvider />
             <ProProvider />
             <LivepeerConfig client={livepeerClient} theme={getLivepeerTheme}>
-              <ThemeProvider attribute="class" defaultTheme="light">
+              <ThemeProvider attribute="class" defaultTheme="dark">
                 <Layout>{children}</Layout>
               </ThemeProvider>
             </LivepeerConfig>
