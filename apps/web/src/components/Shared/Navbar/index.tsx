@@ -64,13 +64,13 @@ const Navbar: FC = () => {
           current={pathname === '/'}
           name=""
           url="/"
-          icon={<HomeIcon className="h-6 w-6" />}
+          icon={<HomeIcon className="h-12 w-12" />}
         />
         <NavItem
           current={pathname === '/explore'}
           name=""
           url="/explore"
-          icon={<MagnifyingGlassIcon className="h-6 w-6" />}
+          icon={<MagnifyingGlassIcon className="h-12 w-12" />}
         />
         <MoreNavItems />
       </>

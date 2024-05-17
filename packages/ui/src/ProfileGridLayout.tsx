@@ -7,49 +7,38 @@ interface GridProps {
   classNameChild?: string;
 }
 
-
 export const ThreeColumnContainer: FC<GridProps> = ({
   children,
   className = '',
 }) => {
-  const [firstChild, secondChild, thirdChild] = React.Children.toArray(children);
+  const [firstChild, secondChild] = React.Children.toArray(children);
 
   return (
     <div
       className={cn(
-        'grid grid-cols-3 gap-10', // Three columns with a gap of 10px between them
+        'grid grid-cols-2 gap-10', // Two columns with a gap of 10px between them
         className
       )}
-      style={{ gridTemplateColumns: '40% 30% 40%',
-      overflowX: 'hidden', // Prevent horizontal scrolling
-
-       }} // Set the column widths
+      style={{
+        overflowX: 'hidden', // Prevent horizontal scrolling
+      }}
     >
-      {/* First column with left margin */}
-      <div className="col-start-1 col-span-1 lg:col-start-1 lg:col-span-1">
+      {/* First column */}
+      <div className="col-span-1">
         {firstChild} {/* Render the first child component */}
       </div>
-      
-      {/* Middle column */}
-      <div className="col-start-2 col-span-1 lg:col-start-2 lg:col-span-1">
+
+      {/* Second column */}
+      <div className="col-span-1 mt-8 lg:mt-0">
         {secondChild} {/* Render the second child component */}
-      </div>
-      
-      {/* Third column with right margin */}
-      <div className="col-start-3 col-span-1 lg:col-start-3 lg:col-span-1 mt-8">
-        {thirdChild} {/* Render the third child component */}
       </div>
     </div>
   );
 };
 
-
-
-
 export const ProfileGridLayout: FC<GridProps> = ({
   children,
   className = '',
-  classNameChild = ''
 }) => {
   const coverWidth = 850; // Hard code the cover width
 
@@ -59,24 +48,22 @@ export const ProfileGridLayout: FC<GridProps> = ({
         ' mb-2 mt-8 max-w-screen-xl grow px-0 border-l border-r',
         className
       )}
-      style={{ 
+      style={{
         maxWidth: `${coverWidth}px`,
         height: '100vh',
-        borderLeftColor: 'grey', 
+        borderLeftColor: 'grey',
         borderRightColor: 'grey',
       }}
     >
-      <div className={cn('grid grid-cols-3 lg:grid-cols-3')}>
-        {}
-        <div className="col-span-3 lg:col-span-3">
-          {children}
-        </div>
-      </div>
+      {children}
     </div>
   );
 };
 
-export const ProfileGridItemThreeRows: FC<GridProps> = ({ children, className = '' }) => {
+export const ProfileGridItemThreeRows: FC<GridProps> = ({
+  children,
+  className = '',
+}) => {
   return (
     <div className={cn('row-span-3 md:row-span-3 lg:row-span-3', className)}>
       {children}
@@ -84,32 +71,34 @@ export const ProfileGridItemThreeRows: FC<GridProps> = ({ children, className = 
   );
 };
 
-export const ProfileGridItemFour: FC<GridProps> = ({ children, className = '' }) => {
+export const ProfileGridItemFour: FC<GridProps> = ({
+  children,
+  className = '',
+}) => {
   return (
-    <div className={cn('col-span-11 md:col-span-11 lg:col-span-4', className)}>
+    <div className={cn('col-span-1 md:col-span-1 lg:col-span-1', className)}>
       {children}
     </div>
   );
 };
 
-export const ProfileGridItemEight: FC<GridProps> = ({ children, className = '' }) => {
+export const ProfileGridItemEight: FC<GridProps> = ({
+  children,
+  className = '',
+}) => {
   return (
-    <div
-      className={cn('col-span-11 mb-5 md:col-span-11 lg:col-span-7', className)}
-    >
+    <div className={cn('col-span-1 md:col-span-1 lg:col-span-1', className)}>
       {children}
     </div>
   );
 };
 
-export const ProfileGridItemTwelve: FC<GridProps> = ({ children, className = '' }) => {
+export const ProfileGridItemTwelve: FC<GridProps> = ({
+  children,
+  className = '',
+}) => {
   return (
-    <div
-      className={cn(
-        'col-span-12 mb-5 md:col-span-12 lg:col-span-12',
-        className
-      )}
-    >
+    <div className={cn('col-span-1 md:col-span-1 lg:col-span-1', className)}>
       {children}
     </div>
   );
