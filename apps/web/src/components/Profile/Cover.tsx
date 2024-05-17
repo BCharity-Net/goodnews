@@ -12,7 +12,7 @@ const Cover: FC<CoverProps> = ({ cover }) => {
   const hasCover = !cover.includes(STATIC_IMAGES_URL);
 
   return (
-    <div className="container mx-auto max-w-[1350px]">
+    <div className="container mx-auto max-w-[850px]">
       <div
         className="h-52 sm:h-[350px] md:rounded-b-2xl"
         style={{
@@ -24,9 +24,10 @@ const Cover: FC<CoverProps> = ({ cover }) => {
           })`,
           backgroundPosition: 'center center',
           backgroundRepeat: hasCover ? 'no-repeat' : 'repeat',
-          backgroundSize: hasCover ? 'cover' : '30%'
+          backgroundSize: hasCover ? 'cover' : '20%'
         }}
       />
+
     </div>
   );
 };
