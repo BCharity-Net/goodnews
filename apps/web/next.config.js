@@ -65,12 +65,12 @@ const nextConfig = {
   rewrites() {
     return [
       {
-        destination: `${'http://localhost:4783/'}/u/:match*`,
+        destination: `${process.env.NEXT_PUBLIC_OG_URL}/u/:match*`,
         has: [{ key: 'user-agent', type: 'header', value: allowedBots }],
         source: '/u/:match*'
       },
       {
-        destination: `${'http://localhost:4783/'}/posts/:match*`,
+        destination: `${process.env.NEXT_PUBLIC_OG_URL}/posts/:match*`,
         has: [{ key: 'user-agent', type: 'header', value: allowedBots }],
         source: '/posts/:match*'
       }
