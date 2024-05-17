@@ -3,7 +3,11 @@ import type { FC } from 'react';
 import NotificationIcon from '@components/Notification/NotificationIcon';
 import { STATIC_IMAGES_URL } from '@good/data/constants';
 import cn from '@good/ui/cn';
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  HomeIcon,
+  MagnifyingGlassIcon,
+  DotsHorizontalIcon
+} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -15,7 +19,6 @@ import MenuItems from './MenuItems';
 import MessagesIcon from './MessagesIcon';
 import ModIcon from './ModIcon';
 import MoreNavItems from './MoreNavItems';
-import Search from './Search';
 import StaffBar from './StaffBar';
 
 const Navbar: FC = () => {
@@ -28,22 +31,26 @@ const Navbar: FC = () => {
     current: boolean;
     name: string;
     url: string;
+    icon: React.ReactNode;
   }
 
-  const NavItem = ({ current, name, url }: NavItemProps) => {
+  const NavItem = ({ current, name, url, icon }: NavItemProps) => {
     return (
-      <Link
-        className={cn(
-          'cursor-pointer rounded-md px-2 py-1 text-left text-sm font-bold tracking-wide md:px-3',
-          {
-            'bg-gray-200 text-black dark:bg-gray-800 dark:text-white': current,
-            'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
-              !current
-          }
-        )}
-        href={url}
-      >
-        {name}
+      <Link href={url}>
+        <div
+          className={cn(
+            'flex cursor-pointer items-center rounded-full px-4 py-2 text-left text-lg font-bold tracking-wide transition-colors',
+            {
+              'bg-gray-200 text-black dark:bg-gray-800 dark:text-white':
+                current,
+              'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
+                !current
+            }
+          )}
+        >
+          {icon && <span className="mr-2">{icon}</span>}
+          {name}
+        </div>
       </Link>
     );
   };
@@ -53,11 +60,17 @@ const Navbar: FC = () => {
 
     return (
       <>
-        <NavItem current={pathname === '/'} name="Home" url="/" />
+        <NavItem
+          current={pathname === '/'}
+          name=""
+          url="/"
+          icon={<HomeIcon className="h-6 w-6" />}
+        />
         <NavItem
           current={pathname === '/explore'}
-          name="Explore"
+          name=""
           url="/explore"
+          icon={<MagnifyingGlassIcon className="h-6 w-6" />}
         />
         <MoreNavItems />
       </>
@@ -65,26 +78,12 @@ const Navbar: FC = () => {
   };
 
   return (
-    <header className="divider sticky top-0 z-10 w-full bg-white dark:bg-black">
-      {staffMode ? <StaffBar /> : null}
-      <div className="container mx-auto max-w-screen-xl px-5">
-        <div className="relative flex h-14 items-center justify-between sm:h-16">
-          <div className="flex items-center justify-start">
-            <button
-              className="inline-flex items-center justify-center rounded-md text-gray-500 focus:outline-none md:hidden"
-              onClick={() => setShowSearch(!showSearch)}
-              type="button"
-            >
-              {showSearch ? (
-                <XMarkIcon className="size-6" />
-              ) : (
-                <MagnifyingGlassIcon className="size-6" />
-              )}
-            </button>
-            <Link
-              className="hidden rounded-full outline-offset-8 md:block"
-              href="/"
-            >
+    <header className="h-full bg-white dark:bg-black">
+      {staffMode && <StaffBar />}
+      <div className="fixed left-10 top-10 flex h-full w-64 flex-col">
+        <div className="flex flex-col items-center space-y-4 p-4">
+          <Link href="/">
+            <div className="rounded-full outline-offset-8">
               <img
                 alt="Logo"
                 className="size-8"
@@ -92,45 +91,26 @@ const Navbar: FC = () => {
                 src={`${STATIC_IMAGES_URL}/app-icon/${appIcon}.png`}
                 width={32}
               />
-            </Link>
-            <div className="hidden sm:ml-6 md:block">
-              <div className="flex items-center space-x-4">
-                <div className="hidden md:block">
-                  <Search />
-                </div>
-                <NavItems />
-              </div>
             </div>
-          </div>
-          <Link
-            className={cn('md:hidden', !currentProfile?.id && 'ml-[60px]')}
-            href="/"
-          >
-            <img
-              alt="Logo"
-              className="size-7"
-              height={32}
-              src={`${STATIC_IMAGES_URL}/app-icon/${appIcon}.png`}
-              width={32}
-            />
           </Link>
-          <div className="flex items-center gap-4">
-            {currentProfile ? (
-              <>
-                <ModIcon />
-                <MessagesIcon />
-                <NotificationIcon />
-              </>
-            ) : null}
-            <MenuItems />
-          </div>
+          <nav className="mt-4 flex-grow space-y-2">
+            <NavItems />
+          </nav>
+        </div>
+        <div className="flex flex-col items-center space-y-4 p-4">
+          {currentProfile ? (
+            <>
+              <ModIcon />
+              <MessagesIcon />
+              <NotificationIcon />
+            </>
+          ) : null}
+          <MenuItems />
         </div>
       </div>
-      {showSearch ? (
-        <div className="m-3 md:hidden">
-          <Search />
-        </div>
-      ) : null}
+      {showSearch && (
+        <div className="m-3 md:hidden">{/* Search 组件在 Sidebar 中 */}</div>
+      )}
     </header>
   );
 };

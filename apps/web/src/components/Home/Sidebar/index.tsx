@@ -1,14 +1,15 @@
-import React, { FC } from 'react';
+import type { FC } from 'react';
+
+import SignupCard from '@components/Shared/Auth/SignupCard';
+import Footer from '@components/Shared/Footer';
 import { memo } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
-
+import Search from '@components/Shared/Navbar/Search';
 import EnableLensManager from './EnableLensManager';
 import GoodMembershipNft from './GoodMembershipNft';
 import SetProfile from './SetProfile';
 import StaffPicks from './StaffPicks';
 import WhoToFollow from './WhoToFollow';
-import SignupCard from '@components/Shared/Auth/SignupCard';
-import Footer from '@components/Shared/Footer';
 
 const Sidebar: FC = () => {
   const { currentProfile } = useProfileStore();
@@ -16,9 +17,14 @@ const Sidebar: FC = () => {
   const loggedOut = !loggedInWithProfile;
 
   return (
-    <div className="max-w-md lg:max-w-lg"> {/* Constrain the maximum width */}
+    <>
+      <div className="my-1">
+        <Search />
+      </div>
       {/* <Gitcoin /> */}
+
       {loggedOut && <SignupCard />}
+
       {loggedInWithProfile && <GoodMembershipNft />}
       {/* Onboarding steps */}
       {loggedInWithProfile && (
@@ -31,7 +37,7 @@ const Sidebar: FC = () => {
       <StaffPicks />
       {loggedInWithProfile && <WhoToFollow />}
       <Footer />
-    </div>
+    </>
   );
 };
 
