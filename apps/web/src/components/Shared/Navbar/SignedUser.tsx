@@ -37,7 +37,7 @@ const SignedUser: FC = () => {
   const Avatar = () => (
     <Image
       alt={currentProfile?.id}
-      className="size-8 cursor-pointer rounded-full border dark:border-gray-700"
+      className="size-12 cursor-pointer rounded-full border dark:border-gray-700"
       onError={({ currentTarget }) => {
         currentTarget.src = getLennyURL(currentProfile?.id);
       }}
