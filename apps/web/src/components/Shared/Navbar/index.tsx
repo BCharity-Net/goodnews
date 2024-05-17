@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { usePreferencesStore } from 'src/store/non-persisted/usePreferencesStore';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
+import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore'; // Import the store
 
 import MenuItems from './MenuItems';
 import MessagesIcon from './MessagesIcon';
@@ -25,34 +26,41 @@ const Navbar: FC = () => {
   const { currentProfile } = useProfileStore();
   const { staffMode } = useFeatureFlagsStore();
   const { appIcon } = usePreferencesStore();
+  const { setShowNewPostModal } = useGlobalModalStateStore(); // Use the modal state store
   const [showSearch, setShowSearch] = useState(false);
+
+  const openModal = () => {
+    setShowNewPostModal(true);
+  };
 
   interface NavItemProps {
     current: boolean;
     name: string;
-    url: string;
+    url?: string;
     icon: React.ReactNode;
+    onClick?: () => void; // Add onClick prop
   }
 
-  const NavItem = ({ current, name, url, icon }: NavItemProps) => {
-    return (
-      <Link href={url}>
-        <div
-          className={cn(
-            'flex cursor-pointer items-center rounded-full px-4 py-2 text-left text-lg font-bold tracking-wide transition-colors',
-            {
-              'bg-gray-200 text-black dark:bg-gray-800 dark:text-white':
-                current,
-              'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
-                !current
-            }
-          )}
-        >
-          {icon && <span className="mr-2">{icon}</span>}
-          {name}
-        </div>
-      </Link>
+  const NavItem = ({ current, name, url, icon, onClick }: NavItemProps) => {
+    const Content = (
+      <div
+        className={cn(
+          'flex cursor-pointer items-center rounded-full px-4 py-2 text-left text-lg font-bold tracking-wide transition-colors',
+          {
+            'bg-gray-200 text-black dark:bg-gray-800 dark:text-white':
+              current,
+            'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
+              !current
+          }
+        )}
+        onClick={onClick} // Use onClick prop
+      >
+        {icon && <span className="mr-2">{icon}</span>}
+        {name}
+      </div>
     );
+
+    return url ? <Link href={url}>{Content}</Link> : Content;
   };
 
   const NavItems = () => {
@@ -73,6 +81,12 @@ const Navbar: FC = () => {
           icon={<MagnifyingGlassIcon className="h-6 w-6" />}
         />
         <MoreNavItems />
+        <NavItem
+          current={pathname === '/create-post'}
+          name="Post"
+          icon={null}
+          onClick={openModal} // Use openModal on click
+        />
       </>
     );
   };
