@@ -65,6 +65,8 @@ const nextConfig = {
   rewrites() {
     return [
       {
+        // http://localhost:4783/
+        // process.env.NEXT_PUBLIC_OG_URL
         destination: `http://localhost:4783/u/:match*`,
         has: [{ key: 'user-agent', type: 'header', value: allowedBots }],
         source: '/u/:match*'

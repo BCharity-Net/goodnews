@@ -56,14 +56,14 @@ export const Modal: FC<ModalProps> = ({
               { 'sm:max-w-3xl': size === 'md' },
               { 'sm:max-w-lg': size === 'sm' },
               { 'sm:max-w-sm': size === 'xs' },
-              'inline-block w-full scale-100 rounded-xl bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle dark:bg-gray-800'
+              'inline-block w-full scale-100 rounded-xl bg-gray-800 text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle dark:bg-gray-800'
             )}
           >
             {title ? (
               <DialogTitle className="divider flex items-center justify-between px-5 py-3.5">
                 <div className="flex items-center space-x-2 font-bold">
                   {icon}
-                  <div>{title}</div>
+                  <div className='text-white'>{title}</div>
                 </div>
                 {onClose ? (
                   <button
