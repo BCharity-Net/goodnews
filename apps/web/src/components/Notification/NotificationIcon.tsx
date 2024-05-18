@@ -21,7 +21,7 @@ const NotificationIcon: FC = () => {
         }
       }}
     >
-      <BellIcon className="size-5 sm:size-6" />
+      <BellIcon className="size-12 sm:size-12" />
       {lastOpenedNotificationId !== latestNotificationId ? (
         <span className="size-2 rounded-full bg-red-500" />
       ) : null}

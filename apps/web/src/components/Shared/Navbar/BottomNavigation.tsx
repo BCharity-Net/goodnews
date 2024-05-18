@@ -30,6 +30,7 @@ const BottomNavigation = () => {
       <div
         className={cn('grid', currentProfile ? 'grid-cols-4' : 'grid-cols-3')}
       >
+        
         <Link className="mx-auto my-3" href="/">
           {isActivePath('/') ? (
             <HomeIconSolid className="size-6" />
@@ -37,6 +38,7 @@ const BottomNavigation = () => {
             <HomeIcon className="size-6" />
           )}
         </Link>
+        
         <Link className="mx-auto my-3" href="/explore">
           {isActivePath('/explore') ? (
             <Squares2X2IconSolid className="size-6" />
@@ -64,6 +66,7 @@ const BottomNavigation = () => {
           </Link>
         )}
       </div>
+      
     </div>
   );
 };

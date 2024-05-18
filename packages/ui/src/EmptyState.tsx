@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react';
 
-import { Card } from './Card';
+import { BlockCard } from './BlockCard';
 
 interface EmptyStateProps {
   hideCard?: boolean;
@@ -14,14 +14,13 @@ export const EmptyState: FC<EmptyStateProps> = ({
   message
 }) => {
   return (
-    <Card
-      className={hideCard ? 'border-0 !bg-transparent !shadow-none' : ''}
-      forceRounded
+    <BlockCard
+      className={hideCard ? 'border-0 !bg-transparent !shadow-none' : 'rounded-none'} 
     >
       <div className="grid justify-items-center space-y-2 p-5">
         <div>{icon}</div>
         <div>{message}</div>
       </div>
-    </Card>
+    </BlockCard>
   );
 };
