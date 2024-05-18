@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { usePreferencesStore } from 'src/store/non-persisted/usePreferencesStore';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
+import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore'; // Import the store
 
 import MenuItems from './MenuItems';
 import MessagesIcon from './MessagesIcon';
@@ -25,7 +26,12 @@ const Navbar: FC = () => {
   const { currentProfile } = useProfileStore();
   const { staffMode } = useFeatureFlagsStore();
   const { appIcon } = usePreferencesStore();
+  const { setShowNewPostModal } = useGlobalModalStateStore(); // Use the modal state store
   const [showSearch, setShowSearch] = useState(false);
+
+  const openModal = () => {
+    setShowNewPostModal(true);
+  };
 
   interface NavItemProps {
     current: boolean;
@@ -53,6 +59,8 @@ const Navbar: FC = () => {
         </div>
       </Link>
     );
+
+    return url ? <Link href={url}>{Content}</Link> : Content;
   };
 
   const NavItems = () => {
@@ -73,6 +81,12 @@ const Navbar: FC = () => {
           icon={<MagnifyingGlassIcon className="h-12 w-12" />}
         />
         <MoreNavItems />
+        <NavItem
+          current={pathname === '/create-post'}
+          name="Post"
+          icon={null}
+          onClick={openModal} // Use openModal on click
+        />
       </>
     );
   };
