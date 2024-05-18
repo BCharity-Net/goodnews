@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {!loggedInWithProfile && <Hero />}
+      {/*{!loggedInWithProfile && <Hero />}*/}
       <GridLayout>
         <GridItemEight className="space-y-5">
           {loggedInWithProfile ? (

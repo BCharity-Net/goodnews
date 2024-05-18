@@ -76,11 +76,12 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
   const misuseDetails = getMisuseDetails(profile.id);
 
   return (
-    <div className="mb-4 space-y-5 px-5 sm:px-0">
+    <div className="mb-4 space-y-5 px-5 sm:px-10">
       <div className="relative -mt-24 size-32 sm:-mt-32 sm:size-52">
         <Image
           alt={profile.id}
-          className="size-32 cursor-pointer rounded-xl bg-gray-200 ring-8 ring-gray-50 sm:size-52 dark:bg-gray-700 dark:ring-black"
+          className="size-32 cursor-pointer rounded-full bg-gray-200 ring-8 ring-gray-50 
+          sm:size-52 dark:bg-gray-700 dark:ring-black"
           height={128}
           onClick={() => setExpandedImage(getAvatar(profile, EXPANDED_AVATAR))}
           onError={({ currentTarget }) => {
@@ -96,25 +97,52 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
         />
       </div>
       <div className="space-y-1 py-2">
-        <div className="flex items-center gap-1.5 text-2xl font-bold">
-          <div className="truncate">{getProfile(profile).displayName}</div>
-          {isVerified(profile.id) ? (
-            <Tooltip content="Verified">
-              <CheckBadgeIcon className="text-brand-500 size-6" />
-            </Tooltip>
-          ) : null}
-          {hasMisused(profile.id) ? (
-            <Tooltip content={misuseDetails?.type}>
-              <ExclamationCircleIcon className="text-brand-500 size-6" />
-            </Tooltip>
-          ) : null}
-          {isSuspended ? (
-            <Tooltip content="Suspended">
-              <EyeSlashIcon className="text-brand-500 size-6" />
-            </Tooltip>
-          ) : null}
-          <Pro id={profile.id} />
-        </div>
+      <div className="flex items-center justify-between gap-1.5 text-2xl font-bold">
+  
+  <div className="truncate">{getProfile(profile).displayName}</div>
+  {isVerified(profile.id) ? (
+    <Tooltip content="Verified">
+      <CheckBadgeIcon className="text-brand-500 size-6" />
+    </Tooltip>
+  ) : null}
+  {hasMisused(profile.id) ? (
+    <Tooltip content={misuseDetails?.type}>
+      <ExclamationCircleIcon className="text-brand-500 size-6" />
+    </Tooltip>
+  ) : null}
+  {isSuspended ? (
+    <Tooltip content="Suspended">
+      <EyeSlashIcon className="text-brand-500 size-6" />
+    </Tooltip>
+  ) : null}
+  
+  <div className="flex items-center space-x-2">
+    <Pro id={profile.id} />
+    <p></p>
+  </div>
+
+  <div className="flex items-center space-x-2">
+    {followType !== FollowModuleType.RevertFollowModule ? (
+      <FollowUnfollowButton profile={profile} />
+    ) : null}
+    <ProfileMenu profile={profile} />
+  </div>
+
+  <div style={{ marginTop: '-10rem' }}>
+  <Button
+    onClick={() => push('/settings')}
+    outline
+    variant="secondary"
+    style={{ fontSize: '1.25rem', fontWeight: 'bold' }}
+  >
+    Edit Profile
+  </Button>
+</div>
+
+
+  
+</div>
+
         <div className="flex items-center space-x-3">
           <Slug
             className="text-sm sm:text-base"
@@ -129,38 +157,30 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
       </div>
       {profile?.metadata?.bio ? (
         <div className="markup linkify text-md mr-0 break-words sm:mr-10">
+          
           <Markup mentions={getMentions(profile?.metadata.bio)}>
             {profile?.metadata.bio}
+            
           </Markup>
         </div>
       ) : null}
+      
       <div className="space-y-5">
+      <MetaDetails icon={<ClockIcon className="size-4" />}>
+            Joined {formatDate(profile.createdAt)}
+          </MetaDetails>
         <ScamWarning profileId={profile.id} />
         <Followerings profile={profile} />
-        <div className="flex items-center space-x-2">
-          {currentProfile?.id === profile.id ? (
-            <Button
-              icon={<Cog6ToothIcon className="size-5" />}
-              onClick={() => push('/settings')}
-              outline
-              variant="secondary"
-            >
-              Edit Profile
-            </Button>
-          ) : followType !== FollowModuleType.RevertFollowModule ? (
-            <FollowUnfollowButton profile={profile} />
-          ) : null}
-          <ProfileMenu profile={profile} />
-        </div>
+      
+
+      
         {currentProfile?.id !== profile.id ? (
           <MutualFollowers
             handle={getProfile(profile).slug}
             profileId={profile.id}
           />
         ) : null}
-        <div className="divider w-full" />
-        <div className="space-y-2">
-          {staffMode ? (
+             {staffMode ? (
             <MetaDetails
               icon={<ShieldCheckIcon className="size-4 text-yellow-600" />}
             >
@@ -169,12 +189,15 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
                 href={getProfile(profile).staffLink}
               >
                 Open in Staff Tools
+                
               </Link>
             </MetaDetails>
           ) : null}
-          <MetaDetails icon={<HashtagIcon className="size-4" />}>
-            {parseInt(profile.id)}
-          </MetaDetails>
+
+         {/* <MetaDetails icon={<HashtagIcon className="size-4" />}>
+  {parseInt(profile.id)} This is the # number for profile id?
+      </MetaDetails> */}
+
           <Score id={profile.id} />
           {getProfileAttribute('location', profile?.metadata?.attributes) ? (
             <MetaDetails icon={<MapPinIcon className="size-4" />}>
@@ -260,10 +283,10 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
               </Link>
             </MetaDetails>
           ) : null}
-          <MetaDetails icon={<ClockIcon className="size-4" />}>
-            Joined {formatDate(profile.createdAt)}
-          </MetaDetails>
-        </div>
+       
+        <br></br>
+     
+        
       </div>
       {profile.invitedBy ? (
         <>
@@ -277,6 +300,7 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
         onchainIdentity={profile.onchainIdentity}
       />
       <InternalTools profile={profile} />
+
     </div>
   );
 };

@@ -10,7 +10,7 @@ import {
   PublicationType,
   usePublicationsQuery
 } from '@good/lens';
-import { Card, EmptyState, ErrorMessage } from '@good/ui';
+import { Card,BlockCard, EmptyState, ErrorMessage } from '@good/ui';
 import { RectangleStackIcon } from '@heroicons/react/24/outline';
 import { useEffect, useRef } from 'react';
 import { Virtuoso } from 'react-virtuoso';
@@ -173,7 +173,7 @@ const Feed: FC<FeedProps> = ({ handle, profileId, type }) => {
   }
 
   return (
-    <Card>
+    <BlockCard>
       <Virtuoso
         className="virtual-divider-list-window"
         computeItemKey={(index, publication) => `${publication.id}-${index}`}
@@ -201,7 +201,7 @@ const Feed: FC<FeedProps> = ({ handle, profileId, type }) => {
         }
         useWindowScroll
       />
-    </Card>
+    </BlockCard>
   );
 };
 
