@@ -10,7 +10,7 @@ const defaultMetadata: Metadata = {
     'good',
     'bcharity.net',
     'social media',
-    'lenster',
+    'good',
     'polygon',
     'lens',
     'lens protocol',

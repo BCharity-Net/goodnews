@@ -12,7 +12,7 @@
         <img src="https://therealsujitk-vercel-badge.vercel.app/?app=good" alt="Vercel">
     </a>
     <a href="https://www.gitpoap.io/gh/bcharity">
-        <img src="https://public-api.gitpoap.io/v1/repo/lensterxyz/good/badge" alt="Gitpoap">
+        <img src="https://public-api.gitpoap.io/v1/repo/goodxyz/good/badge" alt="Gitpoap">
     </a>
     <a href="https://status.bcharity.net">
         <img height="20px" src="https://betteruptime.com/status-badges/v1/monitor/dfaw.svg" alt="Uptime">

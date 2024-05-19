@@ -5,7 +5,6 @@ export const hashflags: Record<string, string> = {
   bitcoin: 'bitcoin',
   blacklivesmatter: 'blm',
   blm: 'blm',
-  bonsai: 'bonsai',
   btc: 'bitcoin',
   bts: 'bts',
   btsarmy: 'btsarmy',

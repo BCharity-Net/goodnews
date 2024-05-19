@@ -27,7 +27,7 @@ const MetaTags: FC<MetaTagsProps> = ({
         name="viewport"
       />
       <meta
-        content="good,bcharity.net,social media profile,social media,lenster,user profile,lens,lens protocol,decentralized,web3,Yoginth,@yoginth"
+        content="good,bcharity.net,social media profile,social media,good,user profile,lens,lens protocol,decentralized,web3,Yoginth,@yoginth"
         name="keywords"
       />
       <link href={url} rel="canonical" />

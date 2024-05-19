@@ -27,7 +27,7 @@ export const ADDRESS_PLACEHOLDER = '0x03Ba3...7EF';
 
 // Application
 export const APP_NAME = 'Good';
-export const DESCRIPTION = `${APP_NAME}.xyz is a decentralized, and permissionless social media app built with Lens Protocol 🌿`;
+export const DESCRIPTION = `${APP_NAME} is a decentralized, and permissionless social media app for the public good built with Lens Protocol`;
 export const APP_VERSION = packageJson.version;
 export const BRAND_COLOR = '#FB3A5D';
 export const MAX_UINT256 = 2n ** 256n - 1n;
@@ -76,7 +76,7 @@ export const PLACEHOLDER_IMAGE = `${STATIC_IMAGES_URL}/placeholder.webp`;
 export const MOONPAY_URL = IS_MAINNET
   ? 'https://buy.moonpay.com'
   : 'https://buy-sandbox.moonpay.com';
-export const GOOD_IMAGEKIT_URL = 'https://ik.imagekit.io/lensterimg';
+export const GOOD_IMAGEKIT_URL = 'https://ik.imagekit.io/bcharityimg';
 
 // Tokens / Keys
 export const WALLETCONNECT_PROJECT_ID = 'cd542acc70c2b548030f9901a52e70c8';
