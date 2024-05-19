@@ -3,8 +3,8 @@ import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { SETTINGS } from '@good/data/tracking';
 import {
-  OpenActionModuleType,
-  useGenerateModuleCurrencyApprovalDataLazyQuery
+    OpenActionModuleType,
+    useGenerateModuleCurrencyApprovalDataLazyQuery
 } from '@good/lens';
 import { Button, Modal, Spinner, WarningMessage } from '@good/ui';
 import errorToast from '@helpers/errorToast';

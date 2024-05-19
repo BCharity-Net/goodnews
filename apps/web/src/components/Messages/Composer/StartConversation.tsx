@@ -8,14 +8,14 @@ import { Button, EmptyState, Input } from '@good/ui';
 import cn from '@good/ui/cn';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  ArrowRightCircleIcon,
-  EnvelopeIcon,
-  NoSymbolIcon
+    ArrowRightCircleIcon,
+    EnvelopeIcon,
+    NoSymbolIcon
 } from '@heroicons/react/24/outline';
 import {
-  useCanMessage,
-  useConsent,
-  useStartConversation
+    useCanMessage,
+    useConsent,
+    useStartConversation
 } from '@xmtp/react-sdk';
 import { useEffect, useRef, useState } from 'react';
 import { useMessagesStore } from 'src/store/non-persisted/useMessagesStore';

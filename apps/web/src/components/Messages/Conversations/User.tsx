@@ -15,8 +15,8 @@ import { useDefaultProfileQuery } from '@good/lens';
 import { Image } from '@good/ui';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 

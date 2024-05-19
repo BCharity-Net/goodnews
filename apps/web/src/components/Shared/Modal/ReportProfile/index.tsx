@@ -7,14 +7,14 @@ import { PROFILE } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { useReportProfileMutation } from '@good/lens';
 import {
-  Button,
-  Card,
-  EmptyState,
-  ErrorMessage,
-  Form,
-  Spinner,
-  TextArea,
-  useZodForm
+    Button,
+    Card,
+    EmptyState,
+    ErrorMessage,
+    Form,
+    Spinner,
+    TextArea,
+    useZodForm
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';

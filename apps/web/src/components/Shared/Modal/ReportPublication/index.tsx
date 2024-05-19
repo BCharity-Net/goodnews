@@ -5,13 +5,13 @@ import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { useReportPublicationMutation } from '@good/lens';
 import {
-  Button,
-  EmptyState,
-  ErrorMessage,
-  Form,
-  Spinner,
-  TextArea,
-  useZodForm
+    Button,
+    EmptyState,
+    ErrorMessage,
+    Form,
+    Spinner,
+    TextArea,
+    useZodForm
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';

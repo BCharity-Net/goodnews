@@ -2,8 +2,8 @@ import type { FC } from 'react';
 import type { Address } from 'viem';
 
 import {
-  LensTransactionStatusType,
-  useLensTransactionStatusQuery
+    LensTransactionStatusType,
+    useLensTransactionStatusQuery
 } from '@good/lens';
 import { Spinner } from '@good/ui';
 import cn from '@good/ui/cn';

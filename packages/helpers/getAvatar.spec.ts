@@ -1,8 +1,8 @@
 import {
-  AVATAR,
-  GOOD_API_URL,
-  GOOD_IMAGEKIT_URL,
-  IPFS_GATEWAY
+    AVATAR,
+    GOOD_API_URL,
+    GOOD_IMAGEKIT_URL,
+    IPFS_GATEWAY
 } from '@good/data/constants';
 import { describe, expect, test } from 'vitest';
 

@@ -1,8 +1,8 @@
 import type {
-  DetailedHTMLProps,
-  ImgHTMLAttributes,
-  Ref,
-  SyntheticEvent
+    DetailedHTMLProps,
+    ImgHTMLAttributes,
+    Ref,
+    SyntheticEvent
 } from 'react';
 
 import { PLACEHOLDER_IMAGE } from '@good/data/constants';

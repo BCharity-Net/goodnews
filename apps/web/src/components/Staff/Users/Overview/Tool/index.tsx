@@ -1,8 +1,8 @@
 import type { Profile } from '@good/lens';
 import type { FC } from 'react';
 
+import MetaDetails from '@components/Shared/MetaDetails';
 import P2PRecommendation from '@components/Shared/Profile/P2PRecommendation';
-import MetaDetails from '@components/Shared/Staff/MetaDetails';
 import UserProfile from '@components/Shared/UserProfile';
 import { APP_NAME, GOOD_API_URL, IS_MAINNET } from '@good/data/constants';
 import getPreferences from '@good/helpers/api/getPreferences';

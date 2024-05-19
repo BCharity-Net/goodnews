@@ -1,10 +1,10 @@
 import { TEST_LENS_ID } from '@good/data/constants';
 
 import {
-  GARDENER_FEATURE_ID,
-  STAFF_FEATURE_ID,
-  STAFF_PICK_FEATURE_ID,
-  VERIFIED_FEATURE_ID
+    GARDENER_FEATURE_ID,
+    STAFF_FEATURE_ID,
+    STAFF_PICK_FEATURE_ID,
+    VERIFIED_FEATURE_ID
 } from '../../helpers/constants';
 import { prisma } from '../seed';
 

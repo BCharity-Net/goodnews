@@ -1,5 +1,5 @@
 import type { Feature } from '@good/types/good';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { GOOD_API_URL } from '@good/data/constants';
 import { STAFFTOOLS } from '@good/data/tracking';
@@ -19,7 +19,7 @@ const assignFeatureSchema = object({
 
 interface AssignProps {
   feature: Feature;
-  setShowAssignModal: (show: boolean) => void;
+  setShowAssignModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const Assign: FC<AssignProps> = ({ feature, setShowAssignModal }) => {

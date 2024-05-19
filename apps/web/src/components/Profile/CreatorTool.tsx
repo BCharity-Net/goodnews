@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import ToggleWrapper from '@components/Staff/Users/Overview/Tool/ToggleWrapper';
 import {
-  GOOD_API_URL,
-  STAFF_PICK_FEATURE_ID,
-  VERIFIED_FEATURE_ID
+    GOOD_API_URL,
+    STAFF_PICK_FEATURE_ID,
+    VERIFIED_FEATURE_ID
 } from '@good/data/constants';
 import { FeatureFlag } from '@good/data/feature-flags';
 import { CREATORTOOLS } from '@good/data/tracking';

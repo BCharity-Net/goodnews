@@ -1,21 +1,23 @@
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
+
 import { PROFILE } from '@good/data/tracking';
 import { TabButton } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  ChartBarIcon,
-  ChatBubbleLeftIcon,
-  FilmIcon,
-  PencilSquareIcon,
-  RectangleStackIcon
+    ChartBarIcon,
+    ChatBubbleLeftIcon,
+    FilmIcon,
+    PencilSquareIcon,
+    RectangleStackIcon
 } from '@heroicons/react/24/outline';
 import { ProfileFeedType } from 'src/enums';
 import { useProStore } from 'src/store/non-persisted/useProStore';
+
 import MediaFilter from './Filters/MediaFilter';
 
 interface FeedTypeProps {
   feedType: string;
-  setFeedType?: (type: ProfileFeedType) => void;
+  setFeedType?: Dispatch<SetStateAction<ProfileFeedType>>;
 }
 
 const FeedType: FC<FeedTypeProps> = ({ feedType, setFeedType }) => {
@@ -32,31 +34,31 @@ const FeedType: FC<FeedTypeProps> = ({ feedType, setFeedType }) => {
 
   return (
     <div className="flex items-center justify-between">
-      <div className="flex gap-3 px-5 pb-2 sm:mt-0 sm:px-0 md:pb-0"> 
+      <div className="mt-3 flex gap-3 overflow-x-auto px-5 pb-2 sm:mt-0 sm:px-0 md:pb-0">
         <TabButton
           active={feedType === ProfileFeedType.Feed}
-          icon={<PencilSquareIcon className="size-8" />}
+          icon={<PencilSquareIcon className="size-4" />}
           name="Feed"
           onClick={() => switchTab(ProfileFeedType.Feed)}
           type={ProfileFeedType.Feed.toLowerCase()}
         />
         <TabButton
           active={feedType === ProfileFeedType.Replies}
-          icon={<ChatBubbleLeftIcon className="size-8" />}
+          icon={<ChatBubbleLeftIcon className="size-4" />}
           name="Replies"
           onClick={() => switchTab(ProfileFeedType.Replies)}
           type={ProfileFeedType.Replies.toLowerCase()}
         />
         <TabButton
           active={feedType === ProfileFeedType.Media}
-          icon={<FilmIcon className="size-8" />}
+          icon={<FilmIcon className="size-4" />}
           name="Media"
           onClick={() => switchTab(ProfileFeedType.Media)}
           type={ProfileFeedType.Media.toLowerCase()}
         />
         <TabButton
           active={feedType === ProfileFeedType.Collects}
-          icon={<RectangleStackIcon className="size-8" />}
+          icon={<RectangleStackIcon className="size-4" />}
           name="Collected"
           onClick={() => switchTab(ProfileFeedType.Collects)}
           type={ProfileFeedType.Collects.toLowerCase()}
@@ -64,21 +66,14 @@ const FeedType: FC<FeedTypeProps> = ({ feedType, setFeedType }) => {
         {isPro && (
           <TabButton
             active={feedType === ProfileFeedType.Stats}
-            icon={<ChartBarIcon className="size-8" />}
+            icon={<ChartBarIcon className="size-4" />}
             name="Stats"
             onClick={() => switchTab(ProfileFeedType.Stats)}
             type={ProfileFeedType.Stats.toLowerCase()}
           />
         )}
       </div>
-      <div className="flex items-center gap-3 px-5">
-        {feedType === ProfileFeedType.Media && (
-          <>
-            <span>Media Filter:</span>
-            <MediaFilter />
-          </>
-        )}
-      </div>
+      {feedType === ProfileFeedType.Media ? <MediaFilter /> : null}
     </div>
   );
 };

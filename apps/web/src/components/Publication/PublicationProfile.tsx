@@ -8,8 +8,8 @@ import getProfile from '@good/helpers/getProfile';
 import hasMisused from '@good/helpers/hasMisused';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { memo } from 'react';

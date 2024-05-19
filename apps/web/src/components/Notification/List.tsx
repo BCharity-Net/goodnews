@@ -1,19 +1,19 @@
 import type {
-  ActedNotification as ActedNotificationType,
-  CommentNotification as CommentNotificationType,
-  FollowNotification as FollowNotificationType,
-  MentionNotification as MentionNotificationType,
-  MirrorNotification as MirrorNotificationType,
-  NotificationRequest,
-  QuoteNotification as QuoteNotificationType,
-  ReactionNotification as ReactionNotificationType
+    ActedNotification as ActedNotificationType,
+    CommentNotification as CommentNotificationType,
+    FollowNotification as FollowNotificationType,
+    MentionNotification as MentionNotificationType,
+    MirrorNotification as MirrorNotificationType,
+    NotificationRequest,
+    QuoteNotification as QuoteNotificationType,
+    ReactionNotification as ReactionNotificationType
 } from '@good/lens';
 import type { FC } from 'react';
 
 import {
-  CustomFiltersType,
-  NotificationType,
-  useNotificationsQuery
+    CustomFiltersType,
+    NotificationType,
+    useNotificationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import cn from '@good/ui/cn';

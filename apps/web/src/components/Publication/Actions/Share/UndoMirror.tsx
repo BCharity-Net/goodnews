@@ -1,5 +1,5 @@
 import type { AnyPublication } from '@good/lens';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { Errors } from '@good/data/errors';
 import { PUBLICATION } from '@good/data/tracking';
@@ -17,7 +17,7 @@ import { useProfileStore } from 'src/store/persisted/useProfileStore';
 interface MirrorProps {
   isLoading: boolean;
   publication: AnyPublication;
-  setIsLoading: (isLoading: boolean) => void;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
 
 const UndoMirror: FC<MirrorProps> = ({

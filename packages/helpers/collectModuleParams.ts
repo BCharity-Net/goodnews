@@ -1,8 +1,8 @@
 import type {
-  AmountInput,
-  CollectActionModuleInput,
-  Profile,
-  RecipientDataInput
+    AmountInput,
+    CollectActionModuleInput,
+    Profile,
+    RecipientDataInput
 } from '@good/lens';
 import type { CollectModuleType } from '@good/types/good';
 

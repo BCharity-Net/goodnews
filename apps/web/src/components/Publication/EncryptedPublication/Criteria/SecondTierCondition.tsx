@@ -1,6 +1,6 @@
 import type {
-  SecondTierCondition as SecondTierConditionType,
-  ThirdTierCondition as ThirdTierConditionType
+    SecondTierCondition as SecondTierConditionType,
+    ThirdTierCondition as ThirdTierConditionType
 } from '@good/lens';
 import type { FC } from 'react';
 

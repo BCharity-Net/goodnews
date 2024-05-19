@@ -1,7 +1,7 @@
 import {
-  IPFS_GATEWAY,
-  LENS_MEDIA_SNAPSHOT_URL,
-  PLACEHOLDER_IMAGE
+    IPFS_GATEWAY,
+    LENS_MEDIA_SNAPSHOT_URL,
+    PLACEHOLDER_IMAGE
 } from '@good/data/constants';
 import { describe, expect, test } from 'vitest';
 

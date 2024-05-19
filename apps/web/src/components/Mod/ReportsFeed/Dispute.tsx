@@ -1,11 +1,11 @@
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
 import formatDate from '@good/helpers/datetime/formatDate';
 import {
-  type ModReport,
-  type Profile,
-  useModDisputeReportMutation
+    useModDisputeReportMutation,
+    type ModReport,
+    type Profile
 } from '@good/lens';
 import { Button, Form, TextArea, useZodForm } from '@good/ui';
 import errorToast from '@helpers/errorToast';
@@ -18,7 +18,7 @@ const disputeSchema = object({
 
 interface DisputeProps {
   report: ModReport;
-  setShowDisputeModal: (show: boolean) => void;
+  setShowDisputeModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const Dispute: FC<DisputeProps> = ({ report, setShowDisputeModal }) => {

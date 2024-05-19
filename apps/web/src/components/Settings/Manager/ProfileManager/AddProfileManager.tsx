@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import SearchProfiles from '@components/Shared/SearchProfiles';
 import { LensHub } from '@good/abis';
@@ -8,9 +8,9 @@ import { SETTINGS } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  ChangeProfileManagerActionType,
-  useBroadcastOnchainMutation,
-  useCreateChangeProfileManagersTypedDataMutation
+    ChangeProfileManagerActionType,
+    useBroadcastOnchainMutation,
+    useCreateChangeProfileManagersTypedDataMutation
 } from '@good/lens';
 import { Button, Spinner } from '@good/ui';
 import errorToast from '@helpers/errorToast';
@@ -26,7 +26,7 @@ import { isAddress } from 'viem';
 import { useSignTypedData, useWriteContract } from 'wagmi';
 
 interface AddProfileManagerProps {
-  setShowAddManagerModal: (show: boolean) => void;
+  setShowAddManagerModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const AddProfileManager: FC<AddProfileManagerProps> = ({

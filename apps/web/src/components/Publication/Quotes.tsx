@@ -6,8 +6,8 @@ import PublicationListShimmer from '@components/Shared/Shimmer/PublicationListSh
 import { CustomFiltersType, LimitType, usePublicationsQuery } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import {
-  ArrowLeftIcon,
-  ChatBubbleBottomCenterTextIcon
+    ArrowLeftIcon,
+    ChatBubbleBottomCenterTextIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Virtuoso } from 'react-virtuoso';

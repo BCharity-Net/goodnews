@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+
 import MetaTags from '@components/Common/MetaTags';
 import NotLoggedIn from '@components/Shared/NotLoggedIn';
 import { APP_NAME } from '@good/data/constants';
@@ -12,9 +13,6 @@ import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import FeedType from './FeedType';
 import List from './List';
 import Settings from './Settings';
-import Sidebar from '../Home/Sidebar';
-import Link from 'next/link';
-import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 const Notification: NextPage = () => {
   const {
@@ -45,33 +43,16 @@ const Notification: NextPage = () => {
   }
 
   return (
-    <>
+    <div className="flex grow justify-center px-0 py-8 sm:px-6 lg:px-8">
       <MetaTags title={`Notifications • ${APP_NAME}`} />
-      <div className="flex grow justify-center px-0 py-8 sm:px-6 lg:px-8">
-        <div className="flex w-full max-w-4xl">
-          <div className="flex flex-grow flex-col border-l border-r border-gray-700 px-4">
-            <div className="flex items-center justify-between bg-black p-4 text-white">
-              <div className="flex items-center">
-                <Link href="/" passHref>
-                  <ArrowLeftIcon className="h-8 w-8 cursor-pointer text-white" />
-                </Link>
-                <div className="ml-2">
-                  <h2 className="text-lg font-semibold">Notifications</h2>
-                </div>
-              </div>
-              <Settings />
-            </div>
-            <div className="flex flex-wrap justify-between gap-3 pb-2">
-              <FeedType feedType={feedType} />
-            </div>
-            <List feedType={feedType} />
-          </div>
-          <div className="hidden pl-8 lg:block lg:w-1/3">
-            <Sidebar />
-          </div>
+      <div className="w-full max-w-4xl space-y-3">
+        <div className="flex flex-wrap justify-between gap-3 pb-2">
+          <FeedType feedType={feedType} />
+          <Settings />
         </div>
+        <List feedType={feedType} />
       </div>
-    </>
+    </div>
   );
 };
 

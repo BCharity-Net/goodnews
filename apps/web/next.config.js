@@ -32,6 +32,12 @@ const nextConfig = {
       },
       {
         destination:
+          'https://zora.co/collect/zora:0xf2086c0eaa8b34b0eef73920d0b1b53f4146e2e4/1?referrer=0x03Ba34f6Ea1496fa316873CF8350A3f7eaD317EF',
+        permanent: true,
+        source: '/zorb'
+      },
+      {
+        destination:
           'https://explorer.gitcoin.co/#/round/42161/25/1?utm_source=bcharity.net',
         permanent: true,
         source: '/gitcoin'
@@ -65,14 +71,12 @@ const nextConfig = {
   rewrites() {
     return [
       {
-        // http://localhost:4783/
-        // process.env.NEXT_PUBLIC_OG_URL
-        destination: `http://localhost:4783/u/:match*`,
+        destination: `${process.env.NEXT_PUBLIC_OG_URL}/u/:match*`,
         has: [{ key: 'user-agent', type: 'header', value: allowedBots }],
         source: '/u/:match*'
       },
       {
-        destination: `http://localhost:4783/posts/:match*`,
+        destination: `${process.env.NEXT_PUBLIC_OG_URL}/posts/:match*`,
         has: [{ key: 'user-agent', type: 'header', value: allowedBots }],
         source: '/posts/:match*'
       }
@@ -83,7 +87,7 @@ const nextConfig = {
 
 module.exports = withSentryConfig(
   nextConfig,
-  { org: 'bcharity', project: 'good', silent: true },
+  { org: 'goodverse', project: 'web', silent: true },
   {
     automaticVercelMonitors: true,
     disableLogger: true,

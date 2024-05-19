@@ -13,8 +13,8 @@ import { useProfileLazyQuery } from '@good/lens';
 import { Card, Image } from '@good/ui';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import plur from 'plur';

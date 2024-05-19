@@ -1,13 +1,13 @@
 import type { MirrorablePublication } from '@good/lens';
 import type { FC } from 'react';
 
-import MetaDetails from '@components/Shared/Staff/MetaDetails';
+import MetaDetails from '@components/Shared/MetaDetails';
 import { isCommentPublication } from '@good/helpers/publicationHelpers';
 import { Card } from '@good/ui';
 import {
-  HashtagIcon,
-  RectangleStackIcon,
-  TagIcon
+    HashtagIcon,
+    RectangleStackIcon,
+    TagIcon
 } from '@heroicons/react/24/outline';
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
 

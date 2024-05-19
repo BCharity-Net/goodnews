@@ -8,14 +8,14 @@ import { Image } from '@good/ui';
 import cn from '@good/ui/cn';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import { useEditor } from 'prosekit/react';
 import {
-  AutocompleteItem,
-  AutocompleteList,
-  AutocompletePopover
+    AutocompleteItem,
+    AutocompleteList,
+    AutocompletePopover
 } from 'prosekit/react/autocomplete';
 import { useState } from 'react';
 import useMentionQuery from 'src/hooks/prosekit/useMentionQuery';

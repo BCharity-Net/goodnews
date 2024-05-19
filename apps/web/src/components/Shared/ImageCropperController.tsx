@@ -3,8 +3,8 @@ import type { Dispatch, FC } from 'react';
 
 import ImageCropper from '@good/image-cropper/ImageCropper';
 import {
-  MagnifyingGlassMinusIcon,
-  MagnifyingGlassPlusIcon
+    MagnifyingGlassMinusIcon,
+    MagnifyingGlassPlusIcon
 } from '@heroicons/react/24/outline';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';

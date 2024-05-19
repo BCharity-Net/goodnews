@@ -1,10 +1,10 @@
 import type {
-  AnyPublication,
-  LegacyMultirecipientFeeCollectModuleSettings,
-  LegacySimpleCollectModuleSettings,
-  MultirecipientFeeCollectOpenActionSettings,
-  OpenActionModule,
-  SimpleCollectOpenActionSettings
+    AnyPublication,
+    LegacyMultirecipientFeeCollectModuleSettings,
+    LegacySimpleCollectModuleSettings,
+    MultirecipientFeeCollectOpenActionSettings,
+    OpenActionModule,
+    SimpleCollectOpenActionSettings
 } from '@good/lens';
 import type { FC } from 'react';
 
@@ -20,13 +20,13 @@ import nFormatter from '@good/helpers/nFormatter';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import { HelpTooltip, Tooltip, WarningMessage } from '@good/ui';
 import {
-  BanknotesIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  PhotoIcon,
-  PuzzlePieceIcon,
-  UsersIcon
+    BanknotesIcon,
+    CheckCircleIcon,
+    ClockIcon,
+    CurrencyDollarIcon,
+    PhotoIcon,
+    PuzzlePieceIcon,
+    UsersIcon
 } from '@heroicons/react/24/outline';
 import { useCounter } from '@uidotdev/usehooks';
 import Link from 'next/link';

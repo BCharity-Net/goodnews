@@ -5,10 +5,10 @@ import { HOME } from '@good/data/tracking';
 import { TabButton } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  CheckCircleIcon,
-  CurrencyDollarIcon,
-  LightBulbIcon,
-  UserGroupIcon
+    CheckCircleIcon,
+    CurrencyDollarIcon,
+    LightBulbIcon,
+    UserGroupIcon
 } from '@heroicons/react/24/outline';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 

@@ -3,15 +3,15 @@ import type { MentionAttrs } from 'prosekit/extensions/mention';
 import { HANDLE_PREFIX } from '@good/data/constants';
 import { Regex } from '@good/data/regex';
 import {
-  defineBaseCommands,
-  defineBaseKeymap,
-  defineDoc,
-  defineHistory,
-  defineMarkSpec,
-  defineNodeSpec,
-  defineParagraph,
-  defineText,
-  union
+    defineBaseCommands,
+    defineBaseKeymap,
+    defineDoc,
+    defineHistory,
+    defineMarkSpec,
+    defineNodeSpec,
+    defineParagraph,
+    defineText,
+    union
 } from 'prosekit/core';
 import { defineBold } from 'prosekit/extensions/bold';
 import { defineHeading } from 'prosekit/extensions/heading';

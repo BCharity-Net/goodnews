@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
 import {
-  ARWEAVE_GATEWAY,
-  IPFS_GATEWAY,
-  VIDEO_THUMBNAIL
+    ARWEAVE_GATEWAY,
+    IPFS_GATEWAY,
+    VIDEO_THUMBNAIL
 } from '@good/data/constants';
 import imageKit from '@good/helpers/imageKit';
 import sanitizeDStorageUrl from '@good/helpers/sanitizeDStorageUrl';

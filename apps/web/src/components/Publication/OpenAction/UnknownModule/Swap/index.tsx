@@ -1,15 +1,15 @@
 import type {
-  MirrorablePublication,
-  UnknownOpenActionModuleSettings
+    MirrorablePublication,
+    UnknownOpenActionModuleSettings
 } from '@good/lens';
 import type { UniswapQuote } from '@good/types/good';
 import type { FC } from 'react';
 import type { Address } from 'viem';
 
 import {
-  KNOWN_ATTRIBUTES,
-  REWARDS_ADDRESS,
-  WMATIC_ADDRESS
+    KNOWN_ATTRIBUTES,
+    REWARDS_ADDRESS,
+    WMATIC_ADDRESS
 } from '@good/data/constants';
 import { PUBLICATION } from '@good/data/tracking';
 import getPublicationAttribute from '@good/helpers/getPublicationAttribute';
@@ -27,14 +27,14 @@ import useActOnUnknownOpenAction from 'src/hooks/useActOnUnknownOpenAction';
 import usePreventScrollOnNumberInput from 'src/hooks/usePreventScrollOnNumberInput';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import {
-  concat,
-  decodeAbiParameters,
-  encodeAbiParameters,
-  formatUnits,
-  pad,
-  parseEther,
-  toBytes,
-  toHex
+    concat,
+    decodeAbiParameters,
+    encodeAbiParameters,
+    formatUnits,
+    pad,
+    parseEther,
+    toBytes,
+    toHex
 } from 'viem';
 import { useAccount, useBalance } from 'wagmi';
 

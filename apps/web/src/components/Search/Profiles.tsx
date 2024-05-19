@@ -5,9 +5,9 @@ import UserProfilesShimmer from '@components/Shared/Shimmer/UserProfilesShimmer'
 import UserProfile from '@components/Shared/UserProfile';
 import { ProfileLinkSource } from '@good/data/tracking';
 import {
-  CustomFiltersType,
-  LimitType,
-  useSearchProfilesQuery
+    CustomFiltersType,
+    LimitType,
+    useSearchProfilesQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import { UsersIcon } from '@heroicons/react/24/outline';

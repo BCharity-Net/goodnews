@@ -1,9 +1,9 @@
 import { ApolloClient, from, HttpLink, InMemoryCache } from '@apollo/client';
 import {
-  TEST_LENS_ID,
-  TEST_NON_STAFF_LENS_ID,
-  TEST_PK,
-  TEST_WALLET_ADDRESS
+    TEST_LENS_ID,
+    TEST_NON_STAFF_LENS_ID,
+    TEST_PK,
+    TEST_WALLET_ADDRESS
 } from '@good/data/constants';
 import LensEndpoint from '@good/data/lens-endpoints';
 import { AuthenticateDocument, ChallengeDocument } from '@good/lens';

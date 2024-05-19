@@ -10,11 +10,11 @@ import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions
 import getProfile from '@good/helpers/getProfile';
 import getSignature from '@good/helpers/getSignature';
 import {
-  useBlockMutation,
-  useBroadcastOnchainMutation,
-  useCreateBlockProfilesTypedDataMutation,
-  useCreateUnblockProfilesTypedDataMutation,
-  useUnblockMutation
+    useBlockMutation,
+    useBroadcastOnchainMutation,
+    useCreateBlockProfilesTypedDataMutation,
+    useCreateUnblockProfilesTypedDataMutation,
+    useUnblockMutation
 } from '@good/lens';
 import { Alert } from '@good/ui';
 import errorToast from '@helpers/errorToast';

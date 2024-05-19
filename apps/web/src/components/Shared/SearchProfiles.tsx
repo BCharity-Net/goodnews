@@ -2,9 +2,9 @@ import type { Profile, ProfileSearchRequest } from '@good/lens';
 import type { ChangeEvent, FC } from 'react';
 
 import {
-  CustomFiltersType,
-  LimitType,
-  useSearchProfilesLazyQuery
+    CustomFiltersType,
+    LimitType,
+    useSearchProfilesLazyQuery
 } from '@good/lens';
 import { Card, Input } from '@good/ui';
 

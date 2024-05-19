@@ -1,12 +1,12 @@
 import type { ProfileOnchainIdentity } from '@good/lens';
 import type { FC } from 'react';
 
-import MetaDetails from '@components/Shared/Staff/MetaDetails';
+import MetaDetails from '@components/Shared/MetaDetails';
 import {
-  GlobeAltIcon,
-  HashtagIcon,
-  KeyIcon,
-  UserCircleIcon
+    GlobeAltIcon,
+    HashtagIcon,
+    KeyIcon,
+    UserCircleIcon
 } from '@heroicons/react/24/outline';
 import { AdjustmentsVerticalIcon } from '@heroicons/react/24/solid';
 

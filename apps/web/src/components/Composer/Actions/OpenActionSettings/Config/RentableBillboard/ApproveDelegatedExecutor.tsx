@@ -1,3 +1,5 @@
+import type { Dispatch, FC, SetStateAction } from 'react';
+
 import Loader from '@components/Shared/Loader';
 import { LensHub } from '@good/abis';
 import { Errors } from '@good/data';
@@ -5,7 +7,7 @@ import { LENS_HUB } from '@good/data/constants';
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
 import { Button } from '@good/ui';
 import errorToast from '@helpers/errorToast';
-import { type FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';
 import { useNonceStore } from 'src/store/non-persisted/useNonceStore';
@@ -14,7 +16,7 @@ import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { useTransaction, useWriteContract } from 'wagmi';
 
 interface ApproveDelegatedExecutorProps {
-  setShowForm: (showForm: boolean) => void;
+  setShowForm: Dispatch<SetStateAction<boolean>>;
 }
 
 const ApproveDelegatedExecutor: FC<ApproveDelegatedExecutorProps> = ({

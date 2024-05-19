@@ -5,11 +5,11 @@ import { LENS_HUB } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { SETTINGS } from '@good/data/tracking';
 import {
-  Button,
-  GridItemEight,
-  GridItemFour,
-  GridLayout,
-  Spinner
+    Button,
+    GridItemEight,
+    GridItemFour,
+    GridLayout,
+    Spinner
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';

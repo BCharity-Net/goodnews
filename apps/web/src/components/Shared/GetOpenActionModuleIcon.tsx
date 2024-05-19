@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import { OpenActionModuleType } from '@good/lens';
 import {
-  BriefcaseIcon,
-  DocumentPlusIcon,
-  UserGroupIcon
+    BriefcaseIcon,
+    DocumentPlusIcon,
+    UserGroupIcon
 } from '@heroicons/react/24/outline';
 
 interface GetOpenActionModuleIconProps {

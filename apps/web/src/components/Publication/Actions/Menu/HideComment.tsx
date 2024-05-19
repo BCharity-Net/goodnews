@@ -1,7 +1,7 @@
 import type {
-  HideCommentRequest,
-  MirrorablePublication,
-  UnhideCommentRequest
+    HideCommentRequest,
+    MirrorablePublication,
+    UnhideCommentRequest
 } from '@good/lens';
 import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';

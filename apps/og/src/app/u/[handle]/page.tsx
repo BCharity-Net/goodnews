@@ -9,8 +9,8 @@ import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
   LimitType,
   ProfileDocument,
-  PublicationsDocument,
-  PublicationType
+  PublicationType,
+  PublicationsDocument
 } from '@good/lens';
 import { apolloClient } from '@good/lens/apollo';
 import defaultMetadata from 'src/defaultMetadata';

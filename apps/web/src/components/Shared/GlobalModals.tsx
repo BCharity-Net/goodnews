@@ -5,10 +5,10 @@ import ReportPublication from '@components/Shared/Modal/ReportPublication';
 import { APP_NAME } from '@good/data/constants';
 import { Modal } from '@good/ui';
 import {
-  ArrowRightCircleIcon,
-  CircleStackIcon,
-  ShieldCheckIcon,
-  TicketIcon
+    ArrowRightCircleIcon,
+    CircleStackIcon,
+    ShieldCheckIcon,
+    TicketIcon
 } from '@heroicons/react/24/outline';
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';
 import { usePublicationAudioStore } from 'src/store/non-persisted/publication/usePublicationAudioStore';

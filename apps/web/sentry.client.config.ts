@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/nextjs';
 
 Sentry.init({
   debug: false,
-  dsn: 'https://88dba7b9cb70d4085c508247a4b155f2@o4507229179609088.ingest.us.sentry.io/4507281071341568',
+  dsn: 'https://789bc5c061a50abc28b8776d305a3c89@o4507284811808768.ingest.us.sentry.io/4507284816003072',
   enabled: process.env.NODE_ENV === 'production',
   ignoreErrors: [
     'ResizeObserver loop completed with undelivered notifications.',

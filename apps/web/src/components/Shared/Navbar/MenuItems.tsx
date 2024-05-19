@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import Link from 'next/link';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
-import LoginButton from './LoginButton';
+import LoginButton from '../LoginButton';
 import SignedUser from './SignedUser';
 import SignupButton from './SignupButton';
 
@@ -21,7 +21,7 @@ const MenuItems: FC = () => {
   }
 
   return (
-    <div className="flex flex-col items-center space-y-2">
+    <div className="flex items-center space-x-2">
       <SignupButton />
       <LoginButton />
     </div>

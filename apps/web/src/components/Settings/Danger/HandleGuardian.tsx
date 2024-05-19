@@ -6,19 +6,19 @@ import { LENS_HANDLES } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { SETTINGS } from '@good/data/tracking';
 import {
-  Button,
-  Card,
-  CardHeader,
-  Modal,
-  Spinner,
-  WarningMessage
+    Button,
+    Card,
+    CardHeader,
+    Modal,
+    Spinner,
+    WarningMessage
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  ExclamationTriangleIcon,
-  LockClosedIcon,
-  LockOpenIcon
+    ExclamationTriangleIcon,
+    LockClosedIcon,
+    LockOpenIcon
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';

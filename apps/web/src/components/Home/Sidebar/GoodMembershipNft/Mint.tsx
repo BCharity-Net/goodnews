@@ -58,7 +58,7 @@ const Mint: FC<MintProps> = ({ onCollectSuccess }) => {
           vibrant future of{' '}
           <Link
             className="font-bold"
-            href="https://github.com/goodxyz/good"
+            href="https://github.com/bcharity-net/good"
             target="_blank"
           >
             open-source

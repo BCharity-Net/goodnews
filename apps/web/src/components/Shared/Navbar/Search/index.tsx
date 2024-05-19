@@ -6,9 +6,9 @@ import UserProfile from '@components/Shared/UserProfile';
 import { ProfileLinkSource, SEARCH } from '@good/data/tracking';
 import getProfile from '@good/helpers/getProfile';
 import {
-  CustomFiltersType,
-  LimitType,
-  useSearchProfilesLazyQuery
+    CustomFiltersType,
+    LimitType,
+    useSearchProfilesLazyQuery
 } from '@good/lens';
 import { Card, Input } from '@good/ui';
 import cn from '@good/ui/cn';

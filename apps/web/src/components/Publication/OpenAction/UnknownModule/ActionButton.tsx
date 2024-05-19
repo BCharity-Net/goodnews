@@ -1,7 +1,7 @@
 import type {
-  Amount,
-  ApprovedAllowanceAmountResult,
-  UnknownOpenActionModuleSettings
+    Amount,
+    ApprovedAllowanceAmountResult,
+    UnknownOpenActionModuleSettings
 } from '@good/lens';
 import type { FC, ReactNode } from 'react';
 

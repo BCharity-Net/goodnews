@@ -8,8 +8,8 @@ import { SETTINGS } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  useBroadcastOnchainMutation,
-  useCreateChangeProfileManagersTypedDataMutation
+    useBroadcastOnchainMutation,
+    useCreateChangeProfileManagersTypedDataMutation
 } from '@good/lens';
 import { Button, Spinner } from '@good/ui';
 import cn from '@good/ui/cn';

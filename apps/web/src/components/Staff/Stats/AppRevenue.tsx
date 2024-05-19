@@ -1,11 +1,7 @@
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
-import {
-  APP_NAME,
-  GOOD_API_URL,
-  STATIC_IMAGES_URL
-} from '@good/data/constants';
+import { APP_NAME, GOOD_API_URL, STATIC_IMAGES_URL } from '@good/data/constants';
 import { CardHeader, ErrorMessage, NumberedStat } from '@good/ui';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';

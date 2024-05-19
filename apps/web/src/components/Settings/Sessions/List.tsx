@@ -6,9 +6,9 @@ import { Errors } from '@good/data';
 import { SETTINGS } from '@good/data/tracking';
 import formatDate from '@good/helpers/datetime/formatDate';
 import {
-  LimitType,
-  useApprovedAuthenticationsQuery,
-  useRevokeAuthenticationMutation
+    LimitType,
+    useApprovedAuthenticationsQuery,
+    useRevokeAuthenticationMutation
 } from '@good/lens';
 import { Button, EmptyState, ErrorMessage } from '@good/ui';
 import errorToast from '@helpers/errorToast';

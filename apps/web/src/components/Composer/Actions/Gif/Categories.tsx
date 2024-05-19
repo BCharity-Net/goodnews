@@ -1,12 +1,12 @@
 import type { Category } from '@good/types/giphy';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { GIPHY_KEY } from '@good/data/constants';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 interface CategoriesProps {
-  setSearchText: (searchText: string) => void;
+  setSearchText: Dispatch<SetStateAction<string>>;
 }
 
 const Categories: FC<CategoriesProps> = ({ setSearchText }) => {

@@ -3,9 +3,9 @@ import { LENS_API_URL } from '@good/data/constants';
 import parseJwt from '@good/helpers/parseJwt';
 import axios from 'axios';
 import {
-  hydrateAuthTokens,
-  signIn,
-  signOut
+    hydrateAuthTokens,
+    signIn,
+    signOut
 } from 'src/store/persisted/useAuthStore';
 import { v4 as uuid } from 'uuid';
 

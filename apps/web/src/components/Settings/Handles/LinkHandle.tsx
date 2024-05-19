@@ -12,18 +12,18 @@ import { SETTINGS } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  useBroadcastOnchainMutation,
-  useCreateLinkHandleToProfileTypedDataMutation,
-  useLinkHandleToProfileMutation,
-  useOwnedHandlesQuery
+    useBroadcastOnchainMutation,
+    useCreateLinkHandleToProfileTypedDataMutation,
+    useLinkHandleToProfileMutation,
+    useOwnedHandlesQuery
 } from '@good/lens';
 import { Button, EmptyState, Spinner } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  AtSymbolIcon,
-  MinusCircleIcon,
-  PlusCircleIcon
+    AtSymbolIcon,
+    MinusCircleIcon,
+    PlusCircleIcon
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';

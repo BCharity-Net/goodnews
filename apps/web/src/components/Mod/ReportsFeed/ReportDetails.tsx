@@ -7,10 +7,10 @@ import SmallUserProfile from '@components/Shared/SmallUserProfile';
 import formatDate from '@good/helpers/datetime/formatDate';
 import { Button, Modal } from '@good/ui';
 import {
-  ChatBubbleOvalLeftEllipsisIcon,
-  EyeIcon,
-  FlagIcon,
-  HandRaisedIcon
+    ChatBubbleOvalLeftEllipsisIcon,
+    EyeIcon,
+    FlagIcon,
+    HandRaisedIcon
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 

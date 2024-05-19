@@ -6,9 +6,9 @@ import { EditorRegex } from '@good/data/regex';
 import cn from '@good/ui/cn';
 import { useEditor } from 'prosekit/react';
 import {
-  AutocompleteItem,
-  AutocompleteList,
-  AutocompletePopover
+    AutocompleteItem,
+    AutocompleteList,
+    AutocompletePopover
 } from 'prosekit/react/autocomplete';
 import { useState } from 'react';
 import useEmojiQuery from 'src/hooks/prosekit/useEmojiQuery';

@@ -11,10 +11,10 @@ import { SETTINGS } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  ChangeProfileManagerActionType,
-  useBroadcastOnchainMutation,
-  useCreateChangeProfileManagersTypedDataMutation,
-  useProfileManagersQuery
+    ChangeProfileManagerActionType,
+    useBroadcastOnchainMutation,
+    useCreateChangeProfileManagersTypedDataMutation,
+    useProfileManagersQuery
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button, EmptyState, ErrorMessage, Spinner } from '@good/ui';

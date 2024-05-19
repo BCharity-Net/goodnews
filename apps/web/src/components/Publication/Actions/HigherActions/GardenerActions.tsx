@@ -1,6 +1,6 @@
 import type {
-  MirrorablePublication,
-  ReportPublicationRequest
+    MirrorablePublication,
+    ReportPublicationRequest
 } from '@good/lens';
 import type { FC, ReactNode } from 'react';
 
@@ -8,9 +8,9 @@ import { APP_NAME } from '@good/data/constants';
 import { GARDENER } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import {
-  PublicationReportingReason,
-  PublicationReportingSpamSubreason,
-  useReportPublicationMutation
+    PublicationReportingReason,
+    PublicationReportingSpamSubreason,
+    useReportPublicationMutation
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button } from '@good/ui';

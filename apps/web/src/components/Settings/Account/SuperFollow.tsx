@@ -2,10 +2,10 @@ import type { FC } from 'react';
 
 import { LensHub } from '@good/abis';
 import {
-  ADDRESS_PLACEHOLDER,
-  DEFAULT_COLLECT_TOKEN,
-  LENS_HUB,
-  STATIC_IMAGES_URL
+    ADDRESS_PLACEHOLDER,
+    DEFAULT_COLLECT_TOKEN,
+    LENS_HUB,
+    STATIC_IMAGES_URL
 } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { Regex } from '@good/data/regex';
@@ -13,18 +13,18 @@ import { SETTINGS } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  FollowModuleType,
-  useBroadcastOnchainMutation,
-  useCreateSetFollowModuleTypedDataMutation
+    FollowModuleType,
+    useBroadcastOnchainMutation,
+    useCreateSetFollowModuleTypedDataMutation
 } from '@good/lens';
 import {
-  Button,
-  Card,
-  CardHeader,
-  Form,
-  Input,
-  Select,
-  useZodForm
+    Button,
+    Card,
+    CardHeader,
+    Form,
+    Input,
+    Select,
+    useZodForm
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';

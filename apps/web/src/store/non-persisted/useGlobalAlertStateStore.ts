@@ -1,8 +1,4 @@
-import type {
-  AnyPublication,
-  MirrorablePublication,
-  Profile
-} from '@good/lens';
+import type { AnyPublication, MirrorablePublication, Profile } from '@good/lens';
 
 import { createTrackedSelector } from 'react-tracked';
 import { create } from 'zustand';

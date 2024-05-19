@@ -1,6 +1,6 @@
 import type {
-  MirrorablePublication,
-  PublicationBookmarkRequest
+    MirrorablePublication,
+    PublicationBookmarkRequest
 } from '@good/lens';
 import type { ApolloCache } from '@good/lens/apollo';
 import type { FC } from 'react';
@@ -8,8 +8,8 @@ import type { FC } from 'react';
 import { PUBLICATION } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import {
-  useAddPublicationBookmarkMutation,
-  useRemovePublicationBookmarkMutation
+    useAddPublicationBookmarkMutation,
+    useRemovePublicationBookmarkMutation
 } from '@good/lens';
 import cn from '@good/ui/cn';
 import { MenuItem } from '@headlessui/react';

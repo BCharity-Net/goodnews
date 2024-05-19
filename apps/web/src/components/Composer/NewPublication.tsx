@@ -1,12 +1,12 @@
 import type {
-  MirrorablePublication,
-  MomokaCommentRequest,
-  MomokaPostRequest,
-  MomokaQuoteRequest,
-  OnchainCommentRequest,
-  OnchainPostRequest,
-  OnchainQuoteRequest,
-  Quote
+    MirrorablePublication,
+    MomokaCommentRequest,
+    MomokaPostRequest,
+    MomokaQuoteRequest,
+    OnchainCommentRequest,
+    OnchainPostRequest,
+    OnchainQuoteRequest,
+    Quote
 } from '@good/lens';
 import type { IGif } from '@good/types/giphy';
 import type { NewAttachment } from '@good/types/misc';
@@ -21,6 +21,7 @@ import { Errors } from '@good/data/errors';
 import { PUBLICATION } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import collectModuleParams from '@good/helpers/collectModuleParams';
+import getMentions from '@good/helpers/getMentions';
 import getProfile from '@good/helpers/getProfile';
 import removeQuoteOn from '@good/helpers/removeQuoteOn';
 import { ReferenceModuleType } from '@good/lens';
@@ -42,21 +43,21 @@ import { useOpenActionStore } from 'src/store/non-persisted/publication/useOpenA
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';
 import { usePublicationAttributesStore } from 'src/store/non-persisted/publication/usePublicationAttributesStore';
 import {
-  DEFAULT_AUDIO_PUBLICATION,
-  usePublicationAudioStore
+    DEFAULT_AUDIO_PUBLICATION,
+    usePublicationAudioStore
 } from 'src/store/non-persisted/publication/usePublicationAudioStore';
 import { usePublicationLicenseStore } from 'src/store/non-persisted/publication/usePublicationLicenseStore';
 import { usePublicationLiveStore } from 'src/store/non-persisted/publication/usePublicationLiveStore';
 import { usePublicationPollStore } from 'src/store/non-persisted/publication/usePublicationPollStore';
 import { usePublicationStore } from 'src/store/non-persisted/publication/usePublicationStore';
 import {
-  DEFAULT_VIDEO_THUMBNAIL,
-  usePublicationVideoStore
+    DEFAULT_VIDEO_THUMBNAIL,
+    usePublicationVideoStore
 } from 'src/store/non-persisted/publication/usePublicationVideoStore';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
 import { useNonceStore } from 'src/store/non-persisted/useNonceStore';
-import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
 import { useProStore } from 'src/store/non-persisted/useProStore';
+import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
 import { useReferenceModuleStore } from 'src/store/non-persisted/useReferenceModuleStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
@@ -64,7 +65,7 @@ import LivestreamEditor from './Actions/LivestreamSettings/LivestreamEditor';
 import PollEditor from './Actions/PollSettings/PollEditor';
 import { Editor, useEditorContext, withEditorContext } from './Editor';
 import LinkPreviews from './LinkPreviews';
-import OpenActions from './OpenActions';
+import OpenActionsPreviews from './OpenActionsPreviews';
 import Discard from './Post/Discard';
 
 const Shimmer = <div className="shimmer mb-1 size-5 rounded-lg" />;
@@ -168,6 +169,8 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [showEmojiPicker, setShowEmojiPicker] = useState<boolean>(false);
   const [publicationContentError, setPublicationContentError] = useState('');
+  const [nftOpenActionEmbed, setNftOpenActionEmbed] = useState();
+  const [exceededMentionsLimit, setExceededMentionsLimit] = useState(false);
 
   const editor = useEditorContext();
 
@@ -284,6 +287,16 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
     setPublicationContentError('');
   }, [audioPublication]);
 
+  useEffect(() => {
+    if (getMentions(publicationContent).length > 50) {
+      setExceededMentionsLimit(true);
+      setPublicationContentError('You can only mention 50 people at a time!');
+    } else {
+      setExceededMentionsLimit(false);
+      setPublicationContentError('');
+    }
+  }, [publicationContent]);
+
   const getAnimationUrl = () => {
     const fallback =
       'ipfs://bafkreiaoua5s4iyg4gkfjzl6mzgenw4qw7mwgxj7zf7ev7gga72o5d3lf4';
@@ -376,13 +389,18 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
 
       // Payload for the open action module
       const openActionModules = [];
-      if (collectModule.type) {
+
+      if (nftOpenActionEmbed) {
+        openActionModules.push(nftOpenActionEmbed);
+      }
+
+      if (Boolean(collectModule.type)) {
         openActionModules.push({
           collectOpenAction: collectModuleParams(collectModule, currentProfile)
         });
       }
 
-      if (openAction) {
+      if (Boolean(openAction)) {
         openActionModules.push({ unknownOpenAction: openAction });
       }
 
@@ -396,7 +414,7 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
         contentURI: `ar://${arweaveId}`
       };
 
-      if (useMomoka) {
+      if (useMomoka && !nftOpenActionEmbed) {
         if (canUseLensManager) {
           if (isComment) {
             return await createCommentOnMomka(
@@ -546,8 +564,8 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
       ) : null}
       {showPollEditor ? <PollEditor /> : null}
       {showLiveVideoEditor ? <LivestreamEditor /> : null}
-      <OpenActions />
-      <LinkPreviews />
+      <OpenActionsPreviews setNftOpenActionEmbed={setNftOpenActionEmbed} />
+      {!nftOpenActionEmbed ? <LinkPreviews /> : null}
       <NewAttachments attachments={attachments} />
       {quotedPublication ? (
         <Wrapper className="m-5" zeroPadding>
@@ -587,7 +605,8 @@ const NewPublication: FC<NewPublicationProps> = ({ publication }) => {
               isLoading ||
               isUploading ||
               isSubmitDisabledByPoll ||
-              videoThumbnail.uploading
+              videoThumbnail.uploading ||
+              exceededMentionsLimit
             }
             onClick={createPublication}
           >

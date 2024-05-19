@@ -1,8 +1,8 @@
 import type { Area } from '@good/image-cropper/types';
 import type { OnchainSetProfileMetadataRequest } from '@good/lens';
 import type {
-  MetadataAttribute,
-  ProfileOptions
+    MetadataAttribute,
+    ProfileOptions
 } from '@lens-protocol/metadata';
 import type { ChangeEvent, FC } from 'react';
 import type { z } from 'zod';
@@ -11,10 +11,10 @@ import ChooseFile from '@components/Shared/ChooseFile';
 import ImageCropperController from '@components/Shared/ImageCropperController';
 import { LensHub } from '@good/abis';
 import {
-  AVATAR,
-  COVER,
-  LENS_HUB,
-  STATIC_IMAGES_URL
+    AVATAR,
+    COVER,
+    LENS_HUB,
+    STATIC_IMAGES_URL
 } from '@good/data/constants';
 import { Errors } from '@good/data/errors';
 import { Regex } from '@good/data/regex';
@@ -28,21 +28,21 @@ import sanitizeDStorageUrl from '@good/helpers/sanitizeDStorageUrl';
 import trimify from '@good/helpers/trimify';
 import { getCroppedImg } from '@good/image-cropper/cropUtils';
 import {
-  useBroadcastOnchainMutation,
-  useCreateOnchainSetProfileMetadataTypedDataMutation,
-  useSetProfileMetadataMutation
+    useBroadcastOnchainMutation,
+    useCreateOnchainSetProfileMetadataTypedDataMutation,
+    useSetProfileMetadataMutation
 } from '@good/lens';
 import {
-  Button,
-  Card,
-  ErrorMessage,
-  Form,
-  Image,
-  Input,
-  Modal,
-  Spinner,
-  TextArea,
-  useZodForm
+    Button,
+    Card,
+    ErrorMessage,
+    Form,
+    Image,
+    Input,
+    Modal,
+    Spinner,
+    TextArea,
+    useZodForm
 } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
@@ -50,8 +50,8 @@ import uploadCroppedImage, { readFile } from '@helpers/profilePictureUtils';
 import uploadToArweave from '@helpers/uploadToArweave';
 import { InformationCircleIcon, PencilIcon } from '@heroicons/react/24/outline';
 import {
-  MetadataAttributeType,
-  profile as profileMetadata
+    MetadataAttributeType,
+    profile as profileMetadata
 } from '@lens-protocol/metadata';
 import { useState } from 'react';
 import toast from 'react-hot-toast';

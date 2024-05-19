@@ -1,16 +1,16 @@
 import type {
-  ActOnOpenActionLensManagerRequest,
-  ApprovedAllowanceAmountResult,
-  LegacyCollectRequest,
-  MirrorablePublication,
-  OpenActionModule
+    ActOnOpenActionLensManagerRequest,
+    ApprovedAllowanceAmountResult,
+    LegacyCollectRequest,
+    MirrorablePublication,
+    OpenActionModule
 } from '@good/lens';
 import type { OptimisticTransaction } from '@good/types/misc';
 import type { FC, ReactNode } from 'react';
 
 import { useApolloClient } from '@apollo/client';
 import AllowanceButton from '@components/Settings/Allowance/Button';
-import LoginButton from '@components/Shared/Navbar/LoginButton';
+import LoginButton from '@components/Shared/LoginButton';
 import NoBalanceError from '@components/Shared/NoBalanceError';
 import FollowUnfollowButton from '@components/Shared/Profile/FollowUnfollowButton';
 import { LensHub } from '@good/abis';
@@ -22,12 +22,12 @@ import getCollectModuleData from '@good/helpers/getCollectModuleData';
 import getOpenActionActOnKey from '@good/helpers/getOpenActionActOnKey';
 import getSignature from '@good/helpers/getSignature';
 import {
-  useActOnOpenActionMutation,
-  useApprovedModuleAllowanceAmountQuery,
-  useBroadcastOnchainMutation,
-  useCreateActOnOpenActionTypedDataMutation,
-  useCreateLegacyCollectTypedDataMutation,
-  useLegacyCollectMutation
+    useActOnOpenActionMutation,
+    useApprovedModuleAllowanceAmountQuery,
+    useBroadcastOnchainMutation,
+    useCreateActOnOpenActionTypedDataMutation,
+    useCreateLegacyCollectTypedDataMutation,
+    useLegacyCollectMutation
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import { Button, Spinner, WarningMessage } from '@good/ui';
@@ -46,10 +46,10 @@ import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { useTransactionStore } from 'src/store/persisted/useTransactionStore';
 import { formatUnits } from 'viem';
 import {
-  useAccount,
-  useBalance,
-  useSignTypedData,
-  useWriteContract
+    useAccount,
+    useBalance,
+    useSignTypedData,
+    useWriteContract
 } from 'wagmi';
 
 interface CollectActionProps {

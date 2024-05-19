@@ -6,11 +6,11 @@ import QueuedPublication from '@components/Publication/QueuedPublication';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
 import {
-  CommentRankingFilterType,
-  CustomFiltersType,
-  HiddenCommentsType,
-  LimitType,
-  usePublicationsQuery
+    CommentRankingFilterType,
+    CustomFiltersType,
+    HiddenCommentsType,
+    LimitType,
+    usePublicationsQuery
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';

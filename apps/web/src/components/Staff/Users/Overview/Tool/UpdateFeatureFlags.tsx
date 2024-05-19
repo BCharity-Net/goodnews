@@ -1,5 +1,5 @@
 import type { Feature } from '@good/types/good';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import Loader from '@components/Shared/Loader';
 import { GOOD_API_URL } from '@good/data/constants';
@@ -18,7 +18,7 @@ import ToggleWrapper from './ToggleWrapper';
 interface UpdateFeatureFlagsProps {
   flags: string[];
   profileId: string;
-  setFlags: (flags: string[]) => void;
+  setFlags: Dispatch<SetStateAction<string[]>>;
 }
 
 const UpdateFeatureFlags: FC<UpdateFeatureFlagsProps> = ({

@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import cn from '@good/ui/cn';
 import showCrisp from '@helpers/showCrisp';
 import {
-  ArrowTopRightOnSquareIcon,
-  HandRaisedIcon
+    ArrowTopRightOnSquareIcon,
+    HandRaisedIcon
 } from '@heroicons/react/24/outline';
 
 interface SupportProps {

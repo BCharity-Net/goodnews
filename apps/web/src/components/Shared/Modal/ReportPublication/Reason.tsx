@@ -1,10 +1,10 @@
 import type { Dispatch, FC, SetStateAction } from 'react';
 
 import {
-  PublicationReportingFraudSubreason,
-  PublicationReportingIllegalSubreason,
-  PublicationReportingSensitiveSubreason,
-  PublicationReportingSpamSubreason
+    PublicationReportingFraudSubreason,
+    PublicationReportingIllegalSubreason,
+    PublicationReportingSensitiveSubreason,
+    PublicationReportingSpamSubreason
 } from '@good/lens';
 import { Select } from '@good/ui';
 

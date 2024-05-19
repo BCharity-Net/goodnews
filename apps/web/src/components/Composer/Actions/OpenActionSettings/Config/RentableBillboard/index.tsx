@@ -13,11 +13,11 @@ import { createTrackedSelector } from 'react-tracked';
 import { useOpenActionStore } from 'src/store/non-persisted/publication/useOpenActionStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import {
-  encodeAbiParameters,
-  isAddress,
-  parseEther,
-  toBytes,
-  toHex
+    encodeAbiParameters,
+    isAddress,
+    parseEther,
+    toBytes,
+    toHex
 } from 'viem';
 import { useReadContract } from 'wagmi';
 import { create } from 'zustand';

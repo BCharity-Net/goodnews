@@ -1,7 +1,7 @@
 import type {
-  LastLoggedInProfileRequest,
-  Profile,
-  ProfilesManagedRequest
+    LastLoggedInProfileRequest,
+    Profile,
+    ProfilesManagedRequest
 } from '@good/lens';
 import type { FC } from 'react';
 
@@ -11,10 +11,10 @@ import getAvatar from '@good/helpers/getAvatar';
 import getLennyURL from '@good/helpers/getLennyURL';
 import getProfile from '@good/helpers/getProfile';
 import {
-  ManagedProfileVisibility,
-  useAuthenticateMutation,
-  useChallengeLazyQuery,
-  useProfilesManagedQuery
+    ManagedProfileVisibility,
+    useAuthenticateMutation,
+    useChallengeLazyQuery,
+    useProfilesManagedQuery
 } from '@good/lens';
 import { ErrorMessage, Image, Spinner } from '@good/ui';
 import cn from '@good/ui/cn';

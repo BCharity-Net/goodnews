@@ -1,7 +1,7 @@
 import type {
-  AnyPublication,
-  MirrorablePublication,
-  ModExplorePublicationRequest
+    AnyPublication,
+    MirrorablePublication,
+    ModExplorePublicationRequest
 } from '@good/lens';
 import type { FC } from 'react';
 
@@ -10,9 +10,9 @@ import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
 import { IS_MAINNET } from '@good/data/constants';
 import {
-  ExplorePublicationsOrderByType,
-  LimitType,
-  useModExplorePublicationsQuery
+    ExplorePublicationsOrderByType,
+    LimitType,
+    useModExplorePublicationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import { RectangleStackIcon } from '@heroicons/react/24/outline';

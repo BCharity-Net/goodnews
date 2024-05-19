@@ -3,12 +3,12 @@ import type { FC } from 'react';
 import { OpenAction } from '@good/data/enums';
 import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import {
-  BanknotesIcon,
-  BuildingStorefrontIcon
+    BanknotesIcon,
+    BuildingStorefrontIcon
 } from '@heroicons/react/24/outline';
 import {
-  ScreenType,
-  useOpenActionStore
+    ScreenType,
+    useOpenActionStore
 } from 'src/store/non-persisted/publication/useOpenActionStore';
 
 import OpenActionItem from './OpenActionItem';

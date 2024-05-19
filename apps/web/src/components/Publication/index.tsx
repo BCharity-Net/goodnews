@@ -15,11 +15,11 @@ import getProfile from '@good/helpers/getProfile';
 import getPublicationData from '@good/helpers/getPublicationData';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
-  HiddenCommentsType,
-  LimitType,
-  TriStateValue,
-  usePublicationQuery,
-  usePublicationsQuery
+    HiddenCommentsType,
+    LimitType,
+    TriStateValue,
+    usePublicationQuery,
+    usePublicationsQuery
 } from '@good/lens';
 import { Card, GridItemEight, GridItemFour, GridLayout } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';

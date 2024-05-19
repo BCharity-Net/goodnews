@@ -5,9 +5,9 @@ import Loader from '@components/Shared/Loader';
 import { Errors } from '@good/data';
 import { SETTINGS } from '@good/data/tracking';
 import {
-  useAddProfileInterestsMutation,
-  useProfileInterestsOptionsQuery,
-  useRemoveProfileInterestsMutation
+    useAddProfileInterestsMutation,
+    useProfileInterestsOptionsQuery,
+    useRemoveProfileInterestsMutation
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button } from '@good/ui';

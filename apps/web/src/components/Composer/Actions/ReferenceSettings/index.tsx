@@ -6,10 +6,10 @@ import { Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import {
-  GlobeAltIcon,
-  UserGroupIcon,
-  UserPlusIcon,
-  UsersIcon
+    GlobeAltIcon,
+    UserGroupIcon,
+    UserPlusIcon,
+    UsersIcon
 } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
@@ -61,7 +61,7 @@ const ReferenceSettings: FC = () => {
           {icon}
           <div>{title}</div>
         </div>
-        {selected ? <CheckCircleIcon className="w-5" /> : null}
+        {selected ? <CheckCircleIcon className="size-5" /> : null}
       </div>
     </MenuItem>
   );

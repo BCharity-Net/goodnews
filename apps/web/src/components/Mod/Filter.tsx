@@ -2,9 +2,9 @@ import type { FC } from 'react';
 
 import { apps as knownApps } from '@good/data/apps';
 import {
-  CustomFiltersType,
-  ModExplorePublicationType,
-  PublicationMetadataMainFocusType
+    CustomFiltersType,
+    ModExplorePublicationType,
+    PublicationMetadataMainFocusType
 } from '@good/lens';
 import { Button, Card, Checkbox } from '@good/ui';
 import { createTrackedSelector } from 'react-tracked';

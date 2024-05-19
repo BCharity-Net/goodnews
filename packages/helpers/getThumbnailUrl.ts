@@ -1,6 +1,6 @@
 import type {
-  PublicationMetadataMediaAudio,
-  PublicationMetadataMediaVideo
+    PublicationMetadataMediaAudio,
+    PublicationMetadataMediaVideo
 } from '@good/lens';
 
 import { STATIC_IMAGES_URL } from '@good/data/constants';

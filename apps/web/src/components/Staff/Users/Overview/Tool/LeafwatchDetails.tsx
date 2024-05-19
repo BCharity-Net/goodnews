@@ -1,15 +1,15 @@
 import type { FC } from 'react';
 
-import MetaDetails from '@components/Shared/Staff/MetaDetails';
+import MetaDetails from '@components/Shared/MetaDetails';
 import { GOOD_API_URL } from '@good/data/constants';
 import humanize from '@good/helpers/humanize';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import {
-  ComputerDesktopIcon,
-  CursorArrowRaysIcon,
-  EyeIcon,
-  GlobeAltIcon,
-  MapPinIcon
+    ComputerDesktopIcon,
+    CursorArrowRaysIcon,
+    EyeIcon,
+    GlobeAltIcon,
+    MapPinIcon
 } from '@heroicons/react/24/outline';
 import { AdjustmentsVerticalIcon } from '@heroicons/react/24/solid';
 import { useQuery } from '@tanstack/react-query';

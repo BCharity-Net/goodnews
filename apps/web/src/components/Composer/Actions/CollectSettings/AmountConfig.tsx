@@ -1,15 +1,16 @@
+import type { CollectModuleType } from '@good/types/good';
 import type { FC } from 'react';
 
 import ToggleWithHelper from '@components/Shared/ToggleWithHelper';
 import { DEFAULT_COLLECT_TOKEN, STATIC_IMAGES_URL } from '@good/data/constants';
-import { OpenActionModuleType } from '@good/lens';
+import { CollectOpenActionModuleType } from '@good/lens';
 import { Input, Select } from '@good/ui';
 import { CurrencyDollarIcon } from '@heroicons/react/24/outline';
 import { useCollectModuleStore } from 'src/store/non-persisted/publication/useCollectModuleStore';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
 
 interface AmountConfigProps {
-  setCollectType: (data: any) => void;
+  setCollectType: (data: CollectModuleType) => void;
 }
 
 const AmountConfig: FC<AmountConfigProps> = ({ setCollectType }) => {
@@ -29,10 +30,10 @@ const AmountConfig: FC<AmountConfigProps> = ({ setCollectType }) => {
               ? null
               : { currency: DEFAULT_COLLECT_TOKEN, value: '1' },
             type: collectModule.amount?.value
-              ? OpenActionModuleType.SimpleCollectOpenActionModule
+              ? CollectOpenActionModuleType.SimpleCollectOpenActionModule
               : collectModule.recipients?.length
-                ? OpenActionModuleType.MultirecipientFeeCollectOpenActionModule
-                : OpenActionModuleType.SimpleCollectOpenActionModule
+                ? CollectOpenActionModuleType.MultirecipientFeeCollectOpenActionModule
+                : CollectOpenActionModuleType.SimpleCollectOpenActionModule
           });
         }}
       />
@@ -63,7 +64,7 @@ const AmountConfig: FC<AmountConfigProps> = ({ setCollectType }) => {
                   setCollectType({
                     amount: {
                       currency: value,
-                      value: collectModule.amount?.value
+                      value: collectModule.amount?.value as string
                     }
                   });
                 }}

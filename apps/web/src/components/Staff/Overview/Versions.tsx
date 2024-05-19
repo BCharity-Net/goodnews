@@ -2,13 +2,13 @@ import type { FC } from 'react';
 
 import { CardHeader } from '@good/ui';
 import {
-  BarElement,
-  CategoryScale,
-  Chart as ChartJS,
-  Legend,
-  LinearScale,
-  Title,
-  Tooltip
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    Title,
+    Tooltip
 } from 'chart.js';
 import { useTheme } from 'next-themes';
 import { Bar } from 'react-chartjs-2';

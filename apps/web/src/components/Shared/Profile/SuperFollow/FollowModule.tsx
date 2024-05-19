@@ -1,7 +1,7 @@
 import type {
-  ApprovedAllowanceAmountResult,
-  FeeFollowModuleSettings,
-  Profile
+    ApprovedAllowanceAmountResult,
+    FeeFollowModuleSettings,
+    Profile
 } from '@good/lens';
 import type { Dispatch, FC, SetStateAction } from 'react';
 
@@ -19,11 +19,11 @@ import getProfile from '@good/helpers/getProfile';
 import getSignature from '@good/helpers/getSignature';
 import getTokenImage from '@good/helpers/getTokenImage';
 import {
-  FollowModuleType,
-  useApprovedModuleAllowanceAmountQuery,
-  useBroadcastOnchainMutation,
-  useCreateFollowTypedDataMutation,
-  useProfileQuery
+    FollowModuleType,
+    useApprovedModuleAllowanceAmountQuery,
+    useBroadcastOnchainMutation,
+    useCreateFollowTypedDataMutation,
+    useProfileQuery
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Button, Spinner, WarningMessage } from '@good/ui';

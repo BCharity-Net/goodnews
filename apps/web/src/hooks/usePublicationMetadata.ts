@@ -1,11 +1,11 @@
 import { APP_NAME } from '@good/data/constants';
 import getUserLocale from '@helpers/getUserLocale';
 import {
-  audio,
-  image,
-  liveStream,
-  textOnly,
-  video
+    audio,
+    image,
+    liveStream,
+    textOnly,
+    video
 } from '@lens-protocol/metadata';
 import { useCallback } from 'react';
 import { usePublicationAttachmentStore } from 'src/store/non-persisted/publication/usePublicationAttachmentStore';

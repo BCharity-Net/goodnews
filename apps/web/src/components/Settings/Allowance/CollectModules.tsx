@@ -4,8 +4,8 @@ import Loader from '@components/Shared/Loader';
 import { DEFAULT_COLLECT_TOKEN, STATIC_IMAGES_URL } from '@good/data/constants';
 import allowedOpenActionModules from '@good/helpers/allowedOpenActionModules';
 import {
-  FollowModuleType,
-  useApprovedModuleAllowanceAmountQuery
+    FollowModuleType,
+    useApprovedModuleAllowanceAmountQuery
 } from '@good/lens';
 import { CardHeader, ErrorMessage, Select } from '@good/ui';
 import { useState } from 'react';

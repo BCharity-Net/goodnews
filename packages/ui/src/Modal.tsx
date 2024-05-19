@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import type { FC, ReactNode, SyntheticEvent } from 'react';
 
 import {
   Dialog,
@@ -29,6 +29,11 @@ export const Modal: FC<ModalProps> = ({
   size = 'sm',
   title
 }) => {
+  const handleClose = (e: SyntheticEvent) => {
+    e.stopPropagation(); // This stops the event from propagating further
+    onClose?.();
+  };
+
   return (
     <Transition as={Fragment} show={show}>
       <Dialog
@@ -40,6 +45,7 @@ export const Modal: FC<ModalProps> = ({
         <div
           aria-hidden="true"
           className="fixed inset-0 bg-gray-500/75 transition-opacity dark:bg-gray-900/80"
+          onClick={handleClose}
         />
         <TransitionChild
           as={Fragment}
@@ -56,19 +62,22 @@ export const Modal: FC<ModalProps> = ({
               { 'sm:max-w-3xl': size === 'md' },
               { 'sm:max-w-lg': size === 'sm' },
               { 'sm:max-w-sm': size === 'xs' },
-              'inline-block w-full scale-100 rounded-xl bg-gray-800 text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle dark:bg-gray-800'
+              'inline-block w-full scale-100 rounded-xl bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle dark:bg-gray-800'
             )}
           >
             {title ? (
               <DialogTitle className="divider flex items-center justify-between px-5 py-3.5">
                 <div className="flex items-center space-x-2 font-bold">
                   {icon}
-                  <div className='text-white'>{title}</div>
+                  <div>{title}</div>
                 </div>
                 {onClose ? (
                   <button
                     className="rounded-full p-1 text-gray-800 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700"
-                    onClick={onClose}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onClose();
+                    }}
                     type="button"
                   >
                     <XMarkIcon className="size-5" />

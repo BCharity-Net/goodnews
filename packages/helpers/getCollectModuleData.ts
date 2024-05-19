@@ -1,14 +1,14 @@
 import type {
-  LegacyFeeCollectModuleSettings,
-  LegacyFreeCollectModuleSettings,
-  LegacyLimitedFeeCollectModuleSettings,
-  LegacyLimitedTimedFeeCollectModuleSettings,
-  LegacyMultirecipientFeeCollectModuleSettings,
-  LegacySimpleCollectModuleSettings,
-  LegacyTimedFeeCollectModuleSettings,
-  MultirecipientFeeCollectOpenActionSettings,
-  RecipientDataOutput,
-  SimpleCollectOpenActionSettings
+    LegacyFeeCollectModuleSettings,
+    LegacyFreeCollectModuleSettings,
+    LegacyLimitedFeeCollectModuleSettings,
+    LegacyLimitedTimedFeeCollectModuleSettings,
+    LegacyMultirecipientFeeCollectModuleSettings,
+    LegacySimpleCollectModuleSettings,
+    LegacyTimedFeeCollectModuleSettings,
+    MultirecipientFeeCollectOpenActionSettings,
+    RecipientDataOutput,
+    SimpleCollectOpenActionSettings
 } from '@good/lens';
 
 const getCollectModuleData = (

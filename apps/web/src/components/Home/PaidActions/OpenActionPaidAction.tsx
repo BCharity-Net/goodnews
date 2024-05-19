@@ -1,15 +1,15 @@
 import type {
-  AnyPublication,
-  LatestActed,
-  LegacyFeeCollectModuleSettings,
-  LegacyFreeCollectModuleSettings,
-  LegacyLimitedFeeCollectModuleSettings,
-  LegacyLimitedTimedFeeCollectModuleSettings,
-  LegacyMultirecipientFeeCollectModuleSettings,
-  LegacySimpleCollectModuleSettings,
-  LegacyTimedFeeCollectModuleSettings,
-  MultirecipientFeeCollectOpenActionSettings,
-  SimpleCollectOpenActionSettings
+    AnyPublication,
+    LatestActed,
+    LegacyFeeCollectModuleSettings,
+    LegacyFreeCollectModuleSettings,
+    LegacyLimitedFeeCollectModuleSettings,
+    LegacyLimitedTimedFeeCollectModuleSettings,
+    LegacyMultirecipientFeeCollectModuleSettings,
+    LegacySimpleCollectModuleSettings,
+    LegacyTimedFeeCollectModuleSettings,
+    MultirecipientFeeCollectOpenActionSettings,
+    SimpleCollectOpenActionSettings
 } from '@good/lens';
 import type { FC } from 'react';
 

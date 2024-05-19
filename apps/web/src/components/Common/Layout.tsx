@@ -95,26 +95,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       />
       <GlobalModals />
       <GlobalAlerts />
-      <div className="flex min-h-screen flex-row pb-14 md:pb-0">
-        {/* 左侧导航栏 */}
-        <div className="hidden lg:block lg:w-1/5">
-          <div className="fixed left-0 top-0 h-full p-4">
-            <Navbar />
-          </div>
-        </div>
-        {/* 中间内容区 */}
-        <div className="flex-grow p-4 lg:w-3/5">{children}</div>
-        {/* 右侧侧边栏 */}
-        <div className="hidden lg:block lg:w-1/5">
-          <div className="fixed right-0 top-0 h-full p-4">
-            <GlobalBanners />
-            <GlobalAlerts />
-          </div>
-        </div>
-        {/* 底部导航栏 */}
-        <div className="fixed bottom-0 left-0 block w-full lg:hidden">
-          <BottomNavigation />
-        </div>
+      <div className="flex min-h-screen flex-col pb-14 md:pb-0">
+        <Navbar />
+        <GlobalBanners />
+        <BottomNavigation />
+        {children}
       </div>
     </>
   );

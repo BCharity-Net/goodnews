@@ -20,7 +20,6 @@ const validationSchema = object({
   id: string().nullable()
 });
 
-// TODO: add tests
 export const post: Handler = async (req, res) => {
   const { body } = req;
 
@@ -35,8 +34,9 @@ export const post: Handler = async (req, res) => {
     return invalidBody(res);
   }
 
-  if (!(await validateLensAccount(req))) {
-    return notAllowed(res);
+  const validateLensAccountStatus = await validateLensAccount(req);
+  if (validateLensAccountStatus !== 200) {
+    return notAllowed(res, validateLensAccountStatus);
   }
 
   const { collectModule, content, id } = body as ExtensionRequest;

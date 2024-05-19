@@ -6,15 +6,15 @@ import { Errors } from '@good/data/errors';
 import { GARDENER } from '@good/data/tracking';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import {
-  usePeerToPeerRecommendMutation,
-  usePeerToPeerUnrecommendMutation
+    usePeerToPeerRecommendMutation,
+    usePeerToPeerUnrecommendMutation
 } from '@good/lens';
 import { Button } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  ArrowDownCircleIcon,
-  ArrowUpCircleIcon
+    ArrowDownCircleIcon,
+    ArrowUpCircleIcon
 } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import toast from 'react-hot-toast';

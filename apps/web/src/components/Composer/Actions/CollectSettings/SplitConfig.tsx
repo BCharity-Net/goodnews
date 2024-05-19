@@ -1,3 +1,4 @@
+import type { CollectModuleType } from '@good/types/good';
 import type { FC } from 'react';
 
 import Beta from '@components/Shared/Badges/Beta';
@@ -5,13 +6,13 @@ import SearchProfiles from '@components/Shared/SearchProfiles';
 import ToggleWithHelper from '@components/Shared/ToggleWithHelper';
 import { ADDRESS_PLACEHOLDER } from '@good/data/constants';
 import splitNumber from '@good/helpers/splitNumber';
-import { OpenActionModuleType } from '@good/lens';
+import { CollectOpenActionModuleType } from '@good/lens';
 import { Button, Input } from '@good/ui';
 import {
-  ArrowsRightLeftIcon,
-  PlusIcon,
-  UsersIcon,
-  XCircleIcon
+    ArrowsRightLeftIcon,
+    PlusIcon,
+    UsersIcon,
+    XCircleIcon
 } from '@heroicons/react/24/outline';
 import { useCollectModuleStore } from 'src/store/non-persisted/publication/useCollectModuleStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
@@ -19,7 +20,7 @@ import { isAddress } from 'viem';
 
 interface SplitConfigProps {
   isRecipientsDuplicated: () => boolean;
-  setCollectType: (data: any) => void;
+  setCollectType: (data: CollectModuleType) => void;
 }
 
 const SplitConfig: FC<SplitConfigProps> = ({
@@ -90,8 +91,8 @@ const SplitConfig: FC<SplitConfigProps> = ({
                 : [{ recipient: currentProfile?.ownedBy.address, split: 100 }],
             type:
               recipients.length > 0
-                ? OpenActionModuleType.SimpleCollectOpenActionModule
-                : OpenActionModuleType.MultirecipientFeeCollectOpenActionModule
+                ? CollectOpenActionModuleType.SimpleCollectOpenActionModule
+                : CollectOpenActionModuleType.MultirecipientFeeCollectOpenActionModule
           });
         }}
       />

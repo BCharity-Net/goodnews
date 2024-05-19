@@ -1,5 +1,5 @@
 import type { Feature } from '@good/types/good';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { GOOD_API_URL } from '@good/data/constants';
 import { STAFFTOOLS } from '@good/data/tracking';
@@ -17,8 +17,8 @@ const createFeatureSchema = object({
 
 interface CreateProps {
   features: Feature[];
-  setFeatures: (flags: any) => void;
-  setShowCreateModal: (show: boolean) => void;
+  setFeatures: Dispatch<SetStateAction<Feature[]>>;
+  setShowCreateModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const Create: FC<CreateProps> = ({

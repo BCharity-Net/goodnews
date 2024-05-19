@@ -4,8 +4,8 @@ import type { FC, ReactNode } from 'react';
 import { Card } from '@good/ui';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import {
-  ScreenType,
-  useOpenActionStore
+    ScreenType,
+    useOpenActionStore
 } from 'src/store/non-persisted/publication/useOpenActionStore';
 
 interface OpenActionItemProps {

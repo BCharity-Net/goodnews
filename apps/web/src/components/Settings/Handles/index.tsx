@@ -6,11 +6,11 @@ import Slug from '@components/Shared/Slug';
 import { APP_NAME } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
 import {
-  Card,
-  CardHeader,
-  GridItemEight,
-  GridItemFour,
-  GridLayout
+    Card,
+    CardHeader,
+    GridItemEight,
+    GridItemFour,
+    GridLayout
 } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import { useEffect } from 'react';

@@ -1,20 +1,20 @@
 import type { FC } from 'react';
 
-import MetaDetails from '@components/Shared/Staff/MetaDetails';
+import MetaDetails from '@components/Shared/MetaDetails';
 import { GITCOIN_PASSPORT_KEY } from '@good/data/constants';
 import formatDate from '@good/helpers/datetime/formatDate';
 import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel
 } from '@headlessui/react';
 import {
-  CheckCircleIcon,
-  CurrencyDollarIcon,
-  HandRaisedIcon,
-  UserCircleIcon,
-  UserIcon,
-  UserPlusIcon
+    CheckCircleIcon,
+    CurrencyDollarIcon,
+    HandRaisedIcon,
+    UserCircleIcon,
+    UserIcon,
+    UserPlusIcon
 } from '@heroicons/react/24/outline';
 import { HashtagIcon } from '@heroicons/react/24/solid';
 import { useQuery } from '@tanstack/react-query';

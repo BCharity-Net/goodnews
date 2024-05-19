@@ -1,7 +1,7 @@
 import {
-  GOOD_IMAGEKIT_URL,
-  IPFS_GATEWAY,
-  LENS_MEDIA_SNAPSHOT_URL
+    GOOD_IMAGEKIT_URL,
+    IPFS_GATEWAY,
+    LENS_MEDIA_SNAPSHOT_URL
 } from '@good/data/constants';
 
 /**

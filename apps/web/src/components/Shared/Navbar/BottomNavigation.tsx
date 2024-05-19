@@ -6,14 +6,14 @@ import getProfile from '@good/helpers/getProfile';
 import { Image } from '@good/ui';
 import cn from '@good/ui/cn';
 import {
-  BellIcon,
-  HomeIcon,
-  Squares2X2Icon
+    BellIcon,
+    HomeIcon,
+    Squares2X2Icon
 } from '@heroicons/react/24/outline';
 import {
-  BellIcon as BellIconSolid,
-  HomeIcon as HomeIconSolid,
-  Squares2X2Icon as Squares2X2IconSolid
+    BellIcon as BellIconSolid,
+    HomeIcon as HomeIconSolid,
+    Squares2X2Icon as Squares2X2IconSolid
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -30,7 +30,6 @@ const BottomNavigation = () => {
       <div
         className={cn('grid', currentProfile ? 'grid-cols-4' : 'grid-cols-3')}
       >
-        
         <Link className="mx-auto my-3" href="/">
           {isActivePath('/') ? (
             <HomeIconSolid className="size-6" />
@@ -38,7 +37,6 @@ const BottomNavigation = () => {
             <HomeIcon className="size-6" />
           )}
         </Link>
-        
         <Link className="mx-auto my-3" href="/explore">
           {isActivePath('/explore') ? (
             <Squares2X2IconSolid className="size-6" />
@@ -66,7 +64,6 @@ const BottomNavigation = () => {
           </Link>
         )}
       </div>
-      
     </div>
   );
 };

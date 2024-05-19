@@ -5,8 +5,8 @@ import { SquaresPlusIcon } from '@heroicons/react/24/outline';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
 import {
-  ScreenType,
-  useOpenActionStore
+    ScreenType,
+    useOpenActionStore
 } from 'src/store/non-persisted/publication/useOpenActionStore';
 
 import OpenActionsList from './OpenActionsList';

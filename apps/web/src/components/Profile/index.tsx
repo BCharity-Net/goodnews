@@ -1,19 +1,18 @@
 import type { Profile } from '@good/lens';
 import type { NextPage } from 'next';
 
-
 import MetaTags from '@components/Common/MetaTags';
 import NewPost from '@components/Composer/Post/New';
 import {
-  APP_NAME,
-  HANDLE_PREFIX,
-  STATIC_IMAGES_URL
+    APP_NAME,
+    HANDLE_PREFIX,
+    STATIC_IMAGES_URL
 } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
 import getProfileFlags from '@good/helpers/api/getProfileFlags';
 import getProfile from '@good/helpers/getProfile';
 import { useProfileQuery } from '@good/lens';
-import { EmptyState, ProfileGridItemFour, ProfileGridItemEight, ProfileGridItemThreeRows, ProfileGridLayout, ThreeColumnContainer } from '@good/ui';
+import { EmptyState, GridItemEight, GridItemFour, GridLayout } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import { NoSymbolIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
@@ -24,10 +23,6 @@ import Custom404 from 'src/pages/404';
 import Custom500 from 'src/pages/500';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
-import Sidebar from '../Home/Sidebar';
-import Link from 'next/link';
-import { ArrowLeftIcon } from '@heroicons/react/24/solid';
-
 
 import Cover from './Cover';
 import Details from './Details';
@@ -39,7 +34,6 @@ import MutualFollowersList from './MutualFollowers/List';
 import ProfilePageShimmer from './Shimmer';
 import Stats from './Stats';
 import SuspendedDetails from './SuspendedDetails';
-
 
 const ViewProfile: NextPage = () => {
   const {
@@ -132,91 +126,66 @@ const ViewProfile: NextPage = () => {
           getProfile(profile).slugWithPrefix
         }) • ${APP_NAME}`}
       />
-      <ThreeColumnContainer>
-  
-        <ProfileGridLayout>
-          <ProfileGridItemFour>
-          <Link href="/" passHref>
-              <div className="flex items-center justify-between bg-black text-white">
-                <div className="flex items-center">
-                  <ArrowLeftIcon className="text-white h-8 w-8" />
-                  <div className="ml-2">
-                    <h2 className="text-lg font-semibold">{getProfile(profile).displayName}</h2>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Cover
-              cover={
-                isSuspended
-                  ? `${STATIC_IMAGES_URL}/patterns/2.svg`
-                  : profile?.metadata?.coverPicture?.optimized?.uri ||
-                    `${STATIC_IMAGES_URL}/patterns/2.svg`
-              }
+      <Cover
+        cover={
+          isSuspended
+            ? `${STATIC_IMAGES_URL}/patterns/2.svg`
+            : profile?.metadata?.coverPicture?.optimized?.uri ||
+              `${STATIC_IMAGES_URL}/patterns/2.svg`
+        }
+      />
+      <GridLayout>
+        <GridItemFour>
+          {isSuspended ? (
+            <SuspendedDetails profile={profile as Profile} />
+          ) : (
+            <Details
+              isSuspended={profileFlags?.isSuspended || false}
+              profile={profile as Profile}
             />
-            {isSuspended ? (
-              <SuspendedDetails profile={profile as Profile} />
-            ) : (
-              <Details
-                isSuspended={profileFlags?.isSuspended || false}
-                profile={profile as Profile}
-              />
-            )}
-          </ProfileGridItemFour>
-
-          <ProfileGridItemEight className="space-y-5">
-            {isSuspended ? (
-              <EmptyState
-                icon={<NoSymbolIcon className="size-8" />}
-                message="Profile Suspended"
-              />
-            ) : showFollowing ? (
-              <Following
-                handle={getProfile(profile).slug}
-                profileId={profile.id}
-              />
-            ) : showFollowers ? (
-              <Followers
-                handle={getProfile(profile).slug}
-                profileId={profile.id}
-              />
-            ) : showMutuals ? (
-              <MutualFollowersList
-                handle={getProfile(profile).slug}
-                profileId={profile.id}
-              />
-
-            ) : (
-
-              <>
-
-                <FeedType feedType={feedType} />
-                {currentProfile?.id === profile?.id ? <NewPost /> : null}
-                {feedType === ProfileFeedType.Feed ||
-                  feedType === ProfileFeedType.Replies ||
-                  feedType === ProfileFeedType.Media ||
-                  feedType === ProfileFeedType.Collects ? (
-                    <Feed
-                      handle={getProfile(profile).slugWithPrefix}
-                      profileId={profile.id}
-                      type={feedType}
-                    />
-                  ) : feedType === ProfileFeedType.Stats ? (
-                    <Stats profileId={profile.id} />
-                  ) : null}
-              </>
-
-            )}
-
-          </ProfileGridItemEight>
-        </ProfileGridLayout>
-
-        <ProfileGridItemThreeRows>
-          <Sidebar />
-        </ProfileGridItemThreeRows>
-
-      </ThreeColumnContainer>
-
+          )}
+        </GridItemFour>
+        <GridItemEight className="space-y-5">
+          {isSuspended ? (
+            <EmptyState
+              icon={<NoSymbolIcon className="size-8" />}
+              message="Profile Suspended"
+            />
+          ) : showFollowing ? (
+            <Following
+              handle={getProfile(profile).slug}
+              profileId={profile.id}
+            />
+          ) : showFollowers ? (
+            <Followers
+              handle={getProfile(profile).slug}
+              profileId={profile.id}
+            />
+          ) : showMutuals ? (
+            <MutualFollowersList
+              handle={getProfile(profile).slug}
+              profileId={profile.id}
+            />
+          ) : (
+            <>
+              <FeedType feedType={feedType} />
+              {currentProfile?.id === profile?.id ? <NewPost /> : null}
+              {feedType === ProfileFeedType.Feed ||
+              feedType === ProfileFeedType.Replies ||
+              feedType === ProfileFeedType.Media ||
+              feedType === ProfileFeedType.Collects ? (
+                <Feed
+                  handle={getProfile(profile).slugWithPrefix}
+                  profileId={profile.id}
+                  type={feedType}
+                />
+              ) : feedType === ProfileFeedType.Stats ? (
+                <Stats profileId={profile.id} />
+              ) : null}
+            </>
+          )}
+        </GridItemEight>
+      </GridLayout>
     </>
   );
 };

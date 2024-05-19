@@ -2,8 +2,8 @@ import type { Notification } from '@good/lens';
 import type { FC } from 'react';
 
 import {
-  useNewNotificationSubscriptionSubscription,
-  useUserSigNoncesSubscriptionSubscription
+    useNewNotificationSubscriptionSubscription,
+    useUserSigNoncesSubscriptionSubscription
 } from '@good/lens';
 import { BrowserPush } from '@helpers/browserPush';
 import getCurrentSession from '@helpers/getCurrentSession';

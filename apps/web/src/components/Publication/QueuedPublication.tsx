@@ -6,10 +6,10 @@ import Markup from '@components/Shared/Markup';
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
 import getMentions from '@good/helpers/getMentions';
 import {
-  LensTransactionStatusType,
-  PublicationDocument,
-  useLensTransactionStatusQuery,
-  usePublicationLazyQuery
+    LensTransactionStatusType,
+    PublicationDocument,
+    useLensTransactionStatusQuery,
+    usePublicationLazyQuery
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { Card, Tooltip } from '@good/ui';

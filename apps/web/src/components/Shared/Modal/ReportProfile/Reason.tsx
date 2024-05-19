@@ -1,8 +1,8 @@
 import type { Dispatch, FC, SetStateAction } from 'react';
 
 import {
-  ProfileReportingFraudSubreason,
-  ProfileReportingSpamSubreason
+    ProfileReportingFraudSubreason,
+    ProfileReportingSpamSubreason
 } from '@good/lens';
 import { Select } from '@good/ui';
 

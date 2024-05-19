@@ -23,9 +23,7 @@ describe('truncateUrl', () => {
   test('should not truncate *.bcharity.net urls', () => {
     const mainnetUrl = 'https://bcharity.net/long/pathname/test';
     const testnetUrl = 'https://testnet.bcharity.net/long/pathname/test';
-    expect(truncateUrl(mainnetUrl, 20)).toEqual(
-      'bcharity.net/long/pathname/test'
-    );
+    expect(truncateUrl(mainnetUrl, 20)).toEqual('bcharity.net/long/pathname/test');
     expect(truncateUrl(testnetUrl, 20)).toEqual(
       'testnet.bcharity.net/long/pathname/test'
     );

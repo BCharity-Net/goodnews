@@ -1,12 +1,13 @@
 import type {
-  MirrorablePublication,
-  UnknownOpenActionModuleSettings
+    MirrorablePublication,
+    UnknownOpenActionModuleSettings
 } from '@good/lens';
 import type { FC } from 'react';
 
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
 import isFeatureAvailable from '@helpers/isFeatureAvailable';
 
+import DecentOpenAction from './UnknownModule/Decent';
 import RentableBillboardOpenAction from './UnknownModule/RentableBillboard';
 import SwapOpenAction from './UnknownModule/Swap';
 
@@ -18,7 +19,8 @@ const OpenActionOnBody: FC<OpenActionOnBodyProps> = ({ publication }) => {
   const module = publication.openActionModules.find(
     (module) =>
       module.contract.address === VerifiedOpenActionModules.Swap ||
-      module.contract.address === VerifiedOpenActionModules.RentableBillboard
+      module.contract.address === VerifiedOpenActionModules.RentableBillboard ||
+      module.contract.address === VerifiedOpenActionModules.DecentNFT
   );
 
   if (!module) {
@@ -41,6 +43,9 @@ const OpenActionOnBody: FC<OpenActionOnBodyProps> = ({ publication }) => {
             publication={publication}
           />
         )}
+      {module.contract.address === VerifiedOpenActionModules.DecentNFT && (
+        <DecentOpenAction publication={publication} />
+      )}
     </div>
   );
 };

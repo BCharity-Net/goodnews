@@ -19,13 +19,15 @@ export const PROFILE = {
   FOLLOW: 'Follow profile',
   OPEN_RECOMMENDED_PROFILES: 'Open recommended profiles modal',
   OPEN_SUPER_FOLLOW: 'Open super follow modal',
+  RECOMMENDED: 'Recommended the profile',
   REPORT: 'Report profile',
   SUPER_FOLLOW: 'Super follow profile',
   SWITCH_PROFILE: 'Switch profile',
   SWITCH_PROFILE_FEED_TAB: 'Switch profile feed tab',
   SWITCH_PROFILE_STATS_TAB: 'Switch profile stats tab',
   UNBLOCK: 'Unblock profile',
-  UNFOLLOW: 'Unfollow profile'
+  UNFOLLOW: 'Unfollow profile',
+  UNRECOMENDED: 'Unrecommended the profile'
 };
 
 export const PUBLICATION = {
@@ -57,6 +59,9 @@ export const PUBLICATION = {
   NEW_QUOTE: 'New quote',
   NOT_INTERESTED: 'Not interested publication',
   OPEN_ACTIONS: {
+    DECENT: {
+      OPEN_DECENT: 'Open decent.xyz open action modal'
+    },
     SWAP: { SWAP: 'Swap OA: Swap' }
   },
   OPEN_GIFS: 'Open GIFs modal',

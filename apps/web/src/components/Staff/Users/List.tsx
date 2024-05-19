@@ -1,7 +1,7 @@
 import type {
-  ExploreProfilesRequest,
-  Profile,
-  ProfileSearchRequest
+    ExploreProfilesRequest,
+    Profile,
+    ProfileSearchRequest
 } from '@good/lens';
 import type { FC } from 'react';
 
@@ -11,10 +11,10 @@ import UserProfile from '@components/Shared/UserProfile';
 import { SUPER_ADMIN } from '@good/data/constants';
 import getProfile from '@good/helpers/getProfile';
 import {
-  ExploreProfilesOrderByType,
-  LimitType,
-  useExploreProfilesQuery,
-  useSearchProfilesLazyQuery
+    ExploreProfilesOrderByType,
+    LimitType,
+    useExploreProfilesQuery,
+    useSearchProfilesLazyQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage, Input, Select } from '@good/ui';
 import cn from '@good/ui/cn';

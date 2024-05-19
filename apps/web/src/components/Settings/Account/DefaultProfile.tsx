@@ -7,9 +7,9 @@ import { SETTINGS } from '@good/data/tracking';
 import getAvatar from '@good/helpers/getAvatar';
 import getProfile from '@good/helpers/getProfile';
 import {
-  useDefaultProfileQuery,
-  useProfilesQuery,
-  useSetDefaultProfileMutation
+    useDefaultProfileQuery,
+    useProfilesQuery,
+    useSetDefaultProfileMutation
 } from '@good/lens';
 import { Button, Card, CardHeader, Select } from '@good/ui';
 import errorToast from '@helpers/errorToast';

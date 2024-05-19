@@ -9,12 +9,12 @@ import { APP_NAME } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
 import { useProfileQuery } from '@good/lens';
 import {
-  Card,
-  EmptyState,
-  ErrorMessage,
-  GridItemEight,
-  GridItemFour,
-  GridLayout
+    Card,
+    EmptyState,
+    ErrorMessage,
+    GridItemEight,
+    GridItemFour,
+    GridLayout
 } from '@good/ui';
 import { Leafwatch } from '@helpers/leafwatch';
 import { UserIcon } from '@heroicons/react/24/outline';

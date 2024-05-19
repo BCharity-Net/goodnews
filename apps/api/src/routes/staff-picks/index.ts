@@ -4,8 +4,8 @@ import logger from '@good/helpers/logger';
 import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
-  STAFF_PICK_FEATURE_ID,
-  SWR_CACHE_AGE_10_SECS_30_DAYS
+    STAFF_PICK_FEATURE_ID,
+    SWR_CACHE_AGE_10_SECS_30_DAYS
 } from 'src/helpers/constants';
 
 export const get: Handler = async (_, res) => {

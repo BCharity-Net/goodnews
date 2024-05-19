@@ -10,8 +10,8 @@ import stopEventPropagation from '@good/helpers/stopEventPropagation';
 import { Image } from '@good/ui';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 

@@ -3,9 +3,9 @@ import type { FC } from 'react';
 
 import { Card, HelpTooltip } from '@good/ui';
 import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel
 } from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 

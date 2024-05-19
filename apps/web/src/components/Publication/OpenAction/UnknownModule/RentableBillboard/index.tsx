@@ -1,6 +1,6 @@
 import type {
-  MirrorablePublication,
-  UnknownOpenActionModuleSettings
+    MirrorablePublication,
+    UnknownOpenActionModuleSettings
 } from '@good/lens';
 import type { FC } from 'react';
 

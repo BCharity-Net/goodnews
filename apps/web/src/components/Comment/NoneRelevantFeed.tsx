@@ -5,11 +5,11 @@ import { useHiddenCommentFeedStore } from '@components/Publication';
 import SinglePublication from '@components/Publication/SinglePublication';
 import getAvatar from '@good/helpers/getAvatar';
 import {
-  CommentRankingFilterType,
-  CustomFiltersType,
-  HiddenCommentsType,
-  LimitType,
-  usePublicationsQuery
+    CommentRankingFilterType,
+    CustomFiltersType,
+    HiddenCommentsType,
+    LimitType,
+    usePublicationsQuery
 } from '@good/lens';
 import { Card, StackedAvatars } from '@good/ui';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';

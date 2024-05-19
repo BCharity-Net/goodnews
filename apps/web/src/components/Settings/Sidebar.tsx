@@ -4,20 +4,20 @@ import type { FC } from 'react';
 import Sidebar from '@components/Shared/Sidebar';
 import UserProfile from '@components/Shared/UserProfile';
 import {
-  AdjustmentsVerticalIcon,
-  AtSymbolIcon,
-  BookmarkIcon,
-  CircleStackIcon,
-  CpuChipIcon,
-  ExclamationTriangleIcon,
-  FingerPrintIcon,
-  GlobeAltIcon,
-  NoSymbolIcon,
-  QueueListIcon,
-  ShareIcon,
-  SparklesIcon,
-  StarIcon,
-  UserIcon
+    AdjustmentsVerticalIcon,
+    AtSymbolIcon,
+    BookmarkIcon,
+    CircleStackIcon,
+    CpuChipIcon,
+    ExclamationTriangleIcon,
+    FingerPrintIcon,
+    GlobeAltIcon,
+    NoSymbolIcon,
+    QueueListIcon,
+    ShareIcon,
+    SparklesIcon,
+    StarIcon,
+    UserIcon
 } from '@heroicons/react/24/outline';
 import { useProStore } from 'src/store/non-persisted/useProStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';

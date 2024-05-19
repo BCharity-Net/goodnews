@@ -1,7 +1,7 @@
 import type {
-  AnyPublication,
-  PublicationBookmarksRequest,
-  PublicationMetadataMainFocusType
+    AnyPublication,
+    PublicationBookmarksRequest,
+    PublicationMetadataMainFocusType
 } from '@good/lens';
 import type { FC } from 'react';
 import type { StateSnapshot, VirtuosoHandle } from 'react-virtuoso';

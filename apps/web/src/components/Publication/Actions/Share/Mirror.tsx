@@ -1,10 +1,10 @@
 import type {
-  MirrorablePublication,
-  MomokaMirrorRequest,
-  OnchainMirrorRequest
+    MirrorablePublication,
+    MomokaMirrorRequest,
+    OnchainMirrorRequest
 } from '@good/lens';
 import type { OptimisticTransaction } from '@good/types/misc';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import { useApolloClient } from '@apollo/client';
 import { LensHub } from '@good/abis';
@@ -14,13 +14,13 @@ import { PUBLICATION } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  TriStateValue,
-  useBroadcastOnchainMutation,
-  useBroadcastOnMomokaMutation,
-  useCreateMomokaMirrorTypedDataMutation,
-  useCreateOnchainMirrorTypedDataMutation,
-  useMirrorOnchainMutation,
-  useMirrorOnMomokaMutation
+    TriStateValue,
+    useBroadcastOnchainMutation,
+    useBroadcastOnMomokaMutation,
+    useCreateMomokaMirrorTypedDataMutation,
+    useCreateOnchainMirrorTypedDataMutation,
+    useMirrorOnchainMutation,
+    useMirrorOnMomokaMutation
 } from '@good/lens';
 import { OptmisticPublicationType } from '@good/types/enums';
 import cn from '@good/ui/cn';
@@ -42,7 +42,7 @@ import { useSignTypedData, useWriteContract } from 'wagmi';
 interface MirrorProps {
   isLoading: boolean;
   publication: MirrorablePublication;
-  setIsLoading: (isLoading: boolean) => void;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
 
 const Mirror: FC<MirrorProps> = ({ isLoading, publication, setIsLoading }) => {

@@ -7,8 +7,8 @@ import { ProfileLinkSource } from '@good/data/tracking';
 import { LimitType, useProfilesQuery } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import {
-  ArrowLeftIcon,
-  ArrowsRightLeftIcon
+    ArrowLeftIcon,
+    ArrowsRightLeftIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Virtuoso } from 'react-virtuoso';

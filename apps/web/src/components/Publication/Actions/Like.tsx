@@ -6,9 +6,9 @@ import { Errors } from '@good/data/errors';
 import { PUBLICATION } from '@good/data/tracking';
 import nFormatter from '@good/helpers/nFormatter';
 import {
-  PublicationReactionType,
-  useAddReactionMutation,
-  useRemoveReactionMutation
+    PublicationReactionType,
+    useAddReactionMutation,
+    useRemoveReactionMutation
 } from '@good/lens';
 import { Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';

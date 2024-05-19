@@ -12,8 +12,8 @@ import { Image } from '@good/ui';
 import cn from '@good/ui/cn';
 import isVerified from '@helpers/isVerified';
 import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon
+    CheckBadgeIcon,
+    ExclamationCircleIcon
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { memo } from 'react';

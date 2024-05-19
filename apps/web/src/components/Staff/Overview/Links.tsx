@@ -55,7 +55,7 @@ const Links: FC = () => {
             title="Railway"
           />
           <ListItem
-            link="https://vercel.com/goodxyz/web/deployments"
+            link="https://vercel.com/bcharity-net/web/deployments"
             title="Vercel"
           />
         </ul>

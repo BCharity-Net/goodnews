@@ -11,7 +11,7 @@ const MessagesIcon: FC = () => {
         className="hidden rounded-md px-2 py-1 hover:bg-gray-300/20 md:flex"
         href="/messages"
       >
-        <EnvelopeIcon className="size-12 sm:size-12" />
+        <EnvelopeIcon className="size-5 sm:size-6" />
       </Link>
     </Tooltip>
   );

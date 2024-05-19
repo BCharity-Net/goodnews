@@ -1,18 +1,18 @@
 import type {
-  LastLoggedInProfileRequest,
-  Profile,
-  ProfilesManagedRequest
+    LastLoggedInProfileRequest,
+    Profile,
+    ProfilesManagedRequest
 } from '@good/lens';
-import type { FC } from 'react';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
 import SwitchNetwork from '@components/Shared/SwitchNetwork';
 import { Errors } from '@good/data/errors';
 import { AUTH } from '@good/data/tracking';
 import {
-  ManagedProfileVisibility,
-  useAuthenticateMutation,
-  useChallengeLazyQuery,
-  useProfilesManagedQuery
+    ManagedProfileVisibility,
+    useAuthenticateMutation,
+    useChallengeLazyQuery,
+    useProfilesManagedQuery
 } from '@good/lens';
 import { Button, Card } from '@good/ui';
 import errorToast from '@helpers/errorToast';
@@ -31,7 +31,7 @@ import SignupCard from './SignupCard';
 import WalletSelector from './WalletSelector';
 
 interface LoginProps {
-  setHasProfiles: (hasProfiles: boolean) => void;
+  setHasProfiles: Dispatch<SetStateAction<boolean>>;
 }
 
 const Login: FC<LoginProps> = ({ setHasProfiles }) => {

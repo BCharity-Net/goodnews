@@ -7,6 +7,7 @@ import Markup from '@components/Shared/Markup';
 import Oembed from '@components/Shared/Oembed';
 import Video from '@components/Shared/Video';
 import { KNOWN_ATTRIBUTES } from '@good/data/constants';
+import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
 import getPublicationAttribute from '@good/helpers/getPublicationAttribute';
 import getPublicationData from '@good/helpers/getPublicationData';
 import getURLs from '@good/helpers/getURLs';
@@ -87,7 +88,11 @@ const PublicationBody: FC<PublicationBodyProps> = ({
       metadata.attributes,
       KNOWN_ATTRIBUTES.HIDE_OEMBED
     ) === 'true';
+  const hasDecentOpenAction = targetPublication.openActionModules.some(
+    (module) => module.contract.address === VerifiedOpenActionModules.DecentNFT
+  );
   const showOembed =
+    !hasDecentOpenAction &&
     !hideOembed &&
     !showSharingLink &&
     hasURLs &&
@@ -128,18 +133,14 @@ const PublicationBody: FC<PublicationBodyProps> = ({
         </div>
       ) : null}
       {showOembed ? (
-        <Oembed publicationId={targetPublication.id} url={urls[0]} />
+        <Oembed publication={targetPublication} url={urls[0]} />
       ) : null}
       {showSharingLink ? (
-        <Oembed
-          publicationId={targetPublication.id}
-          url={metadata.sharingLink}
-        />
+        <Oembed publication={targetPublication} url={metadata.sharingLink} />
       ) : null}
       {showQuote && <Quote publication={targetPublication.quoteOn} />}
       <Metadata metadata={targetPublication.metadata} />
     </div>
-    
   );
 };
 

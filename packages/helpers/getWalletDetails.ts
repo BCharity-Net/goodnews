@@ -1,4 +1,4 @@
-import { PUBLIC_WALLET_IMAGE_PATH } from '@good/data/constants';
+import { STATIC_IMAGES_URL } from '@good/data/constants';
 
 interface WalletDetails {
   logo: string;
@@ -14,16 +14,16 @@ interface WalletDetails {
 const getWalletDetails = (name: string): WalletDetails => {
   const walletDetails: Record<string, WalletDetails> = {
     'Coinbase Wallet': {
-      logo: `${PUBLIC_WALLET_IMAGE_PATH}/CoinbaseLogo.png`,
+      logo: `${STATIC_IMAGES_URL}/wallets/coinbase.svg`,
       name: 'Coinbase Wallet'
     },
     WalletConnect: {
-      logo: `${PUBLIC_WALLET_IMAGE_PATH}/walletConnect.png`,
+      logo: `${STATIC_IMAGES_URL}/wallets/walletconnect.svg`,
       name: 'WalletConnect'
     }
   };
   const defaultDetails: WalletDetails = {
-    logo: `${PUBLIC_WALLET_IMAGE_PATH}/BrowserWalletLogo.png`,
+    logo: `${STATIC_IMAGES_URL}/wallets/browser-wallet.svg`,
     name
   };
 

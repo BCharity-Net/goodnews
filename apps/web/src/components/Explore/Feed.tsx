@@ -1,7 +1,7 @@
 import type {
-  AnyPublication,
-  ExplorePublicationRequest,
-  PublicationMetadataMainFocusType
+    AnyPublication,
+    ExplorePublicationRequest,
+    PublicationMetadataMainFocusType
 } from '@good/lens';
 import type { FC } from 'react';
 import type { StateSnapshot, VirtuosoHandle } from 'react-virtuoso';
@@ -9,10 +9,10 @@ import type { StateSnapshot, VirtuosoHandle } from 'react-virtuoso';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
 import {
-  CustomFiltersType,
-  ExplorePublicationsOrderByType,
-  LimitType,
-  useExplorePublicationsQuery
+    CustomFiltersType,
+    ExplorePublicationsOrderByType,
+    LimitType,
+    useExplorePublicationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import { RectangleStackIcon } from '@heroicons/react/24/outline';

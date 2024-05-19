@@ -27,7 +27,7 @@ export const ADDRESS_PLACEHOLDER = '0x03Ba3...7EF';
 
 // Application
 export const APP_NAME = 'Good';
-export const DESCRIPTION = `${APP_NAME} is a decentralized, and permissionless social media app for the public good built with Lens Protocol`;
+export const DESCRIPTION = `${APP_NAME}.xyz is a decentralized, and permissionless social media app built with Lens Protocol 🌿`;
 export const APP_VERSION = packageJson.version;
 export const BRAND_COLOR = '#FB3A5D';
 export const MAX_UINT256 = 2n ** 256n - 1n;
@@ -41,7 +41,9 @@ export const WMATIC_ADDRESS = IS_MAINNET
   ? '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270'
   : '0x9c3c9283d3e44854697cd22d3faa240cfb032889';
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
+export const PERMIT_2_ADDRESS = '0x000000000022D473030F116dDEE9F6B43aC78BA3';
 export const REWARDS_ADDRESS = '0x698386C93513d6D0C58f296633A7A3e529bd4026';
+export const REWARDS_PROFILE_ID = '12'; // 0x0c
 export const TEST_WALLET_ADDRESS = '0xb9C6e304545386E95d5c4ab183EE97A13555A49d';
 export const TEST_PK =
   '0x8b33302ca865bc1ed65bc02b71dd02067bd3dae3da2f8bb0d95b16509e9ac71e';
@@ -59,6 +61,30 @@ export const GOOD_MEMBERSHIP_NFT = IS_MAINNET
   ? '0x100372BBF7f975f6b1448fB11AB0F814b2740EEd'
   : '0x75120677aBF34ae95a916C6E9DbB610a06536CC3';
 export const SUPER_ADMIN = '0x0d';
+export const DEFAULT_DECENT_OA_TOKEN = {
+  contractAddress: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+  decimals: 18,
+  id: 'WMATIC',
+  name: 'Wrapped MATIC',
+  symbol: 'WMATIC'
+};
+export const SUPPORTED_DECENT_OA_TOKENS: Record<
+  string,
+  { address: `0x${string}`; visibleDecimals: number }
+> = {
+  USDC: {
+    address: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+    visibleDecimals: 2
+  },
+  WETH: {
+    address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+    visibleDecimals: 4
+  },
+  WMATIC: {
+    address: '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+    visibleDecimals: 2
+  }
+};
 
 // URLs
 export const STATIC_ASSETS_URL = 'https://good-assets.b-cdn.net';
@@ -68,6 +94,9 @@ export const LENS_MEDIA_SNAPSHOT_URL =
 export const POLYGONSCAN_URL = IS_MAINNET
   ? 'https://polygonscan.com/'
   : 'https://amoy.polygonscan.com/';
+export const LAYERZEROSCAN_URL = IS_MAINNET
+  ? 'https://layerzeroscan.com/'
+  : 'https://testnet.layerzeroscan.com/';
 export const IPFS_GATEWAY = 'https://gw.ipfs-lens.dev/ipfs';
 export const ARWEAVE_GATEWAY = 'https://gateway.irys.xyz';
 export const EVER_API = 'https://endpoint.4everland.co';
@@ -76,7 +105,7 @@ export const PLACEHOLDER_IMAGE = `${STATIC_IMAGES_URL}/placeholder.webp`;
 export const MOONPAY_URL = IS_MAINNET
   ? 'https://buy.moonpay.com'
   : 'https://buy-sandbox.moonpay.com';
-export const GOOD_IMAGEKIT_URL = 'https://ik.imagekit.io/bcharityimg';
+export const GOOD_IMAGEKIT_URL = 'https://ik.imagekit.io/goodimg';
 
 // Tokens / Keys
 export const WALLETCONNECT_PROJECT_ID = 'cd542acc70c2b548030f9901a52e70c8';
@@ -109,5 +138,3 @@ export const KNOWN_ATTRIBUTES = {
   POLL_ID: 'pollId',
   SWAP_OA_DEFAULT_AMOUNT: 'swapOADefaultAmount'
 };
-
-export const PUBLIC_WALLET_IMAGE_PATH = '/wallets';

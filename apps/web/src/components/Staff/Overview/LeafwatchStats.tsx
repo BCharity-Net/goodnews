@@ -3,9 +3,9 @@ import type { FC } from 'react';
 import Loader from '@components/Shared/Loader';
 import { GOOD_API_URL } from '@good/data/constants';
 import {
-  ExploreProfilesOrderByType,
-  LimitType,
-  useExploreProfilesQuery
+    ExploreProfilesOrderByType,
+    LimitType,
+    useExploreProfilesQuery
 } from '@good/lens';
 import { CardHeader, ErrorMessage, NumberedStat } from '@good/ui';
 import { useQuery } from '@tanstack/react-query';

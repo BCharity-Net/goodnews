@@ -5,13 +5,13 @@ import { Spinner, Tooltip } from '@good/ui';
 import cn from '@good/ui/cn';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import {
-  MusicalNoteIcon,
-  PhotoIcon,
-  VideoCameraIcon
+    MusicalNoteIcon,
+    PhotoIcon,
+    VideoCameraIcon
 } from '@heroicons/react/24/outline';
 import {
-  MediaAudioMimeType,
-  MediaImageMimeType
+    MediaAudioMimeType,
+    MediaImageMimeType
 } from '@lens-protocol/metadata';
 import { useClickAway } from '@uidotdev/usehooks';
 import { motion } from 'framer-motion';

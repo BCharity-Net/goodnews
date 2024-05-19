@@ -5,10 +5,10 @@ import { GOOD_API_URL } from '@good/data/constants';
 import { Card, Spinner, Tooltip } from '@good/ui';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import {
-  ClipboardDocumentIcon,
-  SignalIcon,
-  VideoCameraIcon,
-  VideoCameraSlashIcon
+    ClipboardDocumentIcon,
+    SignalIcon,
+    VideoCameraIcon,
+    VideoCameraSlashIcon
 } from '@heroicons/react/24/outline';
 import { XCircleIcon } from '@heroicons/react/24/solid';
 import axios from 'axios';

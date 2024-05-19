@@ -5,9 +5,9 @@ import type { StateSnapshot, VirtuosoHandle } from 'react-virtuoso';
 import SinglePublication from '@components/Publication/SinglePublication';
 import PublicationsShimmer from '@components/Shared/Shimmer/PublicationsShimmer';
 import {
-  CustomFiltersType,
-  LimitType,
-  useSearchPublicationsQuery
+    CustomFiltersType,
+    LimitType,
+    useSearchPublicationsQuery
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import { RectangleStackIcon } from '@heroicons/react/24/outline';

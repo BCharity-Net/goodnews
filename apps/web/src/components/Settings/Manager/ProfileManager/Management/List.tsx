@@ -1,17 +1,17 @@
 import type {
-  LastLoggedInProfileRequest,
-  Profile,
-  ProfilesManagedRequest
+    LastLoggedInProfileRequest,
+    Profile,
+    ProfilesManagedRequest
 } from '@good/lens';
 import type { FC } from 'react';
 
 import Loader from '@components/Shared/Loader';
 import UserProfile from '@components/Shared/UserProfile';
 import {
-  ManagedProfileVisibility,
-  useHideManagedProfileMutation,
-  useProfilesManagedQuery,
-  useUnhideManagedProfileMutation
+    ManagedProfileVisibility,
+    useHideManagedProfileMutation,
+    useProfilesManagedQuery,
+    useUnhideManagedProfileMutation
 } from '@good/lens';
 import { Button, EmptyState, ErrorMessage } from '@good/ui';
 import errorToast from '@helpers/errorToast';

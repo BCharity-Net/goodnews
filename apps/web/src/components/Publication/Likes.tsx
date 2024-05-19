@@ -4,10 +4,10 @@ import ProfileListShimmer from '@components/Shared/Shimmer/ProfileListShimmer';
 import UserProfile from '@components/Shared/UserProfile';
 import { ProfileLinkSource } from '@good/data/tracking';
 import {
-  LimitType,
-  type Profile,
-  useWhoReactedPublicationQuery,
-  type WhoReactedPublicationRequest
+    LimitType,
+    useWhoReactedPublicationQuery,
+    type Profile,
+    type WhoReactedPublicationRequest
 } from '@good/lens';
 import { Card, EmptyState, ErrorMessage } from '@good/ui';
 import { ArrowLeftIcon, HeartIcon } from '@heroicons/react/24/outline';

@@ -7,11 +7,11 @@ import { Component, createRef } from 'react';
 import type { Area, MediaSize, Point, Size } from './types';
 
 import {
-  computeCroppedArea,
-  getDistanceBetweenPoints,
-  getMidpoint,
-  restrictPosition,
-  restrictValue
+    computeCroppedArea,
+    getDistanceBetweenPoints,
+    getMidpoint,
+    restrictPosition,
+    restrictValue
 } from './cropUtils';
 
 interface CropperProps {

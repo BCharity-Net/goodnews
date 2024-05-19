@@ -9,9 +9,9 @@ import { PROFILE } from '@good/data/tracking';
 import checkDispatcherPermissions from '@good/helpers/checkDispatcherPermissions';
 import getSignature from '@good/helpers/getSignature';
 import {
-  useBroadcastOnchainMutation,
-  useCreateFollowTypedDataMutation,
-  useFollowMutation
+    useBroadcastOnchainMutation,
+    useCreateFollowTypedDataMutation,
+    useFollowMutation
 } from '@good/lens';
 import { useApolloClient } from '@good/lens/apollo';
 import { OptmisticPublicationType } from '@good/types/enums';

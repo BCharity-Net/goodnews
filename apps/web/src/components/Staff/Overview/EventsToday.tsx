@@ -3,15 +3,15 @@ import type { FC } from 'react';
 import formatDate from '@good/helpers/datetime/formatDate';
 import { CardHeader } from '@good/ui';
 import {
-  CategoryScale,
-  Chart as ChartJS,
-  Filler,
-  Legend,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip
+    CategoryScale,
+    Chart as ChartJS,
+    Filler,
+    Legend,
+    LinearScale,
+    LineElement,
+    PointElement,
+    Title,
+    Tooltip
 } from 'chart.js';
 import { useTheme } from 'next-themes';
 import { Line } from 'react-chartjs-2';

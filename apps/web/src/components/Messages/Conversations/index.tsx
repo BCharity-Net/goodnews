@@ -4,10 +4,10 @@ import type { FC } from 'react';
 import cn from '@good/ui/cn';
 import { ArrowLeftIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import {
-  useClient,
-  useConsent,
-  useConversations,
-  useStreamAllMessages
+    useClient,
+    useConsent,
+    useConversations,
+    useStreamAllMessages
 } from '@xmtp/react-sdk';
 import { useEffect, useState } from 'react';
 import { Virtuoso } from 'react-virtuoso';

@@ -23,20 +23,20 @@
   "eslintConfig": {
     "root": true
   },
+  "dependencies": {
+    "@good/abis": "workspace:^",
+    "pnpm": "^8.15.8"
+  },
   "devDependencies": {
     "eslint-plugin-perfectionist": "^2.10.0",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "start-server-and-test": "^2.0.0",
-    "turbo": "^1.13.3",
-    "turbo-cli": "^0.39.6"
+    "turbo": "^1.13.3"
   },
   "packageManager": "pnpm@8.15.8+sha256.691fe176eea9a8a80df20e4976f3dfb44a04841ceb885638fe2a26174f81e65e",
   "engines": {
     "node": ">=16.x <=20.x"
-  },
-  "dependencies": {
-    "pnpm": "^8.15.8"
   }
 }

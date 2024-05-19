@@ -1,7 +1,7 @@
 import type {
-  AmountInput,
-  CollectOpenActionModuleType,
-  RecipientDataInput
+    AmountInput,
+    CollectOpenActionModuleType,
+    RecipientDataInput
 } from '@good/lens';
 
 export type StaffPick = {

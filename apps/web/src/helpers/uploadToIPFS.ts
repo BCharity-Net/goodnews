@@ -3,10 +3,10 @@ import type { IPFSResponse } from '@good/types/misc';
 import { S3 } from '@aws-sdk/client-s3';
 import { Upload } from '@aws-sdk/lib-storage';
 import {
-  EVER_API,
-  GOOD_API_URL,
-  S3_BUCKET,
-  THIRDWEB_CLIENT_ID
+    EVER_API,
+    GOOD_API_URL,
+    S3_BUCKET,
+    THIRDWEB_CLIENT_ID
 } from '@good/data/constants';
 import { KillSwitch } from '@good/data/kill-switches';
 import { ThirdwebStorage } from '@thirdweb-dev/storage';
