@@ -109,3 +109,5 @@ export const KNOWN_ATTRIBUTES = {
   POLL_ID: 'pollId',
   SWAP_OA_DEFAULT_AMOUNT: 'swapOADefaultAmount'
 };
+
+export const PUBLIC_WALLET_IMAGE_PATH = '/wallets';

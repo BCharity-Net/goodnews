@@ -43,7 +43,7 @@ const SinglePublication: FC<SinglePublicationProps> = ({
       className={cn(
         isFirst && 'rounded-t-xl',
         isLast && 'rounded-b-xl',
-        'cursor-pointer px-5 pb-3 pt-4 hover:bg-gray-100 dark:hover:bg-gray-900'
+        'cursor-pointer px-5 pb-3 pt-4 dark:hover:bg-gray-900'
       )}
       publication={rootPublication}
     >
@@ -58,6 +58,7 @@ const SinglePublication: FC<SinglePublicationProps> = ({
       )}
       <div className="flex items-start space-x-3">
         <PublicationAvatar feedItem={feedItem} publication={rootPublication} />
+  
         <div className="w-[calc(100%-55px)]">
           <PublicationHeader
             feedItem={feedItem}
