@@ -62,7 +62,7 @@ const nextConfig = {
       },
       {
         destination:
-          'https://yoginth.notion.site/ff1926a080fa44bc9d40ee534f627949',
+          'https://bcharity.notion.site/ff1926a080fa44bc9d40ee534f627949',
         permanent: true,
         source: '/-/mod-guide'
       }
@@ -87,7 +87,7 @@ const nextConfig = {
 
 module.exports = withSentryConfig(
   nextConfig,
-  { org: 'goodverse', project: 'web', silent: true },
+  { org: 'bcharity', project: 'web', silent: true },
   {
     automaticVercelMonitors: true,
     disableLogger: true,
