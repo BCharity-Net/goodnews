@@ -26,7 +26,7 @@ const nextConfig = {
         source: '/signup'
       },
       {
-        destination: 'https://discord.com/invite/B8eKhSSUwX',
+        destination: 'https://discord.com/invite/NPeA8FJwye',
         permanent: true,
         source: '/discord'
       },
