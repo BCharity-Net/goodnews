@@ -38,7 +38,7 @@ const nextConfig = {
       },
       {
         destination:
-          'https://explorer.gitcoin.co/#/round/42161/25/1?utm_source=bcharity.net',
+          'https://explorer.gitcoin.co/#/round/42161/25/165',
         permanent: true,
         source: '/gitcoin'
       },
