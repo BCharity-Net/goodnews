@@ -1,0 +1,413 @@
+[33mcommit da66c33eeb880fa1605f4f1670f8489e3c09415c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Wed May 22 08:48:21 2024 -0700
+
+    fix bugs
+
+[33mcommit d3d731cfd2773584dfaf693cafef6c82a44d1070[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Tue May 21 22:16:08 2024 -0700
+
+    husky pre
+
+[33mcommit 3358f0a3be1b2be482ea63389d75fca18bf7aa59[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Tue May 21 16:17:43 2024 -0700
+
+    new gitcoin
+
+[33mcommit da5e871addafc53d09661da27a6411615e997bed[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Tue May 21 16:05:45 2024 -0700
+
+    new dest
+
+[33mcommit eb0426f69e97ab879277e1d606c57bd2535033a4[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Tue May 21 15:42:46 2024 -0700
+
+    un.husky2
+
+[33mcommit cfdaf8ce5fab283de112a54f362c014291a32803[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Tue May 21 15:38:47 2024 -0700
+
+    un.husky
+
+[33mcommit cc51557bd3f38653638ddee4d7518c567fe44dc0[m[33m ([m[1;31morigin/backup-branch-Yumo[m[33m, [m[1;31morigin/Pink-Button-Yumo-merged[m[33m, [m[1;31morigin/Pink-Button-Yumo[m[33m, [m[1;32mbackup-branch-Yumo[m[33m)[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Sun May 19 13:20:03 2024 -0700
+
+    1.008b-init
+
+[33mcommit 960b4f1c39be06d353337c2a53bd574fc5f34d3b[m
+Merge: d1a3b31 87e1ec3
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Sun May 19 00:15:42 2024 -0700
+
+    Merge branch 'main' of https://github.com/BCharity-Net/good
+
+[33mcommit d1a3b31fa0968721f94f231c70a13110d5dab6b9[m
+Author: bcharityfi <bcharityfi@gmail.com>
+Date:   Sun May 19 00:13:23 2024 -0700
+
+    1.008a-init
+
+[33mcommit 87e1ec31b190d3c75284fe72a1414c467039d7eb[m
+Merge: a434d98 2485fa0
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 12:09:54 2024 -0700
+
+    Merge pull request #8 from BCharity-Net/Emma-Cleanup
+    
+    Emma cleanup
+
+[33mcommit 2485fa03e481423e3ec1fd97009a46a0139bcde6[m[33m ([m[1;31morigin/Emma-Cleanup[m[33m)[m
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 12:09:33 2024 -0700
+
+    Update index.tsx
+
+[33mcommit cfff69f6f370c2f12619926f66e15f13dafc98c0[m
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 11:41:12 2024 -0700
+
+    dep update
+
+[33mcommit a434d98b7a2198c331f5925b0b73983a4815e778[m
+Merge: f10ca58 b56ee17
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 11:35:52 2024 -0700
+
+    Merge pull request #7 from BCharity-Net/Post-Viet
+    
+    Post viet
+
+[33mcommit b56ee17e41917f275073679b2c3bb498b608fc1f[m[33m ([m[1;31morigin/Post-Viet[m[33m)[m
+Merge: 0d352b4 f10ca58
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 11:35:45 2024 -0700
+
+    Merge branch 'main' into Post-Viet
+
+[33mcommit f10ca588e115771266245e53c00bcbb5cd5cb5e6[m
+Merge: e5bf0c6 8060a66
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 11:34:14 2024 -0700
+
+    Merge pull request #6 from BCharity-Net/Posting---Haochen
+    
+    Posting   haochen
+
+[33mcommit 8060a66052e997a42c8a0e42781d264026a1aec6[m[33m ([m[1;31morigin/Posting---Haochen[m[33m)[m
+Merge: cc99777 e5bf0c6
+Author: Emma MB <emma@meredithblack.com>
+Date:   Sat May 18 11:34:05 2024 -0700
+
+    Merge branch 'main' into Posting---Haochen
+
+[33mcommit e5bf0c6b3955295341ad9a325bbfb67d3ecab09b[m
+Merge: 4fdfda2 5e12ea2
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 17:30:45 2024 -0700
+
+    Merge pull request #5 from BCharity-Net/Notification-Yumo
+    
+    Notification yumo
+
+[33mcommit 5e12ea25513a59a9ce1aea1cfdebe5b2e3f80967[m[33m ([m[1;31morigin/Notification-Yumo[m[33m, [m[1;32mNotification-Yumo[m[33m)[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 17:28:14 2024 -0700
+
+    notification page finished
+
+[33mcommit 56e686c18ea4c0e0df1a583cfc3eb3fcbe50c8cd[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 17:21:56 2024 -0700
+
+    modified the  layout for notification page
+
+[33mcommit 4fdfda2d67c190d6436ce64a89105e9f4e4f5e95[m
+Merge: ef7d80f 81864cc
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 16:11:46 2024 -0700
+
+    Merge pull request #4 from BCharity-Net/Auth-Window-Yumo
+    
+    Auth window yumo
+
+[33mcommit 81864cc94d7803c35a959c246a5bb5de3dd9dd06[m[33m ([m[1;31morigin/Auth-Window-Yumo-merged[m[33m, [m[1;31morigin/Auth-Window-Yumo[m[33m, [m[1;32mAuth-Window-Yumo[m[33m)[m
+Merge: de310f7 ef7d80f
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 16:09:15 2024 -0700
+
+    Merge branch 'main' of https://github.com/BCharity-Net/good into Auth-Window-Yumo
+
+[33mcommit de310f742d4722b020fa27257d3e1851e8261d99[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 16:07:03 2024 -0700
+
+    Fixed broken images on Auth windows
+
+[33mcommit 0d352b49b684ddbbd46f1227e79d34fe5a0e5126[m
+Author: VietNguyenSet1D <vnguyen141@my.bcit.ca>
+Date:   Fri May 17 14:44:42 2024 -0700
+
+    Add border
+
+[33mcommit 69de3203f07b53942dc9d42b32ef235a8450232a[m
+Author: VietNguyenSet1D <vnguyen141@my.bcit.ca>
+Date:   Fri May 17 12:54:29 2024 -0700
+
+    modify post-composer component
+
+[33mcommit ef7d80f2292b59a5b9b9d2d34ba11d573d0b7bca[m
+Merge: 914ede5 c1697cc
+Author: SleepyParrot <113309608+John2T@users.noreply.github.com>
+Date:   Fri May 17 11:17:25 2024 -0700
+
+    Merge pull request #3 from BCharity-Net/Profile_John
+    
+    Profile Layout Merge
+
+[33mcommit c1697ccbbf620dde60555ef696eb1f54e77969a5[m[33m ([m[1;31morigin/Profile_John[m[33m)[m
+Author: John2T <johntu537@gmail.com>
+Date:   Fri May 17 11:07:18 2024 -0700
+
+    Changed destination host url back to proccess.env
+
+[33mcommit 4bc331d360d5baa76a82d216e97b3a71132d4ad7[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Fri May 17 10:55:10 2024 -0700
+
+    need to modify the images in public/wallets
+
+[33mcommit cc99777c8b57380f71a8d9da2197c7c64b9efef8[m
+Author: Lucas <113465142+LucasHYing@users.noreply.github.com>
+Date:   Thu May 16 22:01:34 2024 -0700
+
+    created post button and linked to the post function in home
+
+[33mcommit 55b4ebc78588f487f89c118354139d25844efb22[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 19:38:13 2024 -0700
+
+    Removed old comments that needed
+
+[33mcommit daa4b0d8f6af4f02395c0ecb7f2961b2a392275d[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 19:29:15 2024 -0700
+
+    Added top arrow above profile cover and modified size of profile columns
+
+[33mcommit 8b873f54b17a4a245d5d4e71bf8a34f14366f808[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 18:58:30 2024 -0700
+
+    Added navbar to profile page, Minor fixes to size of icons
+
+[33mcommit 386198357e34efbb08af3eb72885c08868e672d5[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 17:52:48 2024 -0700
+
+    Yumo's branch Manual merge
+
+[33mcommit 1972ed5da311b40875e192f53f77167e7fb12d12[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 17:27:45 2024 -0700
+
+    Pink Button Manual merge as git isn't allowing me
+
+[33mcommit 3cae108b79bb60e911f478154383d2b0024008ea[m
+Author: John2T <johntu537@gmail.com>
+Date:   Thu May 16 17:24:45 2024 -0700
+
+    Missing FIles Fixed, Column 2,3 finished
+
+[33mcommit 8a8b9249402acfbbb7c6773c48853ef22097e1ad[m
+Merge: 9ed4d17 914ede5
+Author: VietNguyenSet1D <vnguyen141@my.bcit.ca>
+Date:   Thu May 16 14:50:04 2024 -0700
+
+    Merge branch 'main' of https://github.com/BCharity-Net/good into Post-Viet
+
+[33mcommit 9ed4d171ad5173786933ab7b0f91ee238db67564[m
+Author: VietNguyenSet1D <vnguyen141@my.bcit.ca>
+Date:   Thu May 16 14:49:51 2024 -0700
+
+    change default color to be dark grey
+
+[33mcommit 914ede556b4e2b2907d1b789e8787ca559ed3ed9[m
+Merge: 370c348 2138a53
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Thu May 16 12:25:30 2024 -0700
+
+    Merge pull request #2 from BCharity-Net/Pink-Button-Yumo
+    
+    Pink button yumo
+
+[33mcommit 2138a530631e88d795cb1d9958c0c35966ae8539[m[33m ([m[1;32mPink-Button-Yumo[m[33m)[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Thu May 16 12:23:36 2024 -0700
+
+    Fixed the dizzy emoji and broken logo
+
+[33mcommit 33a7bfa207792e636f546f612403584083ef6589[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Thu May 16 11:43:38 2024 -0700
+
+    remove the Hero section
+
+[33mcommit 370c3483d99fa745e374351f0698b9bfb3e4c862[m
+Merge: 73406b6 7e7bc28
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Thu May 16 11:02:56 2024 -0700
+
+    Merge pull request #1 from BCharity-Net/Pink-Button-Yumo
+    
+    Pink buttons finished
+
+[33mcommit 7e7bc28500bdebe4f853801db00a47988963d703[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Thu May 16 10:55:45 2024 -0700
+
+    Pink buttons finished
+
+[33mcommit d0be0f6c0c0f3b930623623b102b920c8ac8cb6c[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Wed May 15 22:34:47 2024 -0700
+
+    modify home page icon and navbar layout
+
+[33mcommit a5e16658c5ed486eeb0673c608d762fb128d265a[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Wed May 15 20:54:40 2024 -0700
+
+    defaultTheme="dark"
+
+[33mcommit 55f2de8a5de3c0f28c2bcc6b3553a63660c907c4[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Wed May 15 10:44:28 2024 -0700
+
+    modify button ui, all pink now
+
+[33mcommit 3b98a5db4fea5ebc6e8e8d54cb632ad48494a04a[m
+Author: Yumo Zhou <113385234+NAinZhou@users.noreply.github.com>
+Date:   Wed May 15 10:32:40 2024 -0700
+
+    Pink login button
+
+[33mcommit f7828b9338d431dfb185f5c21e27e2129ae3bdbf[m
+Author: VietNguyenSet1D <vnguyen141@my.bcit.ca>
+Date:   Tue May 14 13:43:46 2024 -0700
+
+    first commit
+
+[33mcommit 73406b61380b86863f7de5f19f4612f9e82f7e42[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Fri May 10 18:06:49 2024 -0700
+
+    1.008-init
+
+[33mcommit 564e426a890c67326bd11ed4587eae5e121b4352[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Fri May 10 17:55:49 2024 -0700
+
+    1.007-init
+
+[33mcommit 556754466a9c05fddf0c062b901d84b11dd65618[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Fri May 10 17:52:18 2024 -0700
+
+    add ico
+
+[33mcommit f72554686bd410cae7e72df5de8bf9fd63724ab9[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Fri May 10 17:47:58 2024 -0700
+
+    Add icions
+
+[33mcommit df6a113fb5a4f3f8984aa47259c469c48d05efc2[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Fri May 10 17:41:35 2024 -0700
+
+    1.006-init
+
+[33mcommit 7f647728dc7861292482f2c216bf998f5d8e2d4b[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Fri May 10 17:24:37 2024 -0700
+
+    1.005-init
+
+[33mcommit 52ff3149b050da4233782aebcdc34477429e91a3[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Thu May 9 17:35:08 2024 -0700
+
+    1.003-init
+
+[33mcommit a2ce26f997d21506438695e4d274d2cf2a046548[m
+Merge: 3325b2a 010aa7e
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Thu May 9 16:11:17 2024 -0700
+
+    Merge branch 'main' of https://github.com/BCharity-Net/good
+
+[33mcommit 3325b2a393b7daf09cb42f8294ede194019dfb24[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Thu May 9 16:05:36 2024 -0700
+
+    1.002-init
+
+[33mcommit 7eeb0c0a7eeda0760674e99cdb14065a47d42a77[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Thu May 9 16:03:27 2024 -0700
+
+    1.002-init
+
+[33mcommit 010aa7e6984c1a85a9c2146b374649ca00663d7b[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Thu May 9 15:51:09 2024 -0700
+
+    Update page.tsx
+
+[33mcommit f4b1927df3fc4e04ebfb603f7034b20cdba76783[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Wed May 8 14:51:12 2024 -0700
+
+    1.001-init
+
+[33mcommit 18f36e58554b4e10a9b0bce36aa85f5d01eaeee4[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Wed May 8 14:47:45 2024 -0700
+
+    add i-a
+
+[33mcommit 804895c83f938612fb09639695eaf660d8c21e62[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Wed May 8 14:41:07 2024 -0700
+
+    Add icons
+
+[33mcommit 9cc7e4b0525dc9c96e7e6edfcfa299582d9c4e73[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Wed May 8 14:23:31 2024 -0700
+
+    Add files via upload
+
+[33mcommit edbb23a80716604ad5c4e0cddfd895009a101421[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Wed May 8 13:54:57 2024 -0700
+
+    1.001 readme
+
+[33mcommit f561eb7f0ce24eeab867c9f3a987d0cf66b93204[m
+Author: BCharity <bcharityfi@gmail.com>
+Date:   Wed May 8 13:37:29 2024 -0700
+
+    1-init
+
+[33mcommit 16832709b97315563a267ce66adfb413c635c232[m
+Author: bcharityfi <84537757+bcharityfi@users.noreply.github.com>
+Date:   Wed May 1 11:36:48 2024 -0700
+
+    Initial commit
