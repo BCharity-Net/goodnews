@@ -87,13 +87,14 @@ const ReferenceSettings: FC = () => {
       <Menu as="div">
         <MenuButton
           as={motion.button}
-          className="rounded-full outline-offset-8"
+          className="rounded-full outline-offset-8 flex space-x-2"
           whileTap={{ scale: 0.9 }}
         >
           {isEveryone ? <GlobeAltIcon className="w-5" /> : null}
           {isMyFollowers ? <UsersIcon className="w-5" /> : null}
           {isMyFollows ? <UserPlusIcon className="w-5" /> : null}
           {isFriendsOfFriends ? <UserGroupIcon className="w-5" /> : null}
+          <p>Who can reply?</p>
         </MenuButton>
         <MenuTransition>
           <MenuItems

@@ -735,6 +735,11 @@ const NewPost: FC<NewPublicationProps> = ({ publication }) => {
           />
         </Wrapper>
       ) : null}
+      
+      <div className='flex px-16 py-3 mx-1'>
+        <ReferenceSettings />
+      </div>
+
       <div className="divider mx-5" />
       <div className="block items-center px-5 py-3 sm:flex">
         <div className="flex ml-12 items-center space-x-4">
@@ -752,7 +757,7 @@ const NewPost: FC<NewPublicationProps> = ({ publication }) => {
             <>
               <CollectSettings />
               <OpenActionSettings />
-              <ReferenceSettings />
+              {/* <ReferenceSettings /> */}
             </>
           ) : null}
           <PollSettings />
