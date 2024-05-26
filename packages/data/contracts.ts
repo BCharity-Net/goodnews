@@ -1,5 +1,5 @@
 export enum MainnetContracts {
-  DefaultToken = '0x3d2bD0e15829AA5C362a4144FdF4A1112fa29B5c',
+  DefaultToken = '0x08632C91F3e30515CB417217084554632Cf92161',
   GoodLensSignup = '0x4b8845ACb8148dE64D1D99Cf27A3890a91F55E53',
   GoodPro = '0x4D5b616163387fA1Eb26bd1e84bd61C6fdA18C3a',
   GoodTipping = '0xCFeB907551c3C7E4Df2627B2Ed3D0C782702785B',
@@ -10,7 +10,7 @@ export enum MainnetContracts {
 }
 
 export enum TestnetContracts {
-  DefaultToken = '0x3d2bD0e15829AA5C362a4144FdF4A1112fa29B5c',
+  DefaultToken = '0x08632C91F3e30515CB417217084554632Cf92161',
   GoodLensSignup = '0x82Bcb5DA51c6F3D0Ce942bDBEbb0B8A7774d62e8',
   GoodPro = '0x8f5C228E4b9C4Ff01e84C0C4DBDdFe969F6Ca0Ed',
   GoodTipping = '0xAadeC94DCD26555F464455d309a5E896f78cC65f',
