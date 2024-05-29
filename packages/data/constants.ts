@@ -26,7 +26,7 @@ export const IS_MAINNET = LENS_API_URL === LensEndpoint.Mainnet;
 export const ADDRESS_PLACEHOLDER = '0x03Ba3...7EF';
 
 // Application
-export const APP_NAME = 'Good';
+export const APP_NAME = 'Goodnews';
 export const DESCRIPTION = `${APP_NAME}.xyz is a decentralized, and permissionless social media app built with Lens Protocol 🌿`;
 export const APP_VERSION = packageJson.version;
 export const BRAND_COLOR = '#FB3A5D';
