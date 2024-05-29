@@ -38,21 +38,23 @@ const Navbar: FC = () => {
     url?: string;
     icon: React.ReactNode;
     onClick?: () => void; // Add onClick prop
+    className?: string; // Add className prop for custom styles
   }
 
-  const NavItem = ({ current, name, url, icon, onClick }: NavItemProps) => {
+  const NavItem = ({ current, name, url, icon, onClick, className }: NavItemProps) => {
     const Content = (
       <div
-      className={cn(
-        'flex cursor-pointer items-center rounded-full px-4 py-2 text-left text-lg font-bold tracking-wide transition-colors',
-        {
-          'bg-gray-200 text-black dark:bg-gray-800 dark:text-white':
-          current,
-          'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
-          !current
-        }
-      )}
-      onClick={onClick} // Use onClick prop
+        className={cn(
+          'flex cursor-pointer items-center rounded-full px-4 py-2 text-left text-lg font-bold tracking-wide transition-colors',
+          className,
+          {
+            'bg-gray-200 text-black dark:bg-gray-800 dark:text-white':
+              current,
+            'text-gray-700 hover:bg-gray-200 hover:text-black dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white':
+              !current
+          }
+        )}
+        onClick={onClick} // Use onClick prop
       >
         {icon && <span className="mr-2">{icon}</span>}
         {name}
@@ -67,25 +69,27 @@ const Navbar: FC = () => {
 
     return (
       <>
-        <NavItem
-          current={pathname === '/'}
-          name=""
-          url="/"
-          icon={<HomeIcon className="h-6 w-6" />}
-        />
+          <NavItem
+            current={pathname === '/'}
+            name=""
+            url="/"
+            icon={<HomeIcon className="h-12 w-12" />}
+          />
         <NavItem
           current={pathname === '/explore'}
           name=""
           url="/explore"
-          icon={<MagnifyingGlassIcon className="h-6 w-6" />}
+          className=''
+          icon={<MagnifyingGlassIcon className="h-12 w-12" />}
         />
         <MoreNavItems />
-        <NavItem
+        {/* <NavItem
           current={pathname === '/create-post'}
           name="Post"
           icon={null}
           onClick={openModal} // Use openModal on click
-        />
+          className="bg-pink-500 text-white rounded-full py-3 px-6 text-center text-xl font-bold mt-4" // Custom styles for the Post button
+        /> */}
       </>
     );
   };
@@ -118,7 +122,14 @@ const Navbar: FC = () => {
               <NotificationIcon />
             </>
           ) : null}
+          <div
+          className='bg-pink-500 text-white rounded-full py-3 px-6 text-center text-xl font-bold mt-4'
+          onClick={openModal}
+          >
+            Post
+          </div>
           <MenuItems />
+
         </div>
       </div>
       {showSearch && (
