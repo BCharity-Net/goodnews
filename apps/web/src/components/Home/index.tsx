@@ -10,8 +10,8 @@ import { useEffect, useState } from 'react';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
 import FeedType from './FeedType';
+import ForYou from './ForYou';
 import Hero from './Hero';
-import Highlights from './Highlights';
 import PaidActions from './PaidActions';
 import Sidebar from './Sidebar';
 import Timeline from './Timeline';
@@ -39,8 +39,8 @@ const Home: NextPage = () => {
               <FeedType feedType={feedType} setFeedType={setFeedType} />
               {feedType === HomeFeedType.FOLLOWING ? (
                 <Timeline />
-              ) : feedType === HomeFeedType.HIGHLIGHTS ? (
-                <Highlights />
+              ) : feedType === HomeFeedType.FORYOU ? (
+                <ForYou />
               ) : feedType === HomeFeedType.PREMIUM ? (
                 <PaidActions />
               ) : null}

@@ -17,14 +17,14 @@ import sanitizeProfileInterests from '@helpers/sanitizeProfileInterests';
 import { PlusCircleIcon } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import toast from 'react-hot-toast';
-import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
+import { useProfileStatus } from 'src/store/non-persisted/useProfileStatus';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
 const MAX_TOPICS_ALLOWED = 12;
 
 const Interests: FC = () => {
   const { currentProfile } = useProfileStore();
-  const { isSuspended } = useProfileRestriction();
+  const { isSuspended } = useProfileStatus();
   const { cache } = useApolloClient();
 
   const updateCache = (interests: string[]) => {

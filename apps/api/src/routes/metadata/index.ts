@@ -31,7 +31,7 @@ export const post: Handler = async (req, res) => {
     const receipt = await client.upload(JSON.stringify(signed), {
       tags: [
         { name: 'content-type', value: 'application/json' },
-        { name: 'App-Name', value: 'bcharity.net' }
+        { name: 'App-Name', value: 'Good.xyz' }
       ]
     });
 

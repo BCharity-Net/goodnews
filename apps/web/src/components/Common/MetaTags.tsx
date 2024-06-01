@@ -27,7 +27,7 @@ const MetaTags: FC<MetaTagsProps> = ({
         name="viewport"
       />
       <meta
-        content="good,bcharity.net,social media profile,social media,good,user profile,lens,lens protocol,decentralized,web3,Yoginth,@yoginth"
+        content="good,bcharity.net,social media profile,social media,goodcast,user profile,lens,lens protocol,decentralized,web3,Yoginth,@yoginth"
         name="keywords"
       />
       <link href={url} rel="canonical" />
@@ -45,7 +45,7 @@ const MetaTags: FC<MetaTagsProps> = ({
       <meta content={DEFAULT_OG} property="twitter:image" />
       <meta content="400" property="twitter:image:width" />
       <meta content="400" property="twitter:image:height" />
-      <meta content="gooddotxyz" property="twitter:creator" />
+      <meta content="heydotxyz" property="twitter:creator" />
 
       {creator ? (
         <>

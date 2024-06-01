@@ -56,7 +56,7 @@ const Footer: FC = () => {
         </Link>
         <Link
           className="outline-offset-4"
-          href="https://github.com/bcharity-net/good"
+          href="https://github.com/bcharity/good"
           onClick={() => Leafwatch.track(MISCELLANEOUS.FOOTER.OPEN_GITHUB)}
           rel="noreferrer noopener"
           target="_blank"

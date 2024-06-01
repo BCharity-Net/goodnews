@@ -3,7 +3,10 @@ import type pg from 'pg-promise/typescript/pg-subset';
 import type { IConnectionParameters } from 'pg-promise/typescript/pg-subset';
 
 import logger from '@good/helpers/logger';
+import dotenv from 'dotenv';
 import pgPromise from 'pg-promise';
+
+dotenv.config({ override: true });
 
 type DatabaseInstance = IDatabase<unknown, pg.IClient>;
 

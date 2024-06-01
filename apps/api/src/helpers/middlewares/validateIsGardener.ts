@@ -1,7 +1,7 @@
 import type { Request } from 'express';
 
 import parseJwt from '@good/helpers/parseJwt';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 
 import { GARDENER_FEATURE_ID } from '../constants';
 import validateLensAccount from './validateLensAccount';
@@ -25,7 +25,7 @@ const validateIsGardener = async (request: Request) => {
     }
 
     const payload = parseJwt(accessToken);
-    const data = await goodPg.query(
+    const data = await heyPg.query(
       `
         SELECT enabled
         FROM "ProfileFeature"

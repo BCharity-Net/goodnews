@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import axios from 'axios';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import lensPg from 'src/db/lensPg';
 import catchedError from 'src/helpers/catchedError';
 import {
@@ -23,7 +23,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const [cachedProfile, pro, suspended] = await goodPg.multi(
+    const [cachedProfile, pro, suspended] = await heyPg.multi(
       `
         SELECT * FROM "CachedProfileScore" WHERE "id" = $1 LIMIT 1;
         SELECT * FROM "Pro" WHERE "id" = $1 LIMIT 1;
@@ -68,7 +68,7 @@ export const get: Handler = async (req, res) => {
         `SELECT owned_by FROM profile.record WHERE profile_id = $1`,
         [id as string]
       ),
-      goodPg.query(
+      heyPg.query(
         `SELECT * FROM "AdjustedProfileScore" WHERE "profileId" = $1`,
         [id as string]
       )
@@ -85,7 +85,7 @@ export const get: Handler = async (req, res) => {
 
     const score = Number(scores[0].score) + sum;
 
-    const newCachedProfile = await goodPg.query(
+    const newCachedProfile = await heyPg.query(
       `
         INSERT INTO "CachedProfileScore" ("id", "score", "expiresAt")
         VALUES ($1, $2, $3)

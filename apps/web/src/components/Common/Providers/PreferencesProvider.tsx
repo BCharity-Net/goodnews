@@ -11,7 +11,7 @@ import getCurrentSession from '@helpers/getCurrentSession';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { usePreferencesStore } from 'src/store/non-persisted/usePreferencesStore';
-import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
+import { useProfileStatus } from 'src/store/non-persisted/useProfileStatus';
 import { useScoreStore } from 'src/store/non-persisted/useScoreStore';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
@@ -31,9 +31,8 @@ const PreferencesProvider: FC = () => {
     setHasDismissedOrMintedMembershipNft,
     setHighSignalNotificationFilter
   } = usePreferencesStore();
-  const { setRestriction } = useProfileRestriction();
-  const { setFeatureFlags, setGardenerMode, setStaffMode } =
-    useFeatureFlagsStore();
+  const { setStatus } = useProfileStatus();
+  const { setFeatureFlags, setStaffMode } = useFeatureFlagsStore();
 
   // Fetch preferences and set initial values
   useQuery({
@@ -54,11 +53,10 @@ const PreferencesProvider: FC = () => {
           // Feature flags
           setFeatureFlags(preferences.features);
           setStaffMode(preferences.features.includes(FeatureFlag.StaffMode));
-          setGardenerMode(
-            preferences?.features.includes(FeatureFlag.GardenerMode)
-          );
-          setRestriction({
-            isFlagged: preferences.features.includes(FeatureFlag.Flagged),
+          setStatus({
+            isCommentSuspended: preferences.features.includes(
+              FeatureFlag.CommentSuspended
+            ),
             isSuspended: preferences.features.includes(FeatureFlag.Suspended)
           });
 

@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 
 import Providers from '@components/Common/Providers';
-import { goodFont } from '@helpers/fonts';
+import { heyFont } from '@helpers/fonts';
 
 import '../styles.css';
 
@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Providers>
       <style global jsx>{`
         body {
-          font-family: ${goodFont.style.fontFamily};
+          font-family: ${heyFont.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />

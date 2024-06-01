@@ -1,4 +1,4 @@
-const hre = require('hardhat');
+import hre from 'hardhat';
 
 async function deployProxy() {
   const owner = '0x698386C93513d6D0C58f296633A7A3e529bd4026';
@@ -9,14 +9,14 @@ async function deployProxy() {
   const signupPrice = '1000000000000000000';
 
   const GoodLensSignup = await hre.ethers.getContractFactory('GoodLensSignupV2');
-  const deployProxy = await hre.upgrades.deployProxy(GoodLensSignup, [
+  const deployProxy = await hre.upgrades.deployProxy(GoodLensSignup as any, [
     owner,
     lensPermissionlessCreator,
     signupPrice
   ]);
-  await deployProxy.waitForDeployment();
+  await deployProxy.deployed();
 
-  console.log(`GoodLensSignup deployed to ${await deployProxy.getAddress()}`);
+  console.log(`GoodLensSignup deployed to ${await deployProxy.address}`);
 }
 
 deployProxy().catch((error) => {

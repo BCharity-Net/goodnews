@@ -2,9 +2,9 @@ import type { FC } from 'react';
 
 import { GoodLensSignup } from '@good/abis';
 import {
-  GOOD_LENS_SIGNUP,
-  HANDLE_PREFIX,
-  ZERO_ADDRESS
+    GOOD_LENS_SIGNUP,
+    HANDLE_PREFIX,
+    ZERO_ADDRESS
 } from '@good/data/constants';
 import { Regex } from '@good/data/regex';
 import { Button, Card, Form, Input, useZodForm } from '@good/ui';

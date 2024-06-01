@@ -1,7 +1,7 @@
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import validateIsStaff from 'src/helpers/middlewares/validateIsStaff';
 import { invalidBody, noBody, notAllowed } from 'src/helpers/responses';
@@ -38,7 +38,7 @@ export const post: Handler = async (req, res) => {
   const { enabled, id } = body as ExtensionRequest;
 
   try {
-    await goodPg.query(`UPDATE "Feature" SET enabled = $1 WHERE id = $2`, [
+    await heyPg.query(`UPDATE "Feature" SET enabled = $1 WHERE id = $2`, [
       enabled,
       id
     ]);

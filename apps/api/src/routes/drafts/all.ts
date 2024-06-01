@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import parseJwt from '@good/helpers/parseJwt';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import validateLensAccount from 'src/helpers/middlewares/validateLensAccount';
 import { notAllowed } from 'src/helpers/responses';
@@ -19,7 +19,7 @@ export const get: Handler = async (req, res) => {
   try {
     const payload = parseJwt(accessToken);
 
-    const result = await goodPg.query(
+    const result = await heyPg.query(
       `
         SELECT *
         FROM "DraftPublication"

@@ -5,10 +5,14 @@ const allowedBots =
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    instrumentationHook: true
+  },
   headers() {
     return [
       {
         headers: [
+          { key: 'Document-Policy', value: 'js-profiling' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin' }
@@ -17,6 +21,8 @@ const nextConfig = {
       }
     ];
   },
+  poweredByHeader: false,
+  productionBrowserSourceMaps: true,
   reactStrictMode: false,
   redirects() {
     return [
@@ -26,7 +32,7 @@ const nextConfig = {
         source: '/signup'
       },
       {
-        destination: 'https://discord.com/invite/NPeA8FJwye',
+        destination: 'https://discord.com/invite/B8eKhSSUwX',
         permanent: true,
         source: '/discord'
       },
@@ -38,7 +44,7 @@ const nextConfig = {
       },
       {
         destination:
-          'https://explorer.gitcoin.co/#/round/42161/25/165',
+          'https://explorer.gitcoin.co/#/round/42161/25/1?utm_source=bcharity.net',
         permanent: true,
         source: '/gitcoin'
       },
@@ -62,7 +68,7 @@ const nextConfig = {
       },
       {
         destination:
-          'https://bcharity.notion.site/ff1926a080fa44bc9d40ee534f627949',
+          'https://yoginth.notion.site/ff1926a080fa44bc9d40ee534f627949',
         permanent: true,
         source: '/-/mod-guide'
       }
@@ -85,15 +91,13 @@ const nextConfig = {
   transpilePackages: ['data']
 };
 
-module.exports = withSentryConfig(
-  nextConfig,
-  { org: 'bcharity', project: 'web', silent: true },
-  {
-    automaticVercelMonitors: true,
-    disableLogger: true,
-    hideSourceMaps: true,
-    transpileClientSDK: true,
-    tunnelRoute: '/monitoring',
-    widenClientFileUpload: true
-  }
-);
+module.exports = withSentryConfig(nextConfig, {
+  automaticVercelMonitors: true,
+  disableLogger: true,
+  hideSourceMaps: true,
+  org: 'heyverse',
+  project: 'web',
+  silent: !process.env.CI,
+  tunnelRoute: '/monitoring',
+  widenClientFileUpload: true
+});

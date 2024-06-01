@@ -1,7 +1,7 @@
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import validateIsStaff from 'src/helpers/middlewares/validateIsStaff';
 import { invalidBody, noBody, notAllowed } from 'src/helpers/responses';
@@ -36,7 +36,7 @@ export const post: Handler = async (req, res) => {
   const { id } = body as ExtensionRequest;
 
   try {
-    await goodPg.query(`DELETE FROM "AllowedToken" WHERE id = $1`, [id]);
+    await heyPg.query(`DELETE FROM "AllowedToken" WHERE id = $1`, [id]);
     logger.info(`Deleted a token ${id}`);
 
     return res.status(200).json({ success: true });

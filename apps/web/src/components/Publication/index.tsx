@@ -5,7 +5,7 @@ import Feed from '@components/Comment/Feed';
 import NoneRelevantFeed from '@components/Comment/NoneRelevantFeed';
 import MetaTags from '@components/Common/MetaTags';
 import NewPublication from '@components/Composer/NewPublication';
-import CommentWarning from '@components/Shared/CommentWarning';
+import CommentSuspendedWarning from '@components/Shared/CommentSuspendedWarning';
 import Footer from '@components/Shared/Footer';
 import UserProfile from '@components/Shared/UserProfile';
 import PublicationStaffTool from '@components/StaffTools/Panels/Publication';
@@ -17,7 +17,6 @@ import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
     HiddenCommentsType,
     LimitType,
-    TriStateValue,
     usePublicationQuery,
     usePublicationsQuery
 } from '@good/lens';
@@ -29,7 +28,7 @@ import { createTrackedSelector } from 'react-tracked';
 import Custom404 from 'src/pages/404';
 import Custom500 from 'src/pages/500';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
-import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
+import { useProfileStatus } from 'src/store/non-persisted/useProfileStatus';
 import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { create } from 'zustand';
@@ -63,7 +62,7 @@ const ViewPublication: NextPage = () => {
   } = useRouter();
 
   const { currentProfile } = useProfileStore();
-  const { isSuspended } = useProfileRestriction();
+  const { isCommentSuspended, isSuspended } = useProfileStatus();
   const { staffMode } = useFeatureFlagsStore();
   const { showNewPostModal } = useGlobalModalStateStore();
 
@@ -120,8 +119,7 @@ const ViewPublication: NextPage = () => {
   const targetPublication = isMirrorPublication(publication)
     ? publication.mirrorOn
     : publication;
-  const canComment =
-    targetPublication?.operations.canComment === TriStateValue.Yes;
+  const suspended = isSuspended || isCommentSuspended;
 
   return (
     <GridLayout>
@@ -150,15 +148,12 @@ const ViewPublication: NextPage = () => {
                 publication={publication}
               />
             </Card>
+            {suspended ? <CommentSuspendedWarning /> : null}
             {currentProfile &&
             !publication.isHidden &&
             !showNewPostModal &&
-            !isSuspended ? (
-              canComment ? (
-                <NewPublication publication={targetPublication} />
-              ) : (
-                <CommentWarning />
-              )
+            !suspended ? (
+              <NewPublication publication={targetPublication} />
             ) : null}
             <Feed
               isHidden={publication.isHidden}

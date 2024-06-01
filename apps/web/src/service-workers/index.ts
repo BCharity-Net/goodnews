@@ -40,4 +40,5 @@ self.addEventListener('message', (event) => {
 
 self.addEventListener('activate', (event) => event.waitUntil(handleActivate()));
 
-export {};
+export { };
+

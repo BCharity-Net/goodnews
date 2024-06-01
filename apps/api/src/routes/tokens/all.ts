@@ -1,13 +1,13 @@
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import { SWR_CACHE_AGE_10_MINS_30_DAYS } from 'src/helpers/constants';
 
 export const get: Handler = async (_, res) => {
   try {
-    const data = await goodPg.query(`
+    const data = await heyPg.query(`
       SELECT *
       FROM "AllowedToken"
       ORDER BY priority DESC;

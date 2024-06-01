@@ -156,7 +156,7 @@ const Terms: NextPage = () => {
                 <p className="leading-7">
                   We are not responsible for any mistakes or inaccuracies on
                   contents published on this Site. Profiles are fully
-                  responsible for what they are doing in the Site.
+                  responsible for what theabc are doing in the Site.
                 </p>
                 <p className="leading-7">
                   As a Site, we offer information about the content and
@@ -303,7 +303,7 @@ const Terms: NextPage = () => {
                 11. Disclaimer of Warranties
               </div>
               <p className="leading-7">
-                The Site are provided to you completely as they are, and could
+                The Site are provided to you completely as theabc are, and could
                 function differently than you expected. You agree to accept the
                 Site as is. You expressly agree that your use of, or inability
                 to use, the Site is at your sole risk. Our liability shall be

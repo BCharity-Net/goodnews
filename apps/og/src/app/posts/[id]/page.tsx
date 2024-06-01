@@ -6,9 +6,9 @@ import getProfile from '@good/helpers/getProfile';
 import getPublicationData from '@good/helpers/getPublicationData';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
-  LimitType,
-  PublicationDocument,
-  PublicationsDocument
+    LimitType,
+    PublicationDocument,
+    PublicationsDocument
 } from '@good/lens';
 import { apolloClient } from '@good/lens/apollo';
 import getCollectModuleMetadata from '@helpers/getCollectModuleMetadata';
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'bcharity.net',
       'social media post',
       'social media',
-      'good',
+      'goodcast',
       'polygon',
       'user post',
       'like',
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: title,
     twitter: {
       card: assetIsAudio ? 'summary' : 'summary_large_image',
-      site: '@gooddotxyz'
+      site: '@heydotxyz'
     }
   };
 }

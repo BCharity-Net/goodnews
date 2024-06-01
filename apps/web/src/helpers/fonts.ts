@@ -1,7 +1,7 @@
 import { Norican, Rubik_Mono_One } from 'next/font/google';
 import localFont from 'next/font/local';
 
-export const goodFont = localFont({
+export const heyFont = localFont({
   display: 'swap',
   fallback: ['sans-serif'],
   preload: true,

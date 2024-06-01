@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import parseJwt from '@good/helpers/parseJwt';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import validateLensAccount from 'src/helpers/middlewares/validateLensAccount';
 import { invalidBody, noBody, notAllowed } from 'src/helpers/responses';
@@ -42,7 +42,7 @@ export const post: Handler = async (req, res) => {
   try {
     const payload = parseJwt(accessToken);
 
-    const expired = await goodPg.exists(
+    const expired = await heyPg.exists(
       `
         SELECT * FROM "Poll"
         WHERE id = $1
@@ -58,7 +58,7 @@ export const post: Handler = async (req, res) => {
     // End: Check if the poll expired
 
     // Begin: Check if the poll exists and delete the existing response
-    const existingResponse = await goodPg.query(
+    const existingResponse = await heyPg.query(
       `
         SELECT pr.*
         FROM "PollResponse" AS pr
@@ -70,7 +70,7 @@ export const post: Handler = async (req, res) => {
     );
 
     if (existingResponse[0]?.id) {
-      await goodPg.query(
+      await heyPg.query(
         `
           DELETE FROM "PollResponse"
           WHERE "id" = $1;
@@ -80,7 +80,7 @@ export const post: Handler = async (req, res) => {
     }
     // End: Check if the poll exists and delete the existing response
 
-    const data = await goodPg.query(
+    const data = await heyPg.query(
       `
         INSERT INTO "PollResponse" ("optionId", "profileId")
         VALUES ($1, $2)

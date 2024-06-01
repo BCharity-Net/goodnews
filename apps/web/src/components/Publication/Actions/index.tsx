@@ -1,13 +1,14 @@
 import type { AnyPublication } from '@good/lens';
 import type { FC } from 'react';
 
+import { FeatureFlag } from '@good/data/feature-flags';
 import getPublicationViewCountById from '@good/helpers/getPublicationViewCountById';
 import isOpenActionAllowed from '@good/helpers/isOpenActionAllowed';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import stopEventPropagation from '@good/helpers/stopEventPropagation';
+import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import { memo } from 'react';
 import { useImpressionsStore } from 'src/store/non-persisted/useImpressionsStore';
-import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 
 import OpenAction from '../OpenAction';
@@ -31,7 +32,6 @@ const PublicationActions: FC<PublicationActionsProps> = ({
     ? publication.mirrorOn
     : publication;
   const { currentProfile } = useProfileStore();
-  const { gardenerMode } = useFeatureFlagsStore();
   const { publicationViews } = useImpressionsStore();
   const hasOpenAction = (targetPublication.openActionModules?.length || 0) > 0;
 
@@ -60,7 +60,7 @@ const PublicationActions: FC<PublicationActionsProps> = ({
       ) : null}
       <Tip publication={targetPublication} showCount={showCount} />
       {views > 0 ? <Views showCount={showCount} views={views} /> : null}
-      {gardenerMode ? (
+      {isFeatureAvailable(FeatureFlag.Gardener) ? (
         <Mod isFullPublication={showCount} publication={targetPublication} />
       ) : null}
     </span>

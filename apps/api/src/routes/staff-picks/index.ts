@@ -1,7 +1,7 @@
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
     STAFF_PICK_FEATURE_ID,
@@ -10,7 +10,7 @@ import {
 
 export const get: Handler = async (_, res) => {
   try {
-    const data = await goodPg.query(
+    const data = await heyPg.query(
       `
         SELECT "profileId"
         FROM "ProfileFeature"

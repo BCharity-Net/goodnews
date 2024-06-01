@@ -2,12 +2,12 @@ import type { FC } from 'react';
 
 import { GoodLensSignup } from '@good/abis';
 import {
-  APP_NAME,
-  GOOD_LENS_SIGNUP,
-  HANDLE_PREFIX,
-  IS_MAINNET,
-  SIGNUP_PRICE,
-  ZERO_ADDRESS
+    APP_NAME,
+    GOOD_LENS_SIGNUP,
+    HANDLE_PREFIX,
+    IS_MAINNET,
+    SIGNUP_PRICE,
+    ZERO_ADDRESS
 } from '@good/data/constants';
 import { Regex } from '@good/data/regex';
 import { AUTH } from '@good/data/tracking';
@@ -16,11 +16,11 @@ import { Button, Form, Input, Spinner, useZodForm } from '@good/ui';
 import errorToast from '@helpers/errorToast';
 import { Leafwatch } from '@helpers/leafwatch';
 import {
-  CheckIcon,
-  CreditCardIcon,
-  ExclamationTriangleIcon,
-  FaceFrownIcon,
-  FaceSmileIcon
+    CheckIcon,
+    CreditCardIcon,
+    ExclamationTriangleIcon,
+    FaceFrownIcon,
+    FaceSmileIcon
 } from '@heroicons/react/24/outline';
 import Script from 'next/script';
 import { useState } from 'react';
@@ -142,7 +142,7 @@ const ChooseHandle: FC = () => {
     window.createLemonSqueezy?.();
     window.LemonSqueezy?.Setup?.({ eventHandler });
     window.LemonSqueezy?.Url?.Open?.(
-      urlcat('https://goodverse.lemonsqueezy.com/checkout/buy/:product', {
+      urlcat('https://heyverse.lemonsqueezy.com/checkout/buy/:product', {
         'checkout[custom][address]': address,
         'checkout[custom][delegatedExecutor]': delegatedExecutor,
         'checkout[custom][handle]': handle.toLowerCase(),

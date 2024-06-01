@@ -1,7 +1,7 @@
 import type { Address } from 'viem';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import { createPublicClient, http } from 'viem';
 import { zora } from 'viem/chains';
 
@@ -33,7 +33,7 @@ const getAndStoreZorbScore = async (id: string, address: Address) => {
     const hasZorb = zorbBalance === 1n;
 
     if (hasZorb) {
-      await goodPg.query(
+      await heyPg.query(
         `
           INSERT INTO "AdjustedProfileScore" (score, reason, "profileId")
           VALUES (2000, 'ZorbHolder', $1)

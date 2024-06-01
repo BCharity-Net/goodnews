@@ -2,7 +2,7 @@ import type { ThemeConfig } from '@livepeer/react';
 
 import { BRAND_COLOR } from '@good/data/constants';
 
-import { goodFont } from './fonts';
+import { heyFont } from './fonts';
 
 const getLivepeerTheme: ThemeConfig = {
   colors: {
@@ -11,7 +11,7 @@ const getLivepeerTheme: ThemeConfig = {
     progressLeft: BRAND_COLOR
   },
   fonts: {
-    display: goodFont.style.fontFamily
+    display: heyFont.style.fontFamily
   },
   fontSizes: {
     timeFontSize: '11px'

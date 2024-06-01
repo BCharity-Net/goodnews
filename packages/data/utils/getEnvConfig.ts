@@ -5,10 +5,10 @@ import LensEndpoint from '../lens-endpoints';
 
 const getEnvConfig = (): {
   defaultCollectToken: string;
-  goodApiEndpoint: string;
-  goodLensSignup: `0x${string}`;
-  goodPro: `0x${string}`;
-  goodTipping: `0x${string}`;
+  heyApiEndpoint: string;
+  heyLensSignup: `0x${string}`;
+  heyPro: `0x${string}`;
+  heyTipping: `0x${string}`;
   lensApiEndpoint: string;
   lensHandles: `0x${string}`;
   lensHub: `0x${string}`;
@@ -19,10 +19,10 @@ const getEnvConfig = (): {
     case 'testnet':
       return {
         defaultCollectToken: TestnetContracts.DefaultToken,
-        goodApiEndpoint: GoodEndpoint.Testnet,
-        goodLensSignup: TestnetContracts.GoodLensSignup,
-        goodPro: TestnetContracts.GoodPro,
-        goodTipping: TestnetContracts.GoodTipping,
+        heyApiEndpoint: GoodEndpoint.Testnet,
+        heyLensSignup: TestnetContracts.GoodLensSignup,
+        heyPro: TestnetContracts.GoodPro,
+        heyTipping: TestnetContracts.GoodTipping,
         lensApiEndpoint: LensEndpoint.Testnet,
         lensHandles: TestnetContracts.LensHandles,
         lensHub: TestnetContracts.LensHub,
@@ -32,10 +32,10 @@ const getEnvConfig = (): {
     case 'staging':
       return {
         defaultCollectToken: TestnetContracts.DefaultToken,
-        goodApiEndpoint: GoodEndpoint.Staging,
-        goodLensSignup: TestnetContracts.GoodLensSignup,
-        goodPro: TestnetContracts.GoodPro,
-        goodTipping: TestnetContracts.GoodTipping,
+        heyApiEndpoint: GoodEndpoint.Staging,
+        heyLensSignup: TestnetContracts.GoodLensSignup,
+        heyPro: TestnetContracts.GoodPro,
+        heyTipping: TestnetContracts.GoodTipping,
         lensApiEndpoint: LensEndpoint.Staging,
         lensHandles: TestnetContracts.LensHandles,
         lensHub: TestnetContracts.LensHub,
@@ -45,10 +45,10 @@ const getEnvConfig = (): {
     default:
       return {
         defaultCollectToken: MainnetContracts.DefaultToken,
-        goodApiEndpoint: GoodEndpoint.Mainnet,
-        goodLensSignup: MainnetContracts.GoodLensSignup,
-        goodPro: MainnetContracts.GoodPro,
-        goodTipping: MainnetContracts.GoodTipping,
+        heyApiEndpoint: GoodEndpoint.Mainnet,
+        heyLensSignup: MainnetContracts.GoodLensSignup,
+        heyPro: MainnetContracts.GoodPro,
+        heyTipping: MainnetContracts.GoodTipping,
         lensApiEndpoint: LensEndpoint.Mainnet,
         lensHandles: MainnetContracts.LensHandles,
         lensHub: MainnetContracts.LensHub,

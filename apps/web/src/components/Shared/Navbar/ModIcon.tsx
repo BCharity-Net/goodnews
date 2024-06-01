@@ -1,14 +1,13 @@
 import type { FC } from 'react';
 
+import { FeatureFlag } from '@good/data/feature-flags';
 import { Tooltip } from '@good/ui';
+import isFeatureAvailable from '@helpers/isFeatureAvailable';
 import { ShieldCheckIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { useFeatureFlagsStore } from 'src/store/persisted/useFeatureFlagsStore';
 
 const ModIcon: FC = () => {
-  const { gardenerMode } = useFeatureFlagsStore();
-
-  if (!gardenerMode) {
+  if (!isFeatureAvailable(FeatureFlag.Gardener)) {
     return null;
   }
 

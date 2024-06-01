@@ -2,7 +2,7 @@ import type { MirrorablePublication, ModReport, Profile } from '@good/lens';
 import type { FC } from 'react';
 
 import Reports from '@components/Mod/ReportsFeed/Reports';
-import SuspendButton from '@components/Publication/Actions/HigherActions/SuspendButton';
+import SuspendButtons from '@components/Publication/Actions/HigherActions/SuspendButtons';
 import SmallUserProfile from '@components/Shared/SmallUserProfile';
 import formatDate from '@good/helpers/datetime/formatDate';
 import { Button, Modal } from '@good/ui';
@@ -87,9 +87,8 @@ const ReportDetails: FC<ReportDetailsProps> = ({
         >
           <Dispute report={report} setShowDisputeModal={setShowDisputeModal} />
         </Modal>
-        <SuspendButton
+        <SuspendButtons
           publication={report.reportedPublication as MirrorablePublication}
-          title="Suspend the profile"
         />
       </div>
     </div>

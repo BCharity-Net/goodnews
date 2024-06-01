@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/nextjs';
 
 Sentry.init({
   debug: false,
-  dsn: 'https://789bc5c061a50abc28b8776d305a3c89@o4507284811808768.ingest.us.sentry.io/4507284816003072',
+  dsn: 'https://e59a95ba0b70b237301fbc5fcb8e71db@o180224.ingest.us.sentry.io/4506721358512128',
   enabled: process.env.NODE_ENV === 'production',
   ignoreErrors: [
     'ResizeObserver loop completed with undelivered notifications.',
@@ -10,9 +10,16 @@ Sentry.init({
     'User rejected the request',
     'wss://relay.walletconnect.org',
     'To use QR modal, please install @walletconnect/modal package',
+    'WebSocket connection failed for host: wss://relay.walletconnect.com',
     'No matching key',
     'unknown ProviderEvent',
-    'No internet connection detected'
+    'No internet connection detected',
+    'No injected ethereum object.',
+    "Cannot read properties of null (reading 'onError')",
+    'Request Aborted'
   ],
-  tracesSampleRate: 1
+  integrations: [Sentry.browserProfilingIntegration()],
+  profilesSampleRate: 1.0,
+  tracePropagationTargets: ['bcharity.net'],
+  tracesSampleRate: 1.0
 });

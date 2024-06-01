@@ -2,7 +2,7 @@ import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
 import allocations from 'src/data/score-allocations';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import { noBody } from 'src/helpers/responses';
 
@@ -15,7 +15,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const adjustedProfileScore = await goodPg.query(
+    const adjustedProfileScore = await heyPg.query(
       `
         SELECT *
         FROM "AdjustedProfileScore"

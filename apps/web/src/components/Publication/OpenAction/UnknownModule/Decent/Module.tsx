@@ -5,7 +5,7 @@ import type {
 } from '@good/lens';
 import type { AllowedToken } from '@good/types/good';
 import type { Nft, OptimisticTransaction } from '@good/types/misc';
-import type { ActionData } from 'nft-openaction-kit';
+import type { ActionData, UIData } from 'nft-openaction-kit';
 import type { FC } from 'react';
 import type { Address } from 'viem';
 
@@ -16,6 +16,7 @@ import {
     ZERO_ADDRESS
 } from '@good/data/constants';
 import { VerifiedOpenActionModules } from '@good/data/verified-openaction-modules';
+import formatAddress from '@good/helpers/formatAddress';
 import getNftChainId from '@good/helpers/getNftChainId';
 import getNftChainInfo from '@good/helpers/getNftChainInfo';
 import getProfile from '@good/helpers/getProfile';
@@ -83,13 +84,15 @@ interface DecentOpenActionModuleProps {
   module: UnknownOpenActionModuleSettings;
   nft: Nft;
   publication: MirrorablePublication;
+  uiData?: null | UIData;
 }
 
 const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
   actionData,
   loadingActionData,
   nft,
-  publication
+  publication,
+  uiData
 }) => {
   const {
     activeOpenActionModal,
@@ -114,11 +117,15 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
   const [currentImageUrl, setCurrentImageUrl] = useState('');
   const [prevImageUrl, setPrevImageUrl] = useState('');
   const [isImageLoading, setImageLoading] = useState(false);
-  const [nftChainInfo, setNftChainInfo] = useState<{
-    logo: string;
-    name: string;
-  } | null>(null);
-  const [platformName, setPlatformName] = useState('');
+
+  const chainIdStr = uiData?.dstChainId.toString();
+  const chainInfo = getNftChainInfo(getNftChainId(chainIdStr ?? ''));
+  const nftChainInfo = {
+    logo: chainInfo.logo,
+    name: chainInfo.name
+  };
+  const platformName = uiData?.platformName || '';
+  const nftName = uiData?.nftName || '';
 
   const { data: walletClient } = useWalletClient();
   const { address } = useAccount();
@@ -138,8 +145,10 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
   );
 
   const { data: creatorProfileData } = useDefaultProfileQuery({
-    skip: !actionData?.uiData?.nftCreatorAddress,
-    variables: { request: { for: actionData?.uiData?.nftCreatorAddress } }
+    skip: !uiData?.nftCreatorAddress,
+    variables: {
+      request: { for: uiData?.nftCreatorAddress }
+    }
   });
 
   useEffect(() => {
@@ -172,7 +181,7 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
 
   const creatorProfileExists =
     creatorProfileData && creatorProfileData.defaultProfile;
-  const creatorAddress = actionData?.uiData?.nftCreatorAddress || ZERO_ADDRESS;
+  const creatorAddress = uiData?.nftCreatorAddress || ZERO_ADDRESS;
 
   const totalAmount = !!actionData?.actArgumentsFormatted?.paymentToken?.amount
     ? BigInt(actionData?.actArgumentsFormatted?.paymentToken?.amount) *
@@ -199,25 +208,6 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
 
   const amount = formattedTotalAmount || 0;
   const assetAddress = selectedNftOaCurrency;
-
-  useEffect(() => {
-    if (actionData?.uiData?.dstChainId && nftChainInfo === null) {
-      const chainIdStr = actionData.uiData?.dstChainId.toString();
-      const chainInfo = getNftChainInfo(getNftChainId(chainIdStr));
-      setNftChainInfo({
-        logo: chainInfo.logo,
-        name: chainInfo.name
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [actionData?.uiData?.dstChainId]);
-
-  useEffect(() => {
-    if (actionData?.uiData?.platformName && !platformName.length) {
-      setPlatformName(actionData?.uiData?.platformName);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [actionData?.uiData?.dstChainId]);
 
   const fetchPermit2Allowance = async () => {
     setPermit2Data(undefined);
@@ -370,8 +360,8 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
       title={
         showCurrencySelector
           ? 'Select token'
-          : actionData?.uiData?.platformName
-            ? `Mint on ${actionData?.uiData?.platformName}`
+          : uiData?.platformName
+            ? `Mint on ${uiData?.platformName}`
             : 'Mint NFT'
       }
     >
@@ -391,10 +381,10 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
           nftDetails={{
             creator: getProfile(creatorProfileData?.defaultProfile as Profile)
               .slug,
-            name: actionData?.uiData?.nftName || '',
+            name: uiData?.nftName || '',
             price: formattedTotalAmount.toFixed(4),
             schema: formattedNftSchema,
-            uri: sanitizeDStorageUrl(actionData?.uiData?.nftUri)
+            uri: sanitizeDStorageUrl(uiData?.nftUri)
           }}
           selectedCurrencySymbol={getTokenDetails(selectedNftOaCurrency).symbol}
           step={!permit2Allowed ? 'Permit2' : 'Allowance'}
@@ -403,16 +393,20 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
         <>
           <div className="space-y-2 p-5">
             <div>
-              <b className="text-xl">{actionData?.uiData?.nftName}</b>
+              <b className="text-xl">{nftName}</b>
               {creatorProfileData ? (
                 <p className="ld-text-gray-500">
                   by{' '}
                   {creatorProfileExists
                     ? getProfile(creatorProfileData.defaultProfile as Profile)
                         .slug
-                    : `${creatorAddress.slice(0, 6)}...${creatorAddress.slice(-4)}`}
+                    : creatorAddress
+                      ? formatAddress(creatorAddress)
+                      : '...'}
                 </p>
-              ) : null}
+              ) : (
+                <p className="ld-text-gray-500">{`By ${formatAddress(creatorAddress)}`}</p>
+              )}
             </div>
             <div className="pt-2">
               <div className="relative">
@@ -426,9 +420,10 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
                 <div className="relative h-[350px] max-h-[350px] w-full overflow-hidden rounded-xl">
                   <Image
                     alt={`Blurred background for ${nft.collectionName}`}
-                    className="absolute inset-0 h-full w-full scale-110 object-cover blur-lg filter"
+                    className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl filter"
                     src={currentImageUrl}
                   />
+                  <div className="absolute inset-0 bg-white opacity-20" />
                   <Image
                     alt={nft.collectionName}
                     className={cn(
@@ -558,7 +553,7 @@ const DecentOpenActionModule: FC<DecentOpenActionModuleProps> = ({
                   },
                   value: formattedTotalAmount.toFixed(4)
                 }}
-                uiData={actionData?.uiData}
+                uiData={uiData}
               />
             ) : null}
             <div className="flex w-full items-center justify-center">

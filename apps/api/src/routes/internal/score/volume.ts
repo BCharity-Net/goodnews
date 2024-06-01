@@ -1,12 +1,12 @@
 import type { Handler } from 'express';
 
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 
 // TODO: add tests
 export const get: Handler = async (req, res) => {
   try {
-    const score = await goodPg.query(
+    const score = await heyPg.query(
       `
         SELECT COUNT("score") AS total_count, SUM("score") AS total_score
         FROM "CachedProfileScore"

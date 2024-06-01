@@ -10,7 +10,7 @@ const defaultMetadata: Metadata = {
     'good',
     'bcharity.net',
     'social media',
-    'good',
+    'goodcast',
     'polygon',
     'lens',
     'lens protocol',
@@ -24,7 +24,7 @@ const defaultMetadata: Metadata = {
     type: 'website'
   },
   title: APP_NAME,
-  twitter: { card: 'summary_large_image', site: '@gooddotxyz' }
+  twitter: { card: 'summary_large_image', site: '@heydotxyz' }
 };
 
 export default defaultMetadata;

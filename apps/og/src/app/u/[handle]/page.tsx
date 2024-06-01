@@ -7,10 +7,10 @@ import getProfile from '@good/helpers/getProfile';
 import getPublicationData from '@good/helpers/getPublicationData';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
 import {
-  LimitType,
-  ProfileDocument,
-  PublicationType,
-  PublicationsDocument
+    LimitType,
+    ProfileDocument,
+    PublicationType,
+    PublicationsDocument
 } from '@good/lens';
 import { apolloClient } from '@good/lens/apollo';
 import defaultMetadata from 'src/defaultMetadata';
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'bcharity.net',
       'social media profile',
       'social media',
-      'good',
+      'goodcast',
       'polygon',
       'user profile',
       'lens',
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     publisher: displayName,
     title: title,
-    twitter: { card: 'summary', site: '@gooddotxyz' }
+    twitter: { card: 'summary', site: '@heydotxyz' }
   };
 }
 

@@ -2,7 +2,7 @@ import type { ProfileFlags } from '@good/types/good';
 import type { Handler } from 'express';
 
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
+import heyPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import {
     SUSPENDED_FEATURE_ID,
@@ -18,7 +18,7 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const profileFeature = await goodPg.query(
+    const profileFeature = await heyPg.query(
       `
         SELECT * FROM "ProfileFeature"
         WHERE enabled = TRUE

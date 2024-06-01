@@ -6,12 +6,12 @@ import type { Address } from 'viem';
 import { GoodTipping } from '@good/abis';
 import { Errors } from '@good/data';
 import {
-  APP_NAME,
-  DEFAULT_COLLECT_TOKEN,
-  GOOD_API_URL,
-  GOOD_TIPPING,
-  MAX_UINT256,
-  STATIC_IMAGES_URL
+    APP_NAME,
+    DEFAULT_COLLECT_TOKEN,
+    GOOD_API_URL,
+    GOOD_TIPPING,
+    MAX_UINT256,
+    STATIC_IMAGES_URL
 } from '@good/data/constants';
 import { PUBLICATION } from '@good/data/tracking';
 import formatAddress from '@good/helpers/formatAddress';
@@ -23,20 +23,21 @@ import { Leafwatch } from '@helpers/leafwatch';
 import axios from 'axios';
 import { useRef, useState } from 'react';
 import toast from 'react-hot-toast';
+import useHandleWrongNetwork from 'src/hooks/useHandleWrongNetwork';
 import usePreventScrollOnNumberInput from 'src/hooks/usePreventScrollOnNumberInput';
 import { useGlobalModalStateStore } from 'src/store/non-persisted/useGlobalModalStateStore';
-import { useProfileRestriction } from 'src/store/non-persisted/useProfileRestriction';
+import { useProfileStatus } from 'src/store/non-persisted/useProfileStatus';
 import { useTipsStore } from 'src/store/non-persisted/useTipsStore';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
 import { useProfileStore } from 'src/store/persisted/useProfileStore';
 import { useRatesStore } from 'src/store/persisted/useRatesStore';
 import { formatUnits } from 'viem';
 import {
-  useAccount,
-  useBalance,
-  useReadContract,
-  useWaitForTransactionReceipt,
-  useWriteContract
+    useAccount,
+    useBalance,
+    useReadContract,
+    useWaitForTransactionReceipt,
+    useWriteContract
 } from 'wagmi';
 
 const submitButtonClassName = 'w-full py-1.5 text-sm font-semibold';
@@ -68,7 +69,8 @@ const Action: FC<ActionProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
   usePreventScrollOnNumberInput(inputRef);
 
-  const { isSuspended } = useProfileRestriction();
+  const { isSuspended } = useProfileStatus();
+  const handleWrongNetwork = useHandleWrongNetwork();
 
   const { address } = useAccount();
   const { data: balanceData } = useBalance({
@@ -154,7 +156,7 @@ const Action: FC<ActionProps> = ({
 
     try {
       setIsLoading(true);
-
+      await handleWrongNetwork();
       await writeContractAsync({
         abi: [
           {

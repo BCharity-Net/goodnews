@@ -58,7 +58,7 @@ const Privacy: NextPage = () => {
                   other nascent software, applications and systems that interact
                   with blockchain-based networks. One of the defining features
                   of blockchain technology is that its entries are immutable,
-                  which means, as a technical matter, they generally cannot be
+                  which means, as a technical matter, theabc generally cannot be
                   deleted or modified by anyone. If you are not comfortable
                   assuming the inherently immutable and public nature of all
                   entries on the blockchain, you should not engage with our

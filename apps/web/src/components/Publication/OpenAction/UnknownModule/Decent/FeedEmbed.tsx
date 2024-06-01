@@ -187,6 +187,12 @@ const FeedEmbed: FC<FeedEmbedProps> = ({ og, publication }) => {
     ]
   });
 
+  const { data: uiData } = useQuery({
+    queryFn: getUiData,
+    queryKey: ['uiData', publication.id],
+    staleTime: Infinity
+  });
+
   const actionData = actionDataResponse?.data;
   const dataType = actionDataResponse?.type;
 
@@ -204,9 +210,10 @@ const FeedEmbed: FC<FeedEmbedProps> = ({ og, publication }) => {
         <div className="relative h-[350px] max-h-[350px] w-full overflow-hidden rounded-t-xl">
           <Image
             alt={nft.collectionName}
-            className="absolute inset-0 h-full w-full scale-110 object-cover blur-lg filter"
+            className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl filter"
             src={nft.mediaUrl}
           />
+          <div className="absolute inset-0 bg-white opacity-20" />
           <Image
             alt={nft.collectionName}
             className={cn(
@@ -267,6 +274,7 @@ const FeedEmbed: FC<FeedEmbedProps> = ({ og, publication }) => {
         module={module as UnknownOpenActionModuleSettings}
         nft={nft}
         publication={publication}
+        uiData={uiData}
       />
     </>
   );

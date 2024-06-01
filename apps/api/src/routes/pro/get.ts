@@ -3,7 +3,6 @@ import type { Handler } from 'express';
 import { GoodPro } from '@good/abis';
 import { GOOD_PRO, IS_MAINNET } from '@good/data/constants';
 import logger from '@good/helpers/logger';
-import goodPg from 'src/db/goodPg';
 import catchedError from 'src/helpers/catchedError';
 import getRpc from 'src/helpers/getRpc';
 import prisma from 'src/helpers/prisma';
@@ -19,20 +18,6 @@ export const get: Handler = async (req, res) => {
   }
 
   try {
-    const pro = await goodPg.query(`SELECT * FROM "Pro" WHERE "id" = $1;`, [
-      id as string
-    ]);
-
-    if (pro[0]?.expiresAt && new Date() < pro[0]?.expiresAt) {
-      logger.info(`Fetched pro status from cache for ${id}`);
-
-      return res.status(200).json({
-        cached: true,
-        result: { expiresAt: pro[0].expiresAt, isPro: true },
-        success: true
-      });
-    }
-
     const client = createPublicClient({
       chain: IS_MAINNET ? polygon : polygonAmoy,
       transport: getRpc({ mainnet: IS_MAINNET })
