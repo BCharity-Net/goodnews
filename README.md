@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/BCharity-Net/good/blob/main/apps/web/public/logo.png" alt="Goodcast Logo">
+    <img src="https://github.com/BCharity-Net/good/blob/main/apps/web/public/icon-128x128.png" alt="Goodcast Logo">
     <h1>Good</h1>
     <strong>Decentralized, and permissionless social media app for the public good</strong>
 </div>
