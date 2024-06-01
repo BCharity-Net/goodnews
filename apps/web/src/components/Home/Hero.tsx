@@ -16,7 +16,7 @@ const Hero: FC = () => {
             Welcome to {APP_NAME},
           </div>
           <div className="ld-text-gray-500 text-2xl font-extrabold sm:text-5xl">
-            a decentralized social media for the public good built on heyxyz and Lens Protocol
+            an open social media for the public good built on hey.xyz and Lens Protocol
           </div>
         </div>
       </div>
