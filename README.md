@@ -21,7 +21,7 @@
         <img src="https://api.checklyhq.com/v1/badges/checks/8e816d59-e771-4f33-a3ed-72373e19cf18?style=flat&theme=default" alt="Checkly">
     </a>
     <a href="https://github.com/bcharity-net/good/stargazers">
-        <img src="https://img.shields.io/github/stars/bcharity/good?label=Stars&logo=github" alt="Stargazers">
+        <img src="https://img.shields.io/github/stars/bcharity-net/good?label=Stars&logo=github" alt="Stargazers">
     </a>
     <a href="https://github.com/bcharity-net/good/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/bcharity/good?label=Licence&logo=gnu" alt="License">
