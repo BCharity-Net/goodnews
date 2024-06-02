@@ -57,7 +57,7 @@ For a place to have open discussions on features, voice your ideas, or get help 
 
 ## 📊 Repo Activity
 
-<img width="100%" src="https://repobeats.axiom.co/api/embed/23b6c5794e1958e33d3d8cecabd3259bd6798.svg" alt="Repobeats analytics" />
+<img width="100%" src="https://repobeats.axiom.co/api/embed/f5ab54224cdcbd73c2a18472023a2f2d781422f5.svg" alt="Repobeats analytics" />
 
 ## 💕 Contributors
 
