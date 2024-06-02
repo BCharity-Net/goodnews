@@ -9,10 +9,10 @@ const validate = (text: string) => {
 
 describe('cashtag regex', () => {
   test('should pass for valid cashtag', () => {
-    expect(validate('$bonsai')).toBe(true);
-    expect(validate('$BONSAI')).toBe(true);
-    expect(validate('$_bonsai')).toBe(true);
-    expect(validate('$123bonsai')).toBe(true);
+    expect(validate('$good')).toBe(true);
+    expect(validate('$GOOD')).toBe(true);
+    expect(validate('$_good')).toBe(true);
+    expect(validate('$123good')).toBe(true);
   });
 
   test('should fail for cashtags filled with a digit', () => {

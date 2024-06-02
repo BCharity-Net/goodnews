@@ -55,7 +55,7 @@ const store = create<State>((set) => ({
   setSymbol: (symbol) => set({ symbol }),
   setToken: (token) => set({ token }),
   sharedRewardPercent: 0,
-  symbol: 'BONSAI',
+  symbol: 'GOOD',
   token: DEFAULT_COLLECT_TOKEN as Address
 }));
 
