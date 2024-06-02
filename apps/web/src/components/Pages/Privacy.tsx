@@ -46,7 +46,7 @@ const Privacy: NextPage = () => {
                   This Privacy Policy (the “Privacy Policy”) provides a
                   comprehensive description of how {APP_NAME} (“we,” “our,” or
                   “us”) collects, uses, and shares information about you in
-                  connection with the website at bcharity.net”, as well as your
+                  connection with the website at good.xyz”, as well as your
                   rights and choices regarding such information.
                 </p>
                 <p className="leading-7">

@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: title,
     twitter: {
       card: assetIsAudio ? 'summary' : 'summary_large_image',
-      site: '@heydotxyz'
+      site: '@gooddotxyz'
     }
   };
 }

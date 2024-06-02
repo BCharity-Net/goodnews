@@ -1,7 +1,7 @@
 import type { AnyPublication } from '@good/lens';
 import type { FC } from 'react';
 
-import getProfileFlags from '@good/helpers/api/getProfileFlags';
+import getProfileDetails from '@good/helpers/api/getProfileFlags';
 import formatDate from '@good/helpers/datetime/formatDate';
 import getAppName from '@good/helpers/getAppName';
 import { isMirrorPublication } from '@good/helpers/publicationHelpers';
@@ -43,13 +43,13 @@ const FullPublication: FC<FullPublicationProps> = ({
 
   usePushToImpressions(targetPublication.id);
 
-  const { data: profileFlags } = useQuery({
+  const { data: profileDetails } = useQuery({
     enabled: Boolean(by.id),
-    queryFn: () => getProfileFlags(by.id || ''),
-    queryKey: ['getProfileFlags', by.id]
+    queryFn: () => getProfileDetails(by.id || ''),
+    queryKey: ['getProfileDetails', by.id]
   });
 
-  const isSuspended = staffMode ? false : profileFlags?.isSuspended;
+  const isSuspended = staffMode ? false : profileDetails?.isSuspended;
 
   if (isSuspended) {
     return (

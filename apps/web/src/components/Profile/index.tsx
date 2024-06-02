@@ -9,7 +9,7 @@ import {
     STATIC_IMAGES_URL
 } from '@good/data/constants';
 import { PAGEVIEW } from '@good/data/tracking';
-import getProfileFlags from '@good/helpers/api/getProfileFlags';
+import getProfileDetails from '@good/helpers/api/getProfileFlags';
 import getProfile from '@good/helpers/getProfile';
 import { useProfileQuery } from '@good/lens';
 import { EmptyState, GridItemEight, GridItemFour, GridLayout } from '@good/ui';
@@ -93,10 +93,10 @@ const ViewProfile: NextPage = () => {
 
   const profile = data?.profile as Profile;
 
-  const { data: profileFlags } = useQuery({
+  const { data: profileDetails } = useQuery({
     enabled: Boolean(profile?.id),
-    queryFn: () => getProfileFlags(profile?.id || ''),
-    queryKey: ['getProfileFlags', id]
+    queryFn: () => getProfileDetails(profile?.id || ''),
+    queryKey: ['getProfileDetails', id]
   });
 
   if (!isReady || loading) {
@@ -115,7 +115,7 @@ const ViewProfile: NextPage = () => {
     return <Custom500 />;
   }
 
-  const isSuspended = staffMode ? false : profileFlags?.isSuspended;
+  const isSuspended = staffMode ? false : profileDetails?.isSuspended;
 
   return (
     <>
@@ -140,7 +140,7 @@ const ViewProfile: NextPage = () => {
             <SuspendedDetails profile={profile as Profile} />
           ) : (
             <Details
-              isSuspended={profileFlags?.isSuspended || false}
+              isSuspended={profileDetails?.isSuspended || false}
               profile={profile as Profile}
             />
           )}
@@ -176,6 +176,7 @@ const ViewProfile: NextPage = () => {
               feedType === ProfileFeedType.Collects ? (
                 <Feed
                   handle={getProfile(profile).slugWithPrefix}
+                  pinnedPublicationId={profileDetails?.pinnedPublication}
                   profileId={profile.id}
                   type={feedType}
                 />

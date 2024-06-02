@@ -1,6 +1,6 @@
 <div align="center">
     <img src="https://github.com/BCharity-Net/good/blob/main/apps/web/public/icon-128x128.png" alt="Goodcast Logo">
-    <h1>Good</h1>
+    <h1>Goodcast</h1>
     <strong>Decentralized, and permissionless social media app for the public good</strong>
 </div>
 <br>
@@ -69,4 +69,4 @@ We love contributors! Feel free to contribute to this project but please read th
 
 ## ⚖️ License
 
-Good is open-sourced software licensed under the © [AGPLv3](LICENSE).
+Goodcast is open-sourced software licensed under the © [AGPLv3](LICENSE).

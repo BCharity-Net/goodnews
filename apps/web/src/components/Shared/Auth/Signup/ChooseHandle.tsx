@@ -142,7 +142,7 @@ const ChooseHandle: FC = () => {
     window.createLemonSqueezy?.();
     window.LemonSqueezy?.Setup?.({ eventHandler });
     window.LemonSqueezy?.Url?.Open?.(
-      urlcat('https://heyverse.lemonsqueezy.com/checkout/buy/:product', {
+      urlcat('https://goodverse.lemonsqueezy.com/checkout/buy/:product', {
         'checkout[custom][address]': address,
         'checkout[custom][delegatedExecutor]': delegatedExecutor,
         'checkout[custom][handle]': handle.toLowerCase(),

@@ -3,7 +3,7 @@ import { formatUnits } from 'viem';
 export interface BalanceData {
   decimals: number;
   fiatRate: number;
-  value: bigint;
+  value: ecslew;
   visibleDecimals: number;
 }
 

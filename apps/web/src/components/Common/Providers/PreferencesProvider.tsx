@@ -5,12 +5,14 @@ import { GOOD_API_URL } from '@good/data/constants';
 import { FeatureFlag } from '@good/data/feature-flags';
 import getAllTokens from '@good/helpers/api/getAllTokens';
 import getPreferences from '@good/helpers/api/getPreferences';
+import getProfileDetails from '@good/helpers/api/getProfileFlags';
 import getScore from '@good/helpers/api/getScore';
 import getAuthApiHeaders from '@helpers/getAuthApiHeaders';
 import getCurrentSession from '@helpers/getCurrentSession';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { usePreferencesStore } from 'src/store/non-persisted/usePreferencesStore';
+import { useProfileDetailsStore } from 'src/store/non-persisted/useProfileDetailsStore';
 import { useProfileStatus } from 'src/store/non-persisted/useProfileStatus';
 import { useScoreStore } from 'src/store/non-persisted/useScoreStore';
 import { useAllowedTokensStore } from 'src/store/persisted/useAllowedTokensStore';
@@ -31,6 +33,7 @@ const PreferencesProvider: FC = () => {
     setHasDismissedOrMintedMembershipNft,
     setHighSignalNotificationFilter
   } = usePreferencesStore();
+  const { setPinnedPublication } = useProfileDetailsStore();
   const { setStatus } = useProfileStatus();
   const { setFeatureFlags, setStaffMode } = useFeatureFlagsStore();
 
@@ -71,17 +74,17 @@ const PreferencesProvider: FC = () => {
     queryKey: ['getPreferences', sessionProfileId || '']
   });
 
-  // Fetch verified members
-  const getVerifiedMembers = async () => {
-    try {
-      const response = await axios.get(`${GOOD_API_URL}/misc/verified`);
-      const { data } = response;
-      setVerifiedMembers(data.result || []);
-      return true;
-    } catch {
-      return false;
-    }
-  };
+  // Fetch profile details
+  useQuery({
+    enabled: Boolean(sessionProfileId),
+    queryFn: () =>
+      getProfileDetails(sessionProfileId).then((details) => {
+        setPinnedPublication(details?.pinnedPublication || null);
+
+        return true;
+      }),
+    queryKey: ['getProfileDetails', sessionProfileId || '']
+  });
 
   // Fetch score
   useQuery({
@@ -93,6 +96,18 @@ const PreferencesProvider: FC = () => {
       }),
     queryKey: ['getScore', sessionProfileId]
   });
+
+  // Fetch verified members
+  const getVerifiedMembers = async () => {
+    try {
+      const response = await axios.get(`${GOOD_API_URL}/misc/verified`);
+      const { data } = response;
+      setVerifiedMembers(data.result || []);
+      return true;
+    } catch {
+      return false;
+    }
+  };
 
   useQuery({
     queryFn: getVerifiedMembers,

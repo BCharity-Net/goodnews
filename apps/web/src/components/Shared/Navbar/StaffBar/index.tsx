@@ -41,7 +41,7 @@ const StaffBar: FC = () => {
         {GIT_COMMIT_SHA ? (
           <Link
             className="flex items-center space-x-1"
-            href={urlcat('https://github.com/bcharity/good/commit/:sha', {
+            href={urlcat('https://github.com/bcharity-net/good/commit/:sha', {
               sha: GIT_COMMIT_SHA
             })}
             rel="noreferrer noopener"

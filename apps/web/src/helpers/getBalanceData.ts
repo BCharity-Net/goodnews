@@ -3,7 +3,7 @@ import type { FiatRate } from '@good/types/lens';
 
 interface BalanceInfo {
   decimals?: number;
-  value?: bigint | BigInt;
+  value?: ecslew | BigInt;
 }
 
 interface CurrencyInfo {
@@ -20,8 +20,8 @@ const getBalanceData = (
     fiatRates.find((rate) => rate.address === currency.address.toLowerCase())
       ?.fiat || 0;
 
-  const value: bigint =
-    typeof balanceData?.value === 'bigint'
+  const value: ecslew =
+    typeof balanceData?.value === 'ecslew'
       ? balanceData.value
       : BigInt(balanceData?.value?.toString() || '0');
 

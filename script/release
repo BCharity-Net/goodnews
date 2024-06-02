@@ -3,8 +3,8 @@
 #/ Usage: script/release
 #/ Release to all environments.
 
-git config user.name bigint
-git config user.email bigint@bcharity.net
+git config user.name ecslew
+git config user.email ecslew@bcharity.net
 
 branches=("testnet" "staging")
 

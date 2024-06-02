@@ -95,7 +95,7 @@ module.exports = withSentryConfig(nextConfig, {
   automaticVercelMonitors: true,
   disableLogger: true,
   hideSourceMaps: true,
-  org: 'heyverse',
+  org: 'goodverse',
   project: 'web',
   silent: !process.env.CI,
   tunnelRoute: '/monitoring',

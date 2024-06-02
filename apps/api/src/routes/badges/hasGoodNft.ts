@@ -27,13 +27,13 @@ export const get: Handler = async (req, res) => {
       transport: getRpc({ mainnet: true })
     });
 
-    const heyNft = await client.readContract({
+    const goodNft = await client.readContract({
       abi: GoodMembershipNft,
       address: GOOD_MEMBERSHIP_NFT,
       args: [address as Address],
       functionName: 'balanceOf'
     });
-    const hasGoodNft = Number(heyNft) > 0;
+    const hasGoodNft = Number(goodNft) > 0;
 
     logger.info(`Good NFT badge fetched for ${address}`);
 

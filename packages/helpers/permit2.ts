@@ -77,8 +77,8 @@ export const updateWrapperParams = ({
 }: {
   chainId: number;
   data: Hex;
-  deadline: bigint;
-  nonce: bigint;
+  deadline: ecslew;
+  nonce: ecslew;
   signature: Hex;
 }) => {
   if (chainId != polygon.id) {
@@ -146,7 +146,7 @@ export const constructPermit2Sig = ({
   amount,
   token
 }: {
-  amount: bigint;
+  amount: ecslew;
   token: Address;
 }) => {
   const spender = VerifiedOpenActionModules.DecentNFT;
@@ -189,7 +189,7 @@ export const constructPermit2Sig = ({
 
 export const signPermitSignature = async (
   walletClient: WalletClient,
-  amount: bigint,
+  amount: ecslew,
   token: `0x${string}`
 ) => {
   if (!walletClient.account) {

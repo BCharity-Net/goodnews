@@ -29,7 +29,7 @@ const getUniswapQuote = async (
   };
 
   const { data } = await axios.post(
-    'https://quote.bcharity.workers.dev',
+    'https://quote.bcharity-net.workers.dev',
     payload
   );
   const { quote } = data;
