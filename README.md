@@ -18,12 +18,12 @@
         <img height="20px" src="https://betteruptime.com/status-badges/v1/monitor/dfaw.svg" alt="Uptime">
     </a>
     <a href="https://good.checkly-dashboards.com">
-        <img src="https://api.checklyhq.com/v1/badges/checks/0f10fc23-4359-4cf9-a062-dbaa5a4cf0ea?style=flat&theme=default&responseTime=true" alt="Checkly">
+        <img src="https://api.checklyhq.com/v1/badges/checks/8e816d59-e771-4f33-a3ed-72373e19cf18?style=flat&theme=default" alt="Checkly">
     </a>
-    <a href="https://github.com/bcharity/good/stargazers">
+    <a href="https://github.com/bcharity-net/good/stargazers">
         <img src="https://img.shields.io/github/stars/bcharity/good?label=Stars&logo=github" alt="Stargazers">
     </a>
-    <a href="https://github.com/bcharity/good/blob/main/LICENSE">
+    <a href="https://github.com/bcharity-net/good/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/bcharity/good?label=Licence&logo=gnu" alt="License">
     </a>
     <a href="https://discord.com/invite/NPeA8FJwye">
