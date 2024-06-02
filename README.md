@@ -24,7 +24,7 @@
         <img src="https://img.shields.io/github/stars/bcharity-net/good?label=Stars&logo=github" alt="Stargazers">
     </a>
     <a href="https://github.com/bcharity-net/good/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/bcharity/good?label=Licence&logo=gnu" alt="License">
+        <img src="https://img.shields.io/github/license/bcharity-net/good?label=Licence&logo=gnu" alt="License">
     </a>
     <a href="https://discord.com/invite/NPeA8FJwye">
         <img src="https://img.shields.io/discord/953679040722665512.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
