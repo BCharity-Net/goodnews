@@ -36,7 +36,7 @@
     <br><br>
     <a href="https://discord.com/invite/NPeA8FJwye"><b>Discord</b></a>
     •
-    <a href="https://github.com/bcharity/good/issues/new"><b>Issues</b></a>
+    <a href="https://github.com/bcharity-net/good/issues/new"><b>Issues</b></a>
 </div>
 
 ##  About Good
